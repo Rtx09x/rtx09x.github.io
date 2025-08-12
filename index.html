@@ -3,673 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rudra • Portfolio</title>
-    <meta name="description" content="Rudra's personal portfolio and creative space.">
-    <!-- Link to the compiled CSS file -->
-    <link href="./dist/styles.css" rel="stylesheet">
-    <!-- Font awesome for icons -->
+    <title>Rudra • Spider-Verse Portfolio</title>
+    <meta name="description" content="Rudra's Spider-Verse themed portfolio - Developer, Researcher, Music Creator">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Poppins for modern look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Material You + Spider-Verse Theme -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/spider-web.css">
+    <link rel="stylesheet" href="./styles/material-you.css">
 </head>
-<body class="font-poppins antialiased overflow-x-hidden">
-    <!-- Background elements -->
-    <div class="fixed inset-0 bg-gradient-to-br from-light-gradient-from via-light-gradient-via to-light-gradient-to dark:from-dark-gradient-from dark:via-dark-gradient-via dark:to-dark-gradient-to -z-10 transition-colors duration-700"></div>
-    <div class="fixed top-0 left-0 w-full h-full bg-blob-pattern opacity-5 dark:opacity-10 -z-10"></div>
+<body>
+    <!-- Spider Web Canvas Background -->
+    <canvas id="spider-web-canvas"></canvas>
     
-    <!-- Decorative orbs/blobs -->
-    <div class="fixed top-40 right-20 w-40 h-40 rounded-full bg-primary/30 filter blur-3xl animate-float-slow orb -z-10"></div>
-    <div class="fixed bottom-40 left-10 w-60 h-60 rounded-full bg-secondary/20 filter blur-3xl animate-float-reverse orb -z-10"></div>
-    <!-- Additional orbs for more visible movement -->
-    <div class="fixed top-[30%] left-[20%] w-32 h-32 rounded-full bg-blue-500/20 filter blur-3xl orb -z-10"></div>
-    <div class="fixed bottom-[60%] right-[15%] w-48 h-48 rounded-full bg-purple-500/15 filter blur-3xl orb -z-10"></div>
+    <!-- Floating Particles -->
+    <div id="particles-container"></div>
     
-    <!-- Top Navbar -->
-    <nav class="fixed top-10 left-0 right-0 z-50 transition-all duration-300">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="backdrop-blur-md bg-white/10 dark:bg-black/10 shadow-md rounded-full py-3 px-4 md:px-8">
-                <div class="flex justify-between items-center">
-                    <!-- Logo -->
-                    <a href="#" class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Rudra Tiwari</a>
-                    
-                    <!-- Navigation Links (md and above) -->
-                    <div class="hidden md:flex space-x-6 items-center">
-                        <a href="#home" class="nav-link">Home</a>
-                        <a href="#about" class="nav-link">About</a>
-                        <a href="#skills" class="nav-link">Skills</a>
-                        <a href="#projects" class="nav-link">Projects</a>
-                        <a href="#research" class="nav-link">Research</a>
-                        <a href="#music" class="nav-link">Music</a>
-                        <a href="#connect" class="nav-link">Connect</a>
-                        
-                        <!-- Theme Toggle Button -->
-                        <button id="theme-toggle-top" class="p-2 rounded-full bg-white/20 dark:bg-black/20 backdrop-blur-md hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 shadow-sm">
-                            <!-- Sun icon (shown in dark mode) -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                            </svg>
-                            <!-- Moon icon (shown in light mode) -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                            </svg>
-                        </button>
-                    </div>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-full bg-white/20 dark:bg-black/20 backdrop-blur-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-                
-                <!-- Mobile Menu -->
-                <div id="mobile-menu" class="md:hidden hidden px-4 py-3 pb-6 animate-fadeDown mt-4 backdrop-blur-md bg-white/10 dark:bg-black/10 rounded-2xl shadow-lg">
-                    <a href="#home" class="mobile-link">Home</a>
-                    <a href="#about" class="mobile-link">About</a>
-                    <a href="#skills" class="mobile-link">Skills</a>
-                    <a href="#projects" class="mobile-link">Projects</a>
-                    <a href="#research" class="mobile-link">Research</a>
-                    <a href="#music" class="mobile-link">Music</a>
-                    <a href="#connect" class="mobile-link">Connect</a>
-                    
-                    <!-- Mobile Theme Toggle -->
-                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-white/10 dark:border-white/5">
-                        <span class="text-sm opacity-70">Toggle Theme</span>
-                        <button id="mobile-theme-toggle" class="p-2 rounded-full bg-white/20 dark:bg-black/20 backdrop-blur-md">
-                            <!-- Same SVG icons as above -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#music" class="nav-link">Music</a>
+                <a href="#connect" class="nav-link">Connect</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" title="Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
     
+    <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section id="home" class="min-h-screen pt-32 pb-16 px-4 flex flex-col justify-center items-center text-center relative">
-            <div class="animate-fadeIn">
-                <!-- Avatar/Profile Image -->
-                <div class="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-8 overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-70 rounded-full animate-spin-slow"></div>
-                    <div class="absolute inset-1 rounded-full overflow-hidden bg-light-bg dark:bg-dark-bg">
-                        <!-- Replace with your actual image -->
-                        <img src="assets/images/profile.jpeg" alt="Rudra" class="w-full h-full object-cover">
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <!-- Left Content -->
+                <div class="hero-left">
+                    <h1 class="hero-title" id="hero-title">
+                        Rudra Tiwari
+                    </h1>
+                    
+                    <div class="hero-subtitle">
+                        <span id="typewriter-text"></span>
+                        <span class="typewriter-cursor">|</span>
+                    </div>
+                    
+                    <div class="hero-tags">
+                        <span class="tag">code</span>
+                        <span class="tag">research</span>
+                    </div>
+                    
+                    <!-- Hero Actions -->
+                    <div class="hero-actions">
+                        <button class="cta-button primary" onclick="scrollToSection('projects')">
+                            <i class="fas fa-bolt"></i>
+                            <span>View Projects</span>
+                        </button>
+                        <button class="cta-button outline" onclick="scrollToSection('connect')">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Spotify Now Playing -->
+                    <div class="now-playing" id="now-playing">
+                        <div class="now-playing-content">
+                            <i class="fab fa-spotify"></i>
+                            <span class="now-playing-text">Currently vibing to Spotify</span>
+                            <div class="audio-visualizer">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Name and Title -->
-                <h1 class="text-4xl md:text-6xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary leading-tight"></h1>
-                <h2 class="text-xl md:text-2xl text-light-muted dark:text-dark-muted mb-8 max-w-2xl mx-auto leading-relaxed">
-                    Building the future with 
-                    <span class="font-medium color-shift-text">code</span>, 
-                    <span class="font-medium color-shift-text delay-2s">research</span>, and 
-                    <span class="font-medium color-shift-text delay-4s">creative solutions</span>
-                </h2>
-                
-                <!-- Spotify Now Playing Widget -->
-                <div class="mb-10 max-w-sm mx-auto flex items-center justify-center">
-                    <div id="spotify-mini" class="flex items-center space-x-2 text-sm bg-white/10 dark:bg-black/20 backdrop-blur-md p-3 rounded-full animate-pulse cursor-pointer hover:bg-white/20 dark:hover:bg-black/30 transition-all">
-                        <i class="fab fa-spotify text-green-500"></i>
-                        <span class="opacity-70 truncate">Currently vibing to Spotify</span>
+                <!-- Right Content -->
+                <div class="hero-right">
+                    <div class="hero-avatar">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-ring"></div>
+                        <img src="./assets/images/profile.jpg" alt="Rudra" class="avatar-image">
+                        <div class="spider-sense-indicator"></div>
                     </div>
-                </div>
-                
-                <!-- CTA Buttons -->
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#projects" class="cta-button primary group">
-                        <span>View Projects</span>
-                        <i class="fas fa-arrow-right ml-2 text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                    </a>
-                    <a href="#research" class="cta-button secondary">
-                        <span>Research Work</span>
-                        <i class="fas fa-flask ml-2 text-sm"></i>
-                    </a>
-                    <a href="#connect" class="cta-button outline">
-                        <span>Get in Touch</span>
-                        <i class="fas fa-envelope ml-2 text-sm"></i>
-                    </a>
                 </div>
             </div>
             
             <!-- Scroll Indicator -->
-            <div class="absolute bottom-8 left-0 right-0 flex justify-center">
-                <div class="animate-bounce w-10 h-10 flex items-center justify-center text-light-muted dark:text-dark-muted opacity-70">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                    </svg>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
         </section>
-
-        <!-- About Me Section -->
-        <section id="about" class="py-16 md:py-24 px-4">
-            <div class="container mx-auto max-w-4xl">
-                <div class="section-heading">
+        
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
                     <span class="section-tag">Who I Am</span>
                     <h2 class="section-title">About Me</h2>
                 </div>
                 
-                <div class="glass-card p-8 mt-12">
-                    <div class="prose prose-lg dark:prose-invert max-w-none">
-                        <p class="lead text-xl mb-6">
-                            Hi, I'm Rudra! A passionate aspiring developer, researcher, and creative thinker focusing on building meaningful solutions.
-                        </p>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                            <div>
-                                <h3 class="text-xl font-semibold mb-4 gradient-text">Me</h3>
-                                <p>
-                                    I'm fueled by curiosity (and coffee ☕). My passion lies in exploring the intersection of science, 
-                                    physics, coding, and knowledge creation, and i intensely use first principles thinking. With a mindset of always learning and always building, I constantly try to push 
-                                    the boundaries of what's possible.
-                                </p>
-                            </div>
-                            
-                            <div>
-                                <h3 class="text-xl font-semibold mb-4 gradient-text">Currently</h3>
-                                <p>
-                                    Exploring machine learning and its practical applications in the real world. I'm fascinated by AGI research and LLMs,
-                                    and have recently learned about the transformer architecture and started venturing into neuroscience and understanding the brain.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h3 class="text-xl font-semibold mb-4 gradient-text"></h3>
-                            <ul class="space-y-2">
-                                <li><i class="fas fa-lightbulb text-primary mr-2"></i>  INTP</li>
-                                <li><i class="fas fa-guitar text-primary mr-2"></i> Planning to rock the stage someday, literally!</li>
-                                <li><i class="fas fa-search text-primary mr-2"></i> Forever analyzing the "why" behind everything.</li>
-                            </ul>
+                <div class="about-content">
+                    <div class="about-card main-card">
+                        <div class="card-content">
+                            <h3 class="card-title">Me</h3>
+                            <p class="card-text">
+                                Loading bio...
+                            </p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-16 md:py-24 px-4">
-            <div class="container mx-auto max-w-4xl">
-                <div class="section-heading">
-                    <span class="section-tag">What I Know</span>
-                    <h2 class="section-title">Skills</h2>
-                </div>
-                
-                <div class="glass-card p-8 mt-12">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- Technical Skills -->
-                        <div>
-                            <h3 class="text-xl font-semibold mb-6 gradient-text">Technical Skills</h3>
-                            <div class="space-y-6">
-                                <!-- Programming Languages -->
-                                <div>
-                                    <h4 class="font-medium mb-3 text-light-text dark:text-dark-text">Programming</h4>
-                                    <div class="flex flex-wrap gap-3">
-                                        <span class="skill-badge">
-                                            <i class="fas fa-code mr-2"></i>Basic Python
-                                        </span>
-                                        <span class="skill-badge">
-                                            <i class="fas fa-code mr-2"></i>Julia (Soon To Learn)
-                                        </span>
-                                        <span class="skill-badge">
-                                            <i class="fab fa-html5 mr-2"></i>Basic HTML
-                                        </span>
-                                        <span class="skill-badge">
-                                            <i class="fab fa-css3-alt mr-2"></i>Basic CSS
-                                        </span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Research -->
-                                <div>
-                                    <h4 class="font-medium mb-3 text-light-text dark:text-dark-text">Research</h4>
-                                    <div class="flex flex-wrap gap-3">
-                                        <span class="skill-badge">
-                                            <i class="fas fa-search mr-2"></i>Basic Research
-                                        </span>
-                                        <span class="skill-badge">
-                                            <i class="fas fa-brain mr-2"></i>Critical Thinking
-                                        </span>
-                                        <span class="skill-badge">
-                                            <i class="fas fa-flask mr-2"></i>Experimentation
-                                        </span>
-                                    </div>
-                                </div>
+                    
+                    <div class="about-grid">
+                        <div class="about-card">
+                            <div class="card-content">
+                                <h3 class="card-title">Currently</h3>
+                                <p class="card-text">
+                                    Loading current focus...
+                                </p>
                             </div>
                         </div>
                         
-                        <!-- Creative Skills -->
-                        <div>
-                            <h3 class="text-xl font-semibold mb-6 gradient-text">Creative Skills</h3>
-                            <div class="space-y-6">
-                                <!-- Music -->
-                                <div>
-                                    <h4 class="font-medium mb-3 text-light-text dark:text-dark-text">Music</h4>
-                                    <div class="flex flex-wrap gap-3">
-                                        <span class="skill-badge">
-                                            <i class="fas fa-microphone mr-2"></i>Singing
-                                        </span>
-                                        <span class="skill-badge">
-                                            <i class="fas fa-music mr-2"></i>Composition
-                                        </span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Media -->
-                                <div>
-                                    <h4 class="font-medium mb-3 text-light-text dark:text-dark-text">Media</h4>
-                                    <div class="flex flex-wrap gap-3">
-                                        <span class="skill-badge">
-                                            <i class="fas fa-video mr-2"></i>Video Editing
-                                        </span>
-                                        <span class="skill-badge">
-                                            <i class="fas fa-photo-video mr-2"></i>Content Creation
-                                        </span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Learning -->
-                                <div>
-                                    <h4 class="font-medium mb-3 text-light-text dark:text-dark-text">Personal</h4>
-                                    <div class="flex flex-wrap gap-3">
-                                        <span class="skill-badge">
-                                            <i class="fas fa-book mr-2"></i>Lifelong Learning
-                                        </span>
-                                        <span class="skill-badge">
-                                            <i class="fas fa-lightbulb mr-2"></i>Problem Solving
-                                        </span>
-                                    </div>
-                                </div>
+                        <div class="about-card">
+                            <div class="card-content">
+                                <h3 class="card-title">Fun Facts</h3>
+                                <ul class="facts-list">
+                                    <li><i class="fas fa-lightbulb"></i> Loading fun facts...</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        
         <!-- Projects Section -->
-        <section id="projects" class="py-16 md:py-24 px-4">
-            <div class="container mx-auto max-w-6xl">
-                <div class="section-heading">
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
                     <span class="section-tag">What I've Built</span>
                     <h2 class="section-title">Projects</h2>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8 mt-16">
-                    <!-- Project Card 1: YouTube-TLDR -->
-                    <a href="https://github.com/Rtx09x/YouTube-TLDR" target="_blank" rel="noopener noreferrer" class="project-card group hover:shadow-lg transition-all duration-300 max-w-2xl mx-auto">
-                        <div class="project-image bg-gradient-to-tr from-primary/20 to-secondary/20 flex items-center justify-center py-6">
-                            <div class="flex flex-col items-center gap-2">
-                                <img src="https://img.shields.io/badge/YouTube_TLDR-Chrome_Extension-blue?style=for-the-badge&logo=chrome" alt="YouTube TLDR" class="mb-1">
-                                <img src="https://img.shields.io/github/stars/Rtx09x/YouTube-TLDR?style=for-the-badge&logo=github" alt="GitHub Stars">
-                                <img src="https://img.shields.io/badge/AI_Powered-Summary-green?style=for-the-badge&logo=openai" alt="AI Powered">
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">YouTube TLDR</h3>
-                            <p class="project-description">A distraction-blocking Chrome extension that intercepts YouTube videos and redirects you to an AI-generated summary instead.</p>
-                            <div class="project-tags">
-                                <span>JavaScript</span>
-                                <span>Chrome Extensions</span>
-                                <span>AI</span>
-                            </div>
-                            <div class="project-links">
-                                <span class="text-primary hover:text-primary/80 transition-colors">
-                                    <i class="fab fa-github"></i> <span>GitHub</span>
-                                </span>
-                                <span class="text-secondary hover:text-secondary/80 transition-colors">
-                                    <i class="fas fa-external-link-alt"></i> <span>Live Demo</span>
-                                </span>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- Project Card 2: Meow-Mocks -->
-                    <div class="project-card group hover:shadow-lg transition-all duration-300 max-w-2xl mx-auto">
-                        <div class="project-image bg-gradient-to-tr from-primary/20 to-secondary/20 flex items-center justify-center py-6">
-                            <div class="flex flex-col items-center gap-2">
-                                <img src="https://img.shields.io/badge/Meow_Mocks-Test_Engine-blue?style=for-the-badge&logo=chrome" alt="Meow Mocks" class="mb-1">
-                                <img src="https://img.shields.io/github/stars/Rtx09x/Meow-Mocks?style=for-the-badge&logo=github" alt="GitHub Stars">
-                                <img src="https://img.shields.io/badge/Material_You_Theme-green?style=for-the-badge&logo=openai" alt="Plug And Play">
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Meow Mocks</h3>
-                            <p class="project-description">A web-based mock test platform, relying on json configs for exam paper data, is completely plug and play for any type of mock test.</p>
-                            <div class="project-tags">
-                                <span>JavaScript</span>
-                                <span>Mock Test Engine</span>
-                                <span>Beautiful UI</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Rtx09x/Meow-Mocks" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary/80 transition-colors">
-                                    <i class="fab fa-github"></i> <span>GitHub</span>
-                                </a>
-                                <a href="https://rtx09x.github.io/Meow-Mocks/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-secondary/80 transition-colors">
-                                    <i class="fas fa-external-link-alt"></i> <span>Live Demo</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects will be dynamically loaded -->
                 </div>
             </div>
         </section>
-
-        <!-- Research Section (GitHub Integration) -->
-        <section id="research" class="py-16 md:py-24 px-4 relative">
-            <!-- Background effect -->
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-light-card/20 dark:via-dark-card/20 to-transparent -z-10"></div>
-            
-            <div class="container mx-auto max-w-6xl">
-                <div class="section-heading">
+        
+        <!-- Research Section -->
+        <section id="research" class="section">
+            <div class="container">
+                <div class="section-header">
                     <span class="section-tag">My Work</span>
                     <h2 class="section-title">Research & Explorations</h2>
                 </div>
                 
-                <!-- Research Cards -->
-                <div class="grid grid-cols-1 gap-8 mt-16 mb-12 max-w-2xl mx-auto">
-                    <!-- Research Card 1: CuriosityCache -->
-                    <a href="https://github.com/Rtx09x/CuriosityCache" target="_blank" rel="noopener noreferrer" class="glass-card overflow-hidden hover:shadow-lg transition-all duration-300">
-                        <div class="p-6">
-                            <div class="flex items-center mb-4">
-                                <i class="fas fa-flask text-xl mr-3 text-primary"></i>
-                                <h3 class="text-xl font-semibold">CuriosityCache</h3>
-                            </div>
-                            <p class="text-light-muted dark:text-dark-muted mb-4 text-sm">Personal Research Collective - A repository of research findings, insights, and discoveries.</p>
-                            <div class="flex items-center justify-between text-sm">
-                                <div class="flex items-center space-x-4">
-                                    <span><i class="fas fa-calendar mr-1"></i> 2025</span>
-                                    <span><i class="fab fa-github mr-1"></i> GitHub</span>
-                                </div>
-                                <span class="text-xs bg-light-card dark:bg-dark-card px-2 py-1 rounded">Research</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Research Card 2: Infinite Lossless Compression -->
-                    <a href="https://github.com/Rtx09x/CuriosityCache/blob/main/CuriosityCache/Infinite%20Lossless%20Compression/My%20Compression%20Quest%20-%20Summary%20%26%20The%20Wall.md" target="_blank" rel="noopener noreferrer" class="glass-card overflow-hidden hover:shadow-lg transition-all duration-300">
-                        <div class="p-6">
-                            <div class="flex items-center mb-4">
-                                <i class="fas fa-compress-alt text-xl mr-3 text-secondary"></i>
-                                <h3 class="text-xl font-semibold">Infinite Lossless Compression</h3>
-                            </div>
-                            <p class="text-light-muted dark:text-dark-muted mb-4 text-sm">A personal 3-hour deep dive exploring the theoretical limits of lossless data compression, facing the fundamental Shannon Entropy Wall.</p>
-                            <div class="flex items-center justify-between text-sm">
-                                <div class="flex items-center space-x-4">
-                                    <span><i class="fas fa-calendar mr-1"></i> 2025</span>
-                                    <span><i class="fas fa-brain mr-1"></i> Information Theory</span>
-                                </div>
-                                <span class="text-xs bg-light-card dark:bg-dark-card px-2 py-1 rounded">Theoretical CS</span>
-                            </div>
-                        </div>
-                    </a>
+                <div class="research-grid" id="research-grid">
+                    <!-- Research items will be dynamically loaded -->
                 </div>
             </div>
         </section>
-
+        
         <!-- Music Section -->
-        <section id="music" class="py-16 md:py-24 px-4">
-            <div class="container mx-auto max-w-5xl">
-                <div class="section-heading">
+        <section id="music" class="section">
+            <div class="container">
+                <div class="section-header">
                     <span class="section-tag">My Music</span>
                     <h2 class="section-title">Listen to My Songs</h2>
+                    <p class="section-description">
+                        Explore my musical journey through original compositions that blend electronic elements with heartfelt lyrics.
+                    </p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-                    <!-- Spotify Track -->
-                    <div class="glass-card overflow-hidden hover:shadow-lg transition-all duration-300">
-                        <div class="p-6">
-                            <div class="flex flex-col items-center gap-6">
-                                <div class="flex-1 text-center">
-                                    <h3 class="text-xl font-semibold mb-2">If Only You Knew</h3>
-                                    <p class="text-light-muted dark:text-dark-muted mb-4 text-sm">RTX09 • Single • 2024</p>
-                                    
-                                    <div class="flex items-center justify-center gap-3 mb-6">
-                                        <a href="https://open.spotify.com/track/23BEGzgR0ZwBrQYYtjGwRJ?si=83a9ed65a1484672" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center py-2 px-3 rounded-lg bg-green-500/10 hover:bg-green-500/20 text-green-500 transition-colors">
-                                            <i class="fab fa-spotify mr-2"></i>
-                                            <span>Spotify</span>
-                                        </a>
-                                        <a href="https://music.youtube.com/watch?v=A_PK87tTofY&si=9DqlEdz6zHBQnsvS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center py-2 px-3 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-500 transition-colors">
-                                            <i class="fab fa-youtube mr-2"></i>
-                                            <span>YouTube Music</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Spotify Embed -->
-                            <div class="mt-4">
-                                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/23BEGzgR0ZwBrQYYtjGwRJ?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- YouTube Music Track -->
-                    <div class="glass-card overflow-hidden hover:shadow-lg transition-all duration-300">
-                        <div class="p-6">
-                            <div class="flex flex-col items-center gap-6">
-                                <div class="flex-1 text-center">
-                                    <h3 class="text-xl font-semibold mb-2">Sometimes I'm Like</h3>
-                                    <p class="text-light-muted dark:text-dark-muted mb-4 text-sm">RTX09 • Single • 2024</p>
-                                    
-                                    <div class="flex items-center justify-center gap-3 mb-6">
-                                        <a href="https://music.youtube.com/watch?v=MXl8CvB_rJU&si=HSkZfrl2610AAYIU" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center py-2 px-3 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-500 transition-colors">
-                                            <i class="fab fa-youtube mr-2"></i>
-                                            <span>YouTube Music</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- YouTube Music Embed -->
-                            <div class="mt-4">
-                                <iframe width="100%" height="152" src="https://www.youtube.com/embed/MXl8CvB_rJU" title="Music Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                            </div>
-                        </div>
-                    </div>
+                <div class="music-grid" id="music-grid">
+                    <!-- Music tracks will be dynamically loaded -->
                 </div>
                 
-                <div class="mt-16 text-center">
-                    <a href="https://open.spotify.com/artist/2aC7n1BaEOCEgJknWRnLAj?si=snUYQJrFQ_uqcyhfiEFIHw" target="_blank" rel="noopener noreferrer" class="cta-button primary">
-                        <span>Check out all my music on Spotify</span>
-                        <i class="fab fa-spotify ml-2"></i>
+                <div class="music-platforms">
+                    <a href="https://open.spotify.com/artist/2aC7n1BaEOCEgJknWRnLAj" target="_blank" class="platform-link spotify">
+                        <i class="fab fa-spotify"></i>
+                        <span>Spotify Artist</span>
+                    </a>
+                    <a href="https://www.youtube.com/@rtxmusicx9" target="_blank" class="platform-link youtube">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube Channel</span>
                     </a>
                 </div>
             </div>
         </section>
-
-        <!-- Connect & Activity Section -->
-        <section id="connect" class="py-16 md:py-24 px-4 relative">
-            <!-- Background effect -->
-            <div class="absolute inset-0 bg-gradient-to-t from-transparent via-light-card/20 dark:via-dark-card/20 to-transparent -z-10"></div>
-            
-            <div class="container mx-auto max-w-6xl">
-                <div class="section-heading">
+        
+        <!-- Connect Section -->
+        <section id="connect" class="section">
+            <div class="container">
+                <div class="section-header">
                     <span class="section-tag">Reach Out</span>
                     <h2 class="section-title">Connect & Activities</h2>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-                    <!-- Spotify -->
-                    <div class="glass-card p-6">
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fab fa-spotify text-green-500 text-2xl"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-4"></h3>
-                            <div class="flex flex-col items-center space-y-4">
-                                <div class="w-32 h-32 rounded-full overflow-hidden mb-2">
-                                    <img src="assets/images/profile.jpeg" alt="RTX09" class="w-full h-full object-cover">
-                                </div>
-                                <p class="text-lg font-medium">RTX09</p>
-                                <a href="https://open.spotify.com/artist/2aC7n1BaEOCEgJknWRnLAj?si=snUYQJrFQ_uqcyhfiEFIHw" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center py-2 px-4 rounded-lg bg-green-500/10 hover:bg-green-500/20 text-green-500 transition-colors">
-                                    <i class="fab fa-spotify mr-2"></i>
-                                    <span>Listen to My Music</span>
-                                </a>
-                            </div>
+                <div class="connect-grid">
+                    <div class="connect-card primary">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
                         </div>
+                        <h3>Get in Touch</h3>
+                        <p>Have a project or research idea? Let's discuss!</p>
+                        <a href="mailto:contactme.rtx@gmail.com" class="connect-link">
+                            contactme.rtx@gmail.com
+                        </a>
                     </div>
                     
-                    <!-- Contact & Socials -->
-                    <div class="glass-card p-6">
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-envelope text-primary text-2xl"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
-                            <p class="mb-4">Have a project or research idea? Let's discuss!</p>
-                            <a href="mailto:contactme.rtx@gmail.com" class="inline-flex items-center justify-center py-2 px-4 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors">
-                                <i class="fas fa-envelope mr-2"></i>
-                                <span>contactme.rtx@gmail.com</span>
-                            </a>
-                            
-                            <!-- Social Icons -->
-                            <div class="flex justify-center space-x-4 mt-6">
-                                <a href="https://github.com/Rtx09x" target="_blank" rel="noopener noreferrer" class="social-icon">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://x.com/Rudra09x" target="_blank" rel="noopener noreferrer" class="social-icon">
-                                    <i class="fab fa-twitter text-xl"></i>
-                                </a>
-                                <a href="https://medium.com/@einstien56789" target="_blank" rel="noopener noreferrer" class="social-icon">
-                                    <i class="fab fa-medium text-xl"></i>
-                                </a>
-                                <a href="https://www.youtube.com/@rtxmusicx9" target="_blank" rel="noopener noreferrer" class="social-icon">
-                                    <i class="fab fa-youtube text-xl"></i>
-                                </a>
-                                <a href="https://open.spotify.com/user/31ttvfbabaimqzh6zgvilugqd7ya?si=39900551fc5d459b" target="_blank" rel="noopener noreferrer" class="social-icon">
-                                    <i class="fab fa-spotify text-xl"></i>
-                                </a>
-                            </div>
+                    <div class="connect-card">
+                        <div class="card-icon">
+                            <i class="fab fa-github"></i>
                         </div>
+                        <h3>GitHub</h3>
+                        <p>Check out my code and projects</p>
+                        <a href="https://github.com/Rtx09x" target="_blank" class="connect-link">
+                            @Rtx09x
+                        </a>
                     </div>
                     
-                    <!-- Buy Me a Coffee -->
-                    <div class="glass-card p-6">
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-mug-hot text-yellow-500 text-2xl"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-4">Support My Work</h3>
-                            <p class="mb-6">If you find my content valuable, consider buying me a coffee!</p>
-                            <a href="https://www.buymeacoffee.com/rudratiwari" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center py-3 px-6 rounded-lg bg-yellow-500 text-black hover:bg-yellow-400 transition-colors font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                                <i class="fas fa-mug-hot mr-2"></i>
-                                <span>Buy Me a Coffee</span>
-                            </a>
+                    <div class="connect-card">
+                        <div class="card-icon">
+                            <i class="fas fa-mug-hot"></i>
                         </div>
+                        <h3>Support My Work</h3>
+                        <p>Buy me a coffee if you find my content valuable!</p>
+                        <a href="https://www.buymeacoffee.com/rudratiwari" target="_blank" class="connect-link">
+                            Buy Me a Coffee
+                        </a>
                     </div>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="social-links">
+                    <a href="https://github.com/Rtx09x" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://medium.com/@einstien56789" target="_blank" class="social-link">
+                        <i class="fab fa-medium"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@rtxmusicx9" target="_blank" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://open.spotify.com/user/31ttvfbabaimqzh6zgvilugqd7ya" target="_blank" class="social-link">
+                        <i class="fab fa-spotify"></i>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
-
+    
     <!-- Footer -->
-    <footer class="bg-light-card/30 dark:bg-dark-card/30 py-16 mt-16 relative overflow-hidden">
-        <!-- Quote Section -->
-        <div class="container mx-auto px-4 mb-12">
-            <div id="rotating-quote" class="glass-card p-8 max-w-3xl mx-auto text-center transition-opacity duration-500">
-                <i class="fas fa-quote-left text-2xl text-primary/40 mb-4"></i>
-                <p id="quote-text" class="text-xl md:text-2xl font-light italic mb-4">
-                    The best way to predict the future is to invent it.
-                </p>
-                <p id="quote-author" class="text-sm text-light-muted dark:text-dark-muted font-medium">
-                    Alan Kay
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; <span id="current-year">2024</span> Rudra Tiwari. Built with ❤️ and lots of coffee.</p>
+                <p class="footer-quote" id="footer-quote">
+                    "The best way to predict the future is to invent it." - Alan Kay
                 </p>
             </div>
         </div>
-
-        <div class="container mx-auto px-4">
-            <!-- Footer Content -->
-            <div class="flex flex-col items-center">
-                <!-- Social links -->
-                <div class="mb-8">
-                    <h4 class="font-semibold mb-4 text-center">Connect</h4>
-                    <div class="flex space-x-6 justify-center">
-                        <a href="https://github.com/Rtx09x" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors" aria-label="GitHub">
-                            <i class="fab fa-github text-xl"></i>
-                        </a>
-                        <a href="https://x.com/Rudra09x" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors" aria-label="X">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="https://medium.com/@einstien56789" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors" aria-label="Medium">
-                            <i class="fab fa-medium text-xl"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@rtxmusicx9" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors" aria-label="YouTube">
-                            <i class="fab fa-youtube text-xl"></i>
-                        </a>
-                        <a href="https://open.spotify.com/user/31ttvfbabaimqzh6zgvilugqd7ya?si=39900551fc5d459b" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors" aria-label="Spotify">
-                            <i class="fab fa-spotify text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Copyright -->
-            <div class="text-center text-sm text-light-muted dark:text-dark-muted">
-                <p><span id="current-year">2023</span></p>
-            </div>
-        </div>
-        
-        <!-- Decorative elements -->
-        <div class="absolute -bottom-1/2 -right-1/4 w-full h-full rounded-full bg-primary/5 filter blur-3xl -z-10"></div>
-        <div class="absolute -bottom-1/2 -left-1/4 w-full h-full rounded-full bg-secondary/5 filter blur-3xl -z-10"></div>
     </footer>
-
-    <!-- Link to the JavaScript file -->
-    <script src="./src/script.js"></script>
-    <script>
-        // Simple script for current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        // Interactive background - Mouse parallax effect
-        (function setupParallaxEffect() {
-            const orbs = document.querySelectorAll('.orb');
-            
-            if (orbs.length === 0) {
-                console.log('No orbs found on the page');
-                return;
-            }
-            
-            console.log('Found ' + orbs.length + ' orbs for parallax effect');
-            
-            document.addEventListener('mousemove', function(e) {
-                let mouseX = e.clientX;
-                let mouseY = e.clientY;
-                
-                // Get window dimensions
-                let windowWidth = window.innerWidth;
-                let windowHeight = window.innerHeight;
-                
-                // Calculate mouse position as a percentage of window size
-                let mouseXPercent = mouseX / windowWidth;
-                let mouseYPercent = mouseY / windowHeight;
-                
-                // Apply different movements to each orb
-                orbs.forEach((orb, index) => {
-                    // Create a unique movement pattern for each orb
-                    // Some move opposite to the cursor, some follow it, with different intensities
-                    let xFactor = index % 2 === 0 ? -1 : 1;
-                    let yFactor = index % 3 === 0 ? -1 : 1;
-                    let intensity = 30 + (index * 10); // Increased intensity for more noticeable movement
-                    
-                    // Calculate translations
-                    let xTranslate = (mouseXPercent - 0.5) * intensity * xFactor;
-                    let yTranslate = (mouseYPercent - 0.5) * intensity * yFactor;
-                    
-                    // Apply smooth transform
-                    orb.style.transition = 'transform 0.5s ease-out';
-                    orb.style.transform = `translate(${xTranslate}px, ${yTranslate}px)`;
-                });
-            });
-        })();
-    </script>
+    
+    <!-- Scripts -->
+    <script src="./js/config.js"></script>
+    <script src="./js/spider-web.js"></script>
+    <script src="./js/typewriter.js"></script>
+    <script src="./js/main.js"></script>
 </body>
-</html> 
+</html>

@@ -1,0 +1,189 @@
+/* Spider Web Animation Styles */
+
+#spider-web-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Floating Particles */
+#particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: float 20s linear infinite;
+}
+
+.particle.secondary {
+  background: var(--secondary);
+  animation-duration: 25s;
+}
+
+.particle.accent {
+  background: var(--accent);
+  animation-duration: 30s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-100px) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Spider Web Glow Effects */
+.web-glow {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--spider-web-bright) 0%, transparent 70%);
+  pointer-events: none;
+  animation: webGlow 4s ease-in-out infinite;
+}
+
+@keyframes webGlow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.2);
+  }
+}
+
+/* Interactive Web Effects */
+.web-node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.web-node:hover {
+  opacity: 1;
+  transform: scale(1.5);
+  box-shadow: 0 0 20px var(--primary);
+}
+
+.web-node.active {
+  animation: nodeActive 2s ease-in-out infinite;
+}
+
+@keyframes nodeActive {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+    box-shadow: 0 0 30px var(--primary);
+  }
+}
+
+/* Spider Sense Effect */
+.spider-sense-active {
+  animation: spiderSense 0.5s ease-in-out;
+}
+
+@keyframes spiderSense {
+  0% {
+    filter: brightness(1);
+  }
+  25% {
+    filter: brightness(1.5) hue-rotate(30deg);
+  }
+  50% {
+    filter: brightness(2) hue-rotate(60deg);
+  }
+  75% {
+    filter: brightness(1.5) hue-rotate(30deg);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+/* Web Connection Lines */
+.web-connection {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--spider-web), transparent);
+  transform-origin: left center;
+  opacity: 0.3;
+  animation: webPulse 3s ease-in-out infinite;
+}
+
+@keyframes webPulse {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Responsive Web Effects */
+@media (max-width: 768px) {
+  #spider-web-canvas {
+    opacity: 0.3;
+  }
+  
+  .particle {
+    width: 3px;
+    height: 3px;
+  }
+  
+  .web-node {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #spider-web-canvas,
+  #particles-container,
+  .particle,
+  .web-glow,
+  .web-node,
+  .web-connection {
+    animation: none;
+  }
+  
+  .spider-sense-active {
+    animation: none;
+  }
+}
