@@ -1,0 +1,195 @@
+/* Widgets - LIGHT EXPRESSIVE */
+
+/* Hero */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px;
+}
+
+.hero-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: var(--shape-corner-full);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 32px;
+    box-shadow: 0 8px 32px rgba(103, 80, 164, 0.2);
+}
+
+.hero-name {
+    font-size: 64px;
+    font-weight: 800;
+    color: var(--md-sys-color-on-background);
+    margin-bottom: 16px;
+}
+
+.hero-bio {
+    font-size: 20px;
+    color: var(--md-sys-color-on-surface-variant);
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+/* Pill Chips - Colorful */
+.chip-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chip {
+    padding: 12px 24px;
+    border-radius: var(--shape-corner-full);
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+}
+
+.chip.purple {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.chip.lime {
+    background: var(--color-lime);
+    color: #2D3428;
+}
+
+.chip.pink {
+    background: var(--color-pink);
+    color: #492532;
+}
+
+.chip.peach {
+    background: var(--color-peach);
+    color: #5C3D1E;
+}
+
+/* Cards */
+.m3-card {
+    background: var(--md-sys-color-surface);
+    border-radius: var(--shape-corner-xl);
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.m3-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.card-desc {
+    font-size: 16px;
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: 1.5;
+    flex: 1;
+}
+
+/* Project Feature Card */
+.project-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--md-sys-color-surface);
+    border-radius: var(--shape-corner-xl);
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.project-image {
+    min-height: 320px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-content {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.project-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Music Player */
+.music-card {
+    background: linear-gradient(135deg, var(--md-sys-color-tertiary-container), #FFEEF4);
+    border-radius: var(--shape-corner-xl);
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.music-art {
+    width: 160px;
+    height: 160px;
+    border-radius: var(--shape-corner-lg);
+    background: var(--color-pink);
+    flex-shrink: 0;
+}
+
+.music-info {
+    flex: 1;
+}
+
+.music-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--md-sys-color-on-tertiary-container);
+    margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 40px;
+    }
+
+    .project-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .music-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px;
+    }
+}

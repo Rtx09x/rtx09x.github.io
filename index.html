@@ -1,296 +1,371 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rudra • Spider-Verse Portfolio</title>
-    <meta name="description" content="Rudra's Spider-Verse themed portfolio - Developer, Researcher, Music Creator">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
+    <title>Rudra Tiwari • Portfolio</title>
+    <meta name="description" content="Developer, Researcher, Music Creator">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Material You + Spider-Verse Theme -->
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/spider-web.css">
-    <link rel="stylesheet" href="./styles/material-you.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Spider Web Canvas Background -->
-    <canvas id="spider-web-canvas"></canvas>
-    
-    <!-- Floating Particles -->
-    <div id="particles-container"></div>
-    
-    <!-- Navigation -->
-    <nav class="nav-container">
-        <div class="nav-content">
-            <div class="nav-links" id="nav-links">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#research" class="nav-link">Research</a>
-                <a href="#music" class="nav-link">Music</a>
-                <a href="#connect" class="nav-link">Connect</a>
-            </div>
-            
-            <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" title="Dark Mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button class="mobile-menu-toggle" id="mobile-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
+
+    <!-- Navigation Dock -->
+    <nav class="nav-dock">
+        <a href="#home" class="nav-item active" data-tooltip="Home"><i class="fas fa-home"></i></a>
+        <a href="#about" class="nav-item" data-tooltip="About"><i class="fas fa-user"></i></a>
+        <a href="#projects" class="nav-item" data-tooltip="Projects"><i class="fas fa-code"></i></a>
+        <a href="#research" class="nav-item" data-tooltip="Research"><i class="fas fa-flask"></i></a>
+        <a href="#music" class="nav-item" data-tooltip="Music"><i class="fas fa-music"></i></a>
+        <a href="#connect" class="nav-item" data-tooltip="Connect"><i class="fas fa-paper-plane"></i></a>
+
+        <div class="dock-divider"></div>
+
+        <button class="nav-item" id="themeToggle" data-tooltip="Toggle Theme"
+            style="border:none; cursor:pointer; background:transparent;">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
     </nav>
-    
-    <!-- Main Content -->
+
     <main>
-        <!-- Hero Section -->
+        <!-- HERO - Full Page -->
         <section id="home" class="hero-section">
             <div class="hero-container">
-                <!-- Left Content -->
-                <div class="hero-left">
-                    <h1 class="hero-title" id="hero-title">
-                        Rudra Tiwari
-                    </h1>
-                    
-                    <div class="hero-subtitle">
-                        <span id="typewriter-text"></span>
-                        <span class="typewriter-cursor">|</span>
+                <div class="hero-content fade-in">
+                    <div style="display:flex; gap:12px; margin-bottom:24px;">
+                        <span class="m3-chip purple">code</span>
+                        <span class="m3-chip lime">research</span>
+                        <span class="m3-chip pink">music</span>
                     </div>
-                    
-                    <div class="hero-tags">
-                        <span class="tag">code</span>
-                        <span class="tag">research</span>
-                    </div>
-                    
-                    <!-- Hero Actions -->
+                    <h1 class="hero-name">Rudra Tiwari</h1>
+                    <p class="hero-subtitle">Full-stack Developer • Published Researcher • Music Producer</p>
+                    <p class="hero-bio">
+                        This is a space where I share things I'm learning and building. I'm a high school student
+                        interested in research, programming, and music, and I enjoy taking ideas seriously enough
+                        to follow them through, even when they're unfinished.
+                    </p>
                     <div class="hero-actions">
-                        <button class="cta-button primary" onclick="scrollToSection('projects')">
-                            <i class="fas fa-bolt"></i>
-                            <span>View Projects</span>
-                        </button>
-                        <button class="cta-button outline" onclick="scrollToSection('connect')">
-                            <i class="fas fa-envelope"></i>
-                            <span>Contact</span>
-                        </button>
-                    </div>
-                    
-                    <!-- Spotify Now Playing -->
-                    <div class="now-playing" id="now-playing">
-                        <div class="now-playing-content">
-                            <i class="fab fa-spotify"></i>
-                            <span class="now-playing-text">Currently vibing to Spotify</span>
-                            <div class="audio-visualizer">
-                                <div class="bar"></div>
-                                <div class="bar"></div>
-                                <div class="bar"></div>
-                            </div>
-                        </div>
+                        <a href="https://doi.org/10.5281/zenodo.18404002" target="_blank" class="m3-button filled"><i
+                                class="fas fa-scroll"></i> My Research Paper</a>
+                        <a href="#projects" class="m3-button tonal"><i class="fas fa-bolt"></i> View Projects</a>
+                        <a href="#connect" class="m3-button outline"><i class="fas fa-envelope"></i> Contact</a>
                     </div>
                 </div>
-                
-                <!-- Right Content -->
-                <div class="hero-right">
-                    <div class="hero-avatar">
-                        <div class="avatar-glow"></div>
-                        <div class="avatar-ring"></div>
-                        <img src="./assets/images/profile.jpg" alt="Rudra" class="avatar-image">
-                        <div class="spider-sense-indicator"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Scroll Indicator -->
-            <div class="scroll-indicator">
-                <div class="scroll-arrow">
-                    <i class="fas fa-chevron-down"></i>
+                <div class="hero-avatar-wrap fade-in">
+                    <div class="hero-avatar" style="background-image: url('./assets/profile.jpg');"></div>
                 </div>
             </div>
         </section>
-        
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <div class="section-header">
+        <!-- ... (rest of main content is unchanged until script) ... -->
+        <!-- ABOUT - Full Page -->
+        <section id="about">
+            <div class="section-inner">
+                <div class="section-header fade-in">
                     <span class="section-tag">Who I Am</span>
                     <h2 class="section-title">About Me</h2>
                 </div>
-                
-                <div class="about-content">
-                    <div class="about-card main-card">
-                        <div class="card-content">
-                            <h3 class="card-title">Me</h3>
-                            <p class="card-text">
-                                Loading bio...
+
+                <div class="about-grid">
+                    <div class="m3-card about-card fade-in">
+                        <h3 class="about-title">Me</h3>
+                        <p style="font-size:17px; line-height:1.8;">
+                            I'm driven by curiosity and a habit of digging into problems a little deeper than necessary.
+                            Most of my interests sit at the intersection of science, technology, and creative work,
+                            where
+                            I enjoy understanding how things work before trying to build on top of them. I tend to
+                            approach
+                            problems from first principles, spending time asking why something behaves the way it does
+                            before moving on to how it can be implemented or improved.
+                        </p>
+                        <p style="font-size:17px; line-height:1.8; margin-top:16px;">
+                            Lately, that curiosity has taken the form of exploring ideas in information theory and
+                            compression,
+                            building small productivity and systems tools, and experimenting with music as another way
+                            of
+                            thinking and expressing ideas. This space is a collection of projects, notes, and
+                            experiments
+                            that reflect what I'm learning over time rather than finished answers. I don't have
+                            everything
+                            figured out, but I enjoy the process of working carefully, questioning assumptions, and
+                            improving
+                            incrementally.
+                        </p>
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:32px;">
+                        <div class="m3-card about-card fade-in">
+                            <h3 class="about-title">Currently</h3>
+                            <p style="font-size:16px; line-height:1.7;">
+                                Exploring machine learning and AGI research. Diving deep into transformer architectures
+                                and neuroscience to bridge artificial and human intelligence.
                             </p>
                         </div>
-                    </div>
-                    
-                    <div class="about-grid">
-                        <div class="about-card">
-                            <div class="card-content">
-                                <h3 class="card-title">Currently</h3>
-                                <p class="card-text">
-                                    Loading current focus...
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="about-card">
-                            <div class="card-content">
-                                <h3 class="card-title">Fun Facts</h3>
-                                <ul class="facts-list">
-                                    <li><i class="fas fa-lightbulb"></i> Loading fun facts...</li>
-                                </ul>
-                            </div>
+                        <div class="m3-card about-card fade-in">
+                            <h3 class="about-title">Fun Facts</h3>
+                            <ul style="list-style:none; display:flex; flex-direction:column; gap:12px;">
+                                <li><span class="m3-chip peach"><i class="fas fa-lightbulb"
+                                            style="margin-right:10px;"></i> INTP personality type</span></li>
+                                <li><span class="m3-chip pink"><i class="fas fa-music" style="margin-right:10px;"></i>
+                                        Planning to rock the stage!</span></li>
+                                <li><span class="m3-chip lime"><i class="fas fa-brain" style="margin-right:10px;"></i>
+                                        Forever analyzing the "why"</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="container">
-                <div class="section-header">
+
+        <!-- PROJECTS - Full Page -->
+        <section id="projects">
+            <div class="section-inner">
+                <div class="section-header fade-in">
                     <span class="section-tag">What I've Built</span>
                     <h2 class="section-title">Projects</h2>
                 </div>
-                
-                <div class="projects-grid" id="projects-grid">
-                    <!-- Projects will be dynamically loaded -->
+
+                <div class="grid-3">
+                    <div class="m3-card project-card fade-in">
+                        <div class="project-icon" style="background:#FFCDD2; color:#C62828;"><i
+                                class="fab fa-youtube"></i></div>
+                        <h3 class="project-title">YouTube TLDR</h3>
+                        <p class="project-desc">A distraction-blocking Chrome extension that intercepts YouTube videos
+                            and redirects you to an AI-generated summary instead.</p>
+                        <div class="project-chips">
+                            <span class="m3-chip purple">Chrome Extension</span>
+                            <span class="m3-chip lime">AI</span>
+                        </div>
+                        <a href="https://github.com/Rtx09x/YouTube-TLDR" target="_blank" class="m3-button outline">View
+                            Source</a>
+                    </div>
+
+                    <div class="m3-card project-card fade-in">
+                        <div class="project-icon" style="background:var(--color-blue); color:#1565C0;"><i
+                                class="fas fa-cat"></i></div>
+                        <h3 class="project-title">Meow Mocks</h3>
+                        <p class="project-desc">A comprehensive web-based mock test platform that uses JSON
+                            configuration files to create customizable exam experiences.</p>
+                        <div class="project-chips">
+                            <span class="m3-chip blue">Web App</span>
+                            <span class="m3-chip peach">Education</span>
+                        </div>
+                        <a href="https://rtx09x.github.io/Meow-Mocks/" target="_blank" class="m3-button outline">Live
+                            Demo</a>
+                    </div>
+
+                    <div class="m3-card project-card fade-in">
+                        <div class="project-icon"
+                            style="background:var(--md-sys-color-primary-container); color:var(--md-sys-color-primary);">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="project-title">AI Research Model</h3>
+                        <p class="project-desc">An upcoming AI model project focused on research applications and
+                            practical implementations in machine learning.</p>
+                        <div class="project-chips">
+                            <span class="m3-chip green">Python</span>
+                            <span class="m3-chip purple">PyTorch</span>
+                        </div>
+                        <span class="m3-button tonal" style="opacity:0.7;">Coming Soon</span>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Research Section -->
-        <section id="research" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">My Work</span>
-                    <h2 class="section-title">Research & Explorations</h2>
+
+        <!-- RESEARCH - Full Page -->
+        <section id="research">
+            <div class="section-inner">
+                <div class="section-header fade-in">
+                    <span class="section-tag">Published Work</span>
+                    <h2 class="section-title">Research & Publications</h2>
                 </div>
-                
-                <div class="research-grid" id="research-grid">
-                    <!-- Research items will be dynamically loaded -->
+
+                <div class="grid-2">
+                    <!-- PUBLISHED PAPER -->
+                    <div class="m3-card project-card fade-in" style="background:var(--md-sys-color-primary-container);">
+                        <div class="project-icon" style="background:var(--md-sys-color-primary); color:white;"><i
+                                class="fas fa-award"></i></div>
+                        <h3 class="project-title">Why "Infinite" Lossless Compression Fails</h3>
+                        <p class="project-desc">A Clarifying Framework — Published on Zenodo, 2026. This paper explores
+                            the theoretical impossibility of infinite lossless compression.</p>
+                        <div class="project-chips">
+                            <span class="m3-chip purple">Published</span>
+                            <span class="m3-chip lime">Zenodo</span>
+                            <span class="m3-chip peach">2026</span>
+                        </div>
+                        <p style="font-size:13px; margin-top:12px; opacity:0.8;">Tiwari, R. (2026). DOI:
+                            10.5281/zenodo.18404002</p>
+                        <a href="https://doi.org/10.5281/zenodo.18404002" target="_blank" class="m3-button filled"
+                            style="margin-top:12px;"><i class="fas fa-external-link-alt"></i> View Paper</a>
+                    </div>
+
+                    <a href="https://github.com/Rtx09x/CuriosityCache" target="_blank" style="text-decoration:none;"
+                        class="m3-card project-card fade-in">
+                        <div class="project-icon" style="background:var(--color-green); color:#1B4D28;"><i
+                                class="fas fa-flask"></i></div>
+                        <h3 class="project-title">CuriosityCache</h3>
+                        <p class="project-desc">Personal Research Collective - A repository of research findings,
+                            insights, and discoveries across multiple domains.</p>
+                        <div class="project-chips">
+                            <span class="m3-chip green">Research</span>
+                            <span class="m3-chip purple">Documentation</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
-        
-        <!-- Music Section -->
-        <section id="music" class="section">
-            <div class="container">
-                <div class="section-header">
+
+        <!-- MUSIC - Full Page with Embedded Players -->
+        <section id="music">
+            <div class="section-inner">
+                <div class="section-header fade-in">
                     <span class="section-tag">My Music</span>
                     <h2 class="section-title">Listen to My Songs</h2>
-                    <p class="section-description">
-                        Explore my musical journey through original compositions that blend electronic elements with heartfelt lyrics.
+                    <p
+                        style="font-size:18px; color:var(--md-sys-color-on-surface-variant); margin-top:16px; max-width:600px;">
+                        Explore my musical journey through original compositions that blend electronic elements with
+                        heartfelt lyrics.
                     </p>
                 </div>
-                
-                <div class="music-grid" id="music-grid">
-                    <!-- Music tracks will be dynamically loaded -->
+
+                <div class="music-grid">
+                    <!-- Spotify Embed -->
+                    <div class="m3-card music-card fade-in">
+                        <h3 style="font-size:24px; font-weight:700;">If Only You Knew</h3>
+                        <p style="opacity:0.8;">Pop/Electronic • 2024</p>
+                        <div class="spotify-embed">
+                            <iframe
+                                src="https://open.spotify.com/embed/track/23BEGzgR0ZwBrQYYtjGwRJ?utm_source=generator&theme=0"
+                                height="152" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- YouTube Embed -->
+                    <div class="m3-card music-card fade-in">
+                        <h3 style="font-size:24px; font-weight:700;">Sometimes I'm Like</h3>
+                        <p style="opacity:0.8;">Alternative/Indie • 2024</p>
+                        <div class="youtube-embed">
+                            <iframe src="https://www.youtube.com/embed/MXl8CvB_rJU" height="200" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="music-platforms">
-                    <a href="https://open.spotify.com/artist/2aC7n1BaEOCEgJknWRnLAj" target="_blank" class="platform-link spotify">
-                        <i class="fab fa-spotify"></i>
-                        <span>Spotify Artist</span>
-                    </a>
-                    <a href="https://www.youtube.com/@rtxmusicx9" target="_blank" class="platform-link youtube">
-                        <i class="fab fa-youtube"></i>
-                        <span>YouTube Channel</span>
-                    </a>
+
+                <div style="display:flex; gap:20px; justify-content:center; margin-top:64px;" class="fade-in">
+                    <a href="https://open.spotify.com/artist/2aC7n1BaEOCEgJknWRnLAj" target="_blank"
+                        class="m3-button filled" style="background:#1DB954;"><i class="fab fa-spotify"></i> Spotify
+                        Artist</a>
+                    <a href="https://www.youtube.com/@rtxmusicx9" target="_blank" class="m3-button filled"
+                        style="background:#FF0000;"><i class="fab fa-youtube"></i> YouTube Channel</a>
                 </div>
             </div>
         </section>
-        
-        <!-- Connect Section -->
-        <section id="connect" class="section">
-            <div class="container">
-                <div class="section-header">
+
+        <!-- CONNECT - Full Page -->
+        <section id="connect">
+            <div class="section-inner">
+                <div class="section-header fade-in">
                     <span class="section-tag">Reach Out</span>
                     <h2 class="section-title">Connect & Activities</h2>
                 </div>
-                
+
                 <div class="connect-grid">
-                    <div class="connect-card primary">
-                        <div class="card-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Get in Touch</h3>
-                        <p>Have a project or research idea? Let's discuss!</p>
-                        <a href="mailto:contactme.rtx@gmail.com" class="connect-link">
-                            contactme.rtx@gmail.com
-                        </a>
+                    <div class="m3-card connect-card fade-in" style="background:var(--md-sys-color-primary-container);">
+                        <div class="connect-icon" style="background:var(--md-sys-color-primary); color:white;"><i
+                                class="fas fa-envelope"></i></div>
+                        <h3 style="font-size:24px; font-weight:700;">Get in Touch</h3>
+                        <p style="font-size:16px;">Have a project or research idea? Let's discuss!</p>
+                        <a href="mailto:contactme.rtx@gmail.com" class="m3-button filled">contactme.rtx@gmail.com</a>
                     </div>
-                    
-                    <div class="connect-card">
-                        <div class="card-icon">
-                            <i class="fab fa-github"></i>
+
+                    <div class="m3-card connect-card fade-in">
+                        <div class="connect-icon" style="background:#24292e; color:white;"><i class="fab fa-github"></i>
                         </div>
-                        <h3>GitHub</h3>
-                        <p>Check out my code and projects</p>
-                        <a href="https://github.com/Rtx09x" target="_blank" class="connect-link">
-                            @Rtx09x
-                        </a>
+                        <h3 style="font-size:24px; font-weight:700;">GitHub</h3>
+                        <p style="font-size:16px;">Check out my code and projects</p>
+                        <a href="https://github.com/Rtx09x" target="_blank" class="m3-button outline">@Rtx09x</a>
                     </div>
-                    
-                    <div class="connect-card">
-                        <div class="card-icon">
-                            <i class="fas fa-mug-hot"></i>
-                        </div>
-                        <h3>Support My Work</h3>
-                        <p>Buy me a coffee if you find my content valuable!</p>
-                        <a href="https://www.buymeacoffee.com/rudratiwari" target="_blank" class="connect-link">
-                            Buy Me a Coffee
-                        </a>
+
+                    <div class="m3-card connect-card fade-in">
+                        <div class="connect-icon" style="background:var(--color-peach); color:#795548;"><i
+                                class="fas fa-mug-hot"></i></div>
+                        <h3 style="font-size:24px; font-weight:700;">Support My Work</h3>
+                        <p style="font-size:16px;">Buy me a coffee if you find my content valuable!</p>
+                        <a href="https://www.buymeacoffee.com/rudratiwari" target="_blank" class="m3-button tonal">Buy
+                            Me a Coffee</a>
                     </div>
                 </div>
-                
-                <!-- Social Links -->
-                <div class="social-links">
-                    <a href="https://github.com/Rtx09x" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://medium.com/@einstien56789" target="_blank" class="social-link">
-                        <i class="fab fa-medium"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@rtxmusicx9" target="_blank" class="social-link">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://open.spotify.com/user/31ttvfbabaimqzh6zgvilugqd7ya" target="_blank" class="social-link">
-                        <i class="fab fa-spotify"></i>
-                    </a>
+
+                <div class="social-row fade-in">
+                    <a href="https://github.com/Rtx09x" target="_blank" class="social-link"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/@rtxmusicx9" target="_blank" class="social-link"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://open.spotify.com/user/31ttvfbabaimqzh6zgvilugqd7ya" target="_blank"
+                        class="social-link"><i class="fab fa-spotify"></i></a>
                 </div>
             </div>
         </section>
     </main>
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; <span id="current-year">2024</span> Rudra Tiwari. Built with ❤️ and lots of coffee.</p>
-                <p class="footer-quote" id="footer-quote">
-                    "The best way to predict the future is to invent it." - Alan Kay
-                </p>
-            </div>
-        </div>
+
+    <footer>
+        <p>© 2025 Rudra Tiwari. Built with ❤️ and lots of coffee.</p>
+        <p style="margin-top:12px; font-style:italic; opacity:0.8;">"The best way to predict the future is to invent
+            it." - Alan Kay</p>
     </footer>
-    
-    <!-- Scripts -->
-    <script src="./js/config.js"></script>
-    <script src="./js/spider-web.js"></script>
-    <script src="./js/typewriter.js"></script>
-    <script src="./js/main.js"></script>
+
+    <script>
+        // Theme Toggle
+        const toggle = document.getElementById('themeToggle');
+        const icon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        // Check saved preference
+        if (localStorage.getItem('theme') === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            icon.className = 'fas fa-sun';
+        }
+
+        toggle.addEventListener('click', () => {
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        });
+
+        // Nav active state
+        const links = document.querySelectorAll('a.nav-item');
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', () => {
+            let current = 'home';
+            sections.forEach(s => { if (scrollY >= s.offsetTop - 300) current = s.id; });
+            links.forEach(l => {
+                l.classList.remove('active');
+                if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+            });
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
+
 </html>

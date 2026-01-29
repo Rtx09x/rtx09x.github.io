@@ -1,0 +1,231 @@
+/* ==============================================
+   RESPONSIVE / MOBILE STYLES
+   ============================================== */
+
+/* Tablet breakpoint (768px and below) */
+@media (max-width: 768px) {
+
+    /* Navigation Dock - Make it fit mobile */
+    .nav-dock {
+        top: auto;
+        bottom: 24px;
+        padding: 10px 16px;
+        gap: 8px;
+        border-radius: 24px;
+    }
+
+    .nav-item {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .dock-divider {
+        height: 20px;
+    }
+
+    /* Hero Section */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 100px 24px 120px;
+    }
+
+    .hero-content {
+        order: 2;
+        align-items: center;
+    }
+
+    .hero-content>div:first-child {
+        justify-content: center;
+    }
+
+    .hero-avatar-wrap {
+        order: 1;
+    }
+
+    .hero-avatar {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-name {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero-bio {
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-actions .m3-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Section layout */
+    section {
+        min-height: auto;
+        padding: 80px 20px 100px;
+    }
+
+    .section-inner {
+        padding: 0;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    /* About Grid */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* Project/Research Grids */
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Cards */
+    .m3-card {
+        padding: 24px;
+    }
+
+    .project-title {
+        font-size: 20px;
+    }
+
+    .project-desc {
+        font-size: 14px;
+    }
+
+    /* Music Section */
+    .music-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .spotify-embed iframe,
+    .youtube-embed iframe {
+        height: 152px;
+    }
+
+    /* Connect Grid */
+    .connect-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .social-row {
+        gap: 16px;
+    }
+
+    .social-link {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 40px 20px;
+    }
+}
+
+/* Small mobile (480px and below) */
+@media (max-width: 480px) {
+    .nav-dock {
+        padding: 8px 12px;
+        gap: 4px;
+    }
+
+    .nav-item {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    /* Hide tooltips on mobile - they don't work well with touch */
+    .nav-item::after {
+        display: none;
+    }
+
+    .hero-name {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .hero-avatar {
+        width: 140px;
+        height: 140px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-tag {
+        font-size: 12px;
+    }
+
+    .m3-card {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .m3-chip {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    .m3-button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .project-chips {
+        flex-wrap: wrap;
+    }
+
+    .about-title {
+        font-size: 20px;
+    }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    section {
+        min-height: auto;
+        padding: 60px 24px;
+    }
+
+    .hero-container {
+        flex-direction: row;
+        padding: 60px 24px;
+    }
+
+    .hero-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-name {
+        font-size: 36px;
+    }
+}

@@ -1,0 +1,362 @@
+/* Section Specific Styles - POLISHED Tonal Surfaces */
+
+/* ============================================
+   HERO / ABOUT SECTION
+   ============================================ */
+#about {
+    align-items: center;
+    background: radial-gradient(ellipse at 50% 0%, rgba(79, 55, 139, 0.15) 0%, transparent 60%),
+        var(--md-sys-color-surface-dim);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative blob */
+#about::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(208, 188, 255, 0.08) 0%, transparent 70%);
+    top: -200px;
+    right: -200px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--md-sys-color-surface-container-high) 0%, var(--md-sys-color-surface-container) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    overflow: hidden;
+    border: 3px solid var(--md-sys-color-outline-variant);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.hero-avatar span {
+    font-size: 100px !important;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.hero-tagline {
+    max-width: 500px;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+/* ============================================
+   RESEARCH SECTION - Sage Tonal
+   ============================================ */
+#research {
+    background: linear-gradient(180deg, rgba(18, 21, 20, 1) 0%, rgba(14, 18, 17, 1) 100%);
+    position: relative;
+}
+
+#research::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(188, 207, 205, 0.06) 0%, transparent 70%);
+    bottom: -100px;
+    left: -100px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.section-header {
+    margin-bottom: 48px;
+}
+
+.section-header h2 {
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.research-card {
+    background: linear-gradient(135deg, var(--md-sys-color-secondary-container) 0%, rgba(62, 76, 75, 0.9) 100%);
+    color: var(--md-sys-color-on-secondary-container);
+    border-radius: 28px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid rgba(188, 207, 205, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.research-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(188, 207, 205, 0.15);
+}
+
+.research-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ============================================
+   PROJECTS SECTION - Default Blue-ish
+   ============================================ */
+#projects {
+    background: var(--md-sys-color-surface-container-lowest);
+    position: relative;
+}
+
+#projects::before {
+    content: '';
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(208, 188, 255, 0.04) 0%, transparent 60%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.project-card {
+    background: var(--md-sys-color-surface-container);
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+    border-color: var(--md-sys-color-primary);
+}
+
+.project-image {
+    height: 160px;
+    background: linear-gradient(135deg, var(--md-sys-color-surface-container-high) 0%, var(--md-sys-color-surface-container-highest) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--md-sys-color-on-surface-variant);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.project-image span {
+    font-size: 56px !important;
+    opacity: 0.7;
+}
+
+.project-details {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tech-chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+/* ============================================
+   MUSIC SECTION - Warm Pink Tonal
+   ============================================ */
+#music {
+    background: linear-gradient(180deg, rgba(26, 17, 21, 1) 0%, rgba(20, 12, 16, 1) 100%);
+    position: relative;
+}
+
+#music::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(239, 184, 200, 0.08) 0%, transparent 60%);
+    top: -100px;
+    right: -100px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.music-player-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.music-player-full {
+    background: linear-gradient(135deg, var(--md-sys-color-tertiary-container) 0%, rgba(99, 59, 72, 0.9) 100%);
+    color: var(--md-sys-color-on-tertiary-container);
+    border-radius: 32px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid rgba(239, 184, 200, 0.2);
+    box-shadow: 0 16px 64px rgba(239, 184, 200, 0.1);
+}
+
+.album-art-large {
+    width: 180px;
+    height: 180px;
+    border-radius: 24px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.album-art-large span {
+    font-size: 72px !important;
+    opacity: 0.9;
+}
+
+.player-controls {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.track-meta h3 {
+    margin-bottom: 4px;
+}
+
+.track-meta p {
+    opacity: 0.7;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    width: 45%;
+    height: 100%;
+    background: currentColor;
+    border-radius: 2px;
+    transition: width 0.3s;
+}
+
+.control-buttons-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.control-btn {
+    font-size: 28px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 8px;
+}
+
+.control-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.play-fab {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    background: var(--md-sys-color-on-tertiary-container);
+    color: var(--md-sys-color-tertiary-container);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.play-fab:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+}
+
+.play-fab span {
+    font-size: 32px !important;
+}
+
+.streaming-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+/* Responsive Music */
+@media (max-width: 700px) {
+    .music-player-full {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 24px;
+        gap: 24px;
+    }
+
+    .control-buttons-row {
+        justify-content: center;
+    }
+
+    .streaming-links {
+        justify-content: center;
+    }
+}
