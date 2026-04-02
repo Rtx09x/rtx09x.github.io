@@ -72,6 +72,12 @@
         justify-content: center;
     }
 
+    .project-actions .m3-button,
+    .music-links .m3-button {
+        width: 100%;
+        justify-content: center;
+    }
+
     /* Section layout */
     section {
         min-height: auto;
@@ -97,6 +103,15 @@
     .grid-3 {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .research-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .research-featured {
+        grid-column: auto;
     }
 
     /* Cards */
@@ -131,6 +146,16 @@
 
     .social-row {
         gap: 16px;
+    }
+
+    .music-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .video-preview-media,
+    .video-preview-overlay {
+        min-height: 190px;
     }
 
     .social-link {
