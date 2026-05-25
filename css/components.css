@@ -195,6 +195,21 @@
     flex-wrap: wrap;
 }
 
+.hero-action-break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.hero-social {
+    padding: 13px 24px;
+}
+
+.hero-social-icon {
+    width: 54px;
+    padding-inline: 0;
+    justify-content: center;
+}
+
 .body-copy {
     font-size: 17px;
     line-height: 1.8;
@@ -245,6 +260,20 @@
     min-height: 320px;
 }
 
+.org-label {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
 .featured-project {
     position: relative;
     overflow: hidden;
@@ -266,6 +295,16 @@
     align-items: center;
     justify-content: center;
     font-size: 28px;
+}
+
+.org-logo {
+    width: 76px;
+    height: 76px;
+    border-radius: 24px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    box-shadow: var(--shadow-sm);
 }
 
 .project-title {
@@ -421,14 +460,14 @@
 /* Connect - BIGGER */
 .connect-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
 }
 
 .connect-card {
     text-align: center;
-    padding: 48px 32px;
-    min-height: 280px;
+    padding: 40px 28px;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -447,6 +486,13 @@
     color: var(--md-sys-color-on-surface-variant);
 }
 
+.connect-card .m3-button {
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
 .connect-icon {
     width: 80px;
     height: 80px;
@@ -455,6 +501,14 @@
     align-items: center;
     justify-content: center;
     font-size: 36px;
+}
+
+.x-mark {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.82em;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0;
 }
 
 /* Social Links */
@@ -564,24 +618,38 @@ footer {
     }
 }
 
+@media (max-width: 1200px) and (min-width: 901px) {
+    .connect-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 /* NAVIGATION DOCK - The Control Center */
 .nav-dock {
     position: fixed;
     top: 32px;
     left: 50%;
     transform: translateX(-50%);
+    max-width: calc(100vw - 32px);
     background: var(--md-sys-color-surface);
     border-radius: var(--shape-full);
     padding: 12px 24px;
     display: flex;
     align-items: center;
     gap: 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
     box-shadow: var(--shadow-lg);
     z-index: 1000;
     border: 1px solid var(--md-sys-color-outline);
 }
 
+.nav-dock::-webkit-scrollbar {
+    display: none;
+}
+
 .nav-item {
+    flex: 0 0 auto;
     text-decoration: none;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 24px;
