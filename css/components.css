@@ -331,6 +331,16 @@
     transform: translateX(-50%) scale(1);
 }
 
+[data-theme="dark"] .dock {
+    background: #2a2438;
+    border-color: #5c5270;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .dock-item {
+    color: #E6E1E5;
+}
+
 /* ---------- Footer ---------- */
 footer {
     padding: 56px var(--gutter) 72px;

@@ -85,12 +85,17 @@
 .hero-portrait {
     width: min(320px, 72vw);
     aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center 20%;
     border-radius: 30%;
-    background-image: url('../assets/profile.jpg');
-    background-size: cover;
-    background-position: center 20%;
+    display: block;
+    background: #1b1724;
     box-shadow: 0 24px 80px rgba(103, 80, 164, 0.28);
     animation: float 7s ease-in-out infinite;
+}
+
+[data-theme="dark"] .hero-portrait {
+    box-shadow: 0 0 0 3px rgba(208, 188, 255, 0.45), 0 24px 80px rgba(0, 0, 0, 0.55);
 }
 
 @keyframes float {

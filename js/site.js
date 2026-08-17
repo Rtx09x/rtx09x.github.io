@@ -55,15 +55,15 @@
     const p = d.profile;
     document.getElementById('home').innerHTML = `
         <div class="section-inner hero-grid">
-            <div class="hero-main reveal">
+            <div class="hero-main">
                 <h1 class="display hero-name">${esc(p.name)}</h1>
                 <p class="hero-role">${esc(p.role)}</p>
                 <p class="body hero-bio">${esc(p.bio)}</p>
                 <div class="hero-ctas">${p.ctas.map(btn).join('')}</div>
                 <div class="hero-socials">${p.socials.map(socialIcon).join('')}</div>
             </div>
-            <div class="hero-portrait-wrap reveal">
-                <div class="hero-portrait" role="img" aria-label="Portrait of ${esc(p.name)}"></div>
+            <div class="hero-portrait-wrap">
+                <img class="hero-portrait" src="assets/profile.jpg" alt="Portrait of ${esc(p.name)}" width="640" height="640">
             </div>
         </div>`;
 
@@ -361,8 +361,16 @@
     }, { passive: true });
     spy();
 
-    /* Reveal on scroll */
-    const revealEls = document.querySelectorAll('.reveal');
+    /* Reveal on scroll — never leave the page blank */
+    const revealEls = [...document.querySelectorAll('.reveal')];
+    const showVisible = () => {
+        const vh = window.innerHeight;
+        revealEls.forEach((el) => {
+            const r = el.getBoundingClientRect();
+            if (r.top < vh + 120 && r.bottom > -80) el.classList.add('in');
+        });
+    };
+    showVisible();
     if (reduced || !('IntersectionObserver' in window)) {
         revealEls.forEach((el) => el.classList.add('in'));
     } else {
@@ -370,8 +378,9 @@
             entries.forEach((e) => {
                 if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
             });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-        revealEls.forEach((el) => io.observe(el));
+        }, { threshold: 0.01, rootMargin: '80px 0px 80px 0px' });
+        revealEls.forEach((el) => { if (!el.classList.contains('in')) io.observe(el); });
+        setTimeout(() => revealEls.forEach((el) => el.classList.add('in')), 1800);
     }
 
     /* Rail arrow buttons + drag-to-scroll (desktop), links stay clickable */
