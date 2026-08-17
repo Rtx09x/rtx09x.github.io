@@ -63,7 +63,7 @@
                 <div class="hero-socials">${p.socials.map(socialIcon).join('')}</div>
             </div>
             <div class="hero-portrait-wrap">
-                <img class="hero-portrait" src="assets/profile.jpg" alt="Portrait of ${esc(p.name)}" width="640" height="640">
+                <img class="hero-portrait" src="assets/profile.jpg" alt="Portrait of ${esc(p.name)}" width="320" height="320" style="width:min(320px,72vw);height:min(320px,72vw);object-fit:cover;flex:none">
             </div>
         </div>`;
 
