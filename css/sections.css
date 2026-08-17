@@ -80,14 +80,17 @@
 .hero-portrait-wrap {
     display: flex;
     justify-content: center;
+    align-items: center;
+    align-self: center;
 }
 
 .hero-portrait {
     width: min(320px, 72vw);
-    aspect-ratio: 1;
+    height: min(320px, 72vw);
+    flex: 0 0 auto;
     object-fit: cover;
     object-position: center 20%;
-    border-radius: 30%;
+    border-radius: 36%;
     display: block;
     background: #1b1724;
     box-shadow: 0 24px 80px rgba(103, 80, 164, 0.28);
@@ -636,7 +639,10 @@
     }
 
     .hero-portrait-wrap { order: -1; justify-content: flex-start; }
-    .hero-portrait { width: min(220px, 62vw); }
+    .hero-portrait {
+        width: min(220px, 62vw);
+        height: min(220px, 62vw);
+    }
 
     .about-grid,
     .work-grid,
