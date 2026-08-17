@@ -1,4 +1,7 @@
-/* Layout - FULL PAGE SECTIONS */
+/* ============================================================
+   LAYOUT — Full-viewport sections, proximity snap
+   Short sections fill the screen; taller ones grow.
+   ============================================================ */
 
 * {
     box-sizing: border-box;
@@ -9,92 +12,95 @@
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
+    scroll-padding-top: 0;
 }
 
 body {
-    background: var(--md-sys-color-background);
-    color: var(--md-sys-color-on-background);
-    font-family: 'Outfit', sans-serif;
-    transition: background 0.3s, color 0.3s;
+    background: var(--bg);
+    color: var(--ink);
+    transition: background var(--dur-2) var(--ease), color var(--dur-2) var(--ease);
 }
 
-/* FULL PAGE SECTIONS - No overlap */
+::selection {
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+}
+
+main {
+    display: block;
+}
+
+/* Full-viewport sections — one screen, then the next */
 section {
-    min-height: 100vh;
-    width: 100%;
+    min-height: 100dvh;
+    padding: 108px var(--gutter) 56px;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 80px 48px;
+    justify-content: safe center;
     scroll-snap-align: start;
-    position: relative;
+    scroll-snap-stop: normal;
+}
+
+#home.hero {
+    padding-top: 120px;
 }
 
 .section-inner {
-    max-width: 1200px;
+    max-width: 1180px;
     margin: 0 auto;
     width: 100%;
 }
 
-/* Section Headers - BIGGER */
-.section-header {
-    margin-bottom: 64px;
+/* Hairline rule between sections */
+section + section {
+    border-top: 1px solid var(--line);
 }
 
-.section-tag {
-    display: inline-block;
-    padding: 10px 24px;
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    border-radius: var(--shape-full);
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+/* Section header block */
+/* Section header — no pills, plain eyebrow text */
+.section-head {
+    margin-bottom: clamp(40px, 6vw, 60px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
-.section-title {
-    font-size: 56px;
-    font-weight: 800;
-    line-height: 1.1;
+.section-head .h2 {
+    max-width: 16ch;
 }
 
-
-/* Grids */
-.grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+/* Focus visible for keyboard users */
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: var(--r-xs);
 }
 
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+/* Reduced motion: honor user preference globally */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+        scroll-snap-type: none;
+    }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 760px) {
+    html { scroll-padding-top: 0; }
+
     section {
-        padding: 60px 24px;
+        min-height: 100dvh;
+        padding: 40px var(--gutter) 108px;
+        justify-content: flex-start;
     }
 
-    .section-title {
-        font-size: 40px;
-    }
-
-    .grid-2,
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-float {
-        padding: 6px 8px;
-        gap: 2px;
-    }
-
-    .nav-link {
-        padding: 10px 14px;
-        font-size: 13px;
+    #home.hero {
+        padding-top: 32px;
+        padding-bottom: 108px;
     }
 }

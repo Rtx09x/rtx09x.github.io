@@ -1,2 +1,3 @@
 # rtx09x.github.io
-My Personal Website
+
+Personal site. Copy lives in `content.json`; `js/site.js` renders it.

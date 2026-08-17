@@ -1,0 +1,692 @@
+{
+  "profile": {
+    "name": "Rudra Tiwari",
+    "role": "Building agent infrastructure & scientific ML systems",
+    "bio": "I build tools and research systems for coding agents, developers, and scientific discovery. Current work includes ANCP for agent-native compiler interaction, TRIADS for materials ML, and practical infrastructure for real developer workflows.",
+    "tags": [],
+    "ctas": [
+      {
+        "label": "View ANCP",
+        "url": "https://github.com/TwentySevenLabs/ancp",
+        "style": "solid",
+        "fa": "fas fa-code-branch"
+      },
+      {
+        "label": "Read TRIADS",
+        "url": "https://doi.org/10.5281/zenodo.19200579",
+        "style": "soft",
+        "fa": "fas fa-scroll"
+      }
+    ],
+    "portrait": "squarish",
+    "socials": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Rtx09x",
+        "icon": "assets/icons/color--github.png"
+      },
+      {
+        "label": "ORCID",
+        "url": "https://orcid.org/0009-0004-8521-7627",
+        "icon": "assets/icons/brands/orcid-official.svg"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/rtx09x/",
+        "icon": "assets/icons/color--linkedin.png"
+      },
+      {
+        "label": "X",
+        "url": "https://x.com/Rtx09x",
+        "x": false,
+        "icon": "assets/icons/color--twitterx.png"
+      }
+    ],
+    "status": "Open to research conversations and collaborations"
+  },
+  "about": {
+    "tag": "Who I am",
+    "title": "About",
+    "body": [
+      "I build public systems across agent infrastructure, developer tooling, scientific machine learning, and focused product experiments. The common thread is turning messy workflows into something concrete: protocols agents can use, models researchers can test, and tools developers can actually run.",
+      "I operate this work through both my personal account and independent orgs: TwentySevenLabs for agent/dev infrastructure, Catalyst Zero Research for materials and scientific ML, and Rtx09x for experiments, apps, research notes, and fast shipping.",
+      "Away from the terminal, I am still usually building something: RC planes, PC builds, hardware setups, videos, songs, and whatever new rabbit hole is too interesting to leave alone."
+    ],
+    "focus": [
+      {
+        "k": "Agent infrastructure",
+        "v": "ANCP, provider routing, and executable agent skills."
+      },
+      {
+        "k": "Scientific ML",
+        "v": "TRIADS, Matbench workflows, and materials-discovery research."
+      },
+      {
+        "k": "Side quests",
+        "v": "RC aircraft, PC hardware, video edits, music, and tiny tools."
+      }
+    ],
+    "signals": [
+      {
+        "label": "Agent systems",
+        "tone": "violet"
+      },
+      {
+        "label": "Python",
+        "tone": "sage"
+      },
+      {
+        "label": "TypeScript",
+        "tone": "sky"
+      },
+      {
+        "label": "Machine learning",
+        "tone": "violet"
+      },
+      {
+        "label": "Materials science",
+        "tone": "moss"
+      },
+      {
+        "label": "Open research",
+        "tone": "rose"
+      },
+      {
+        "label": "Developer tools",
+        "tone": "clay"
+      },
+      {
+        "label": "RC planes",
+        "tone": "sky"
+      },
+      {
+        "label": "PC builds",
+        "tone": "clay"
+      },
+      {
+        "label": "Music",
+        "tone": "rose"
+      }
+    ]
+  },
+  "work": {
+    "tag": "Selected work",
+    "title": "Work",
+    "lede": "Agent infrastructure, scientific ML, and tools that are useful outside the demo.",
+    "featured": [
+      {
+        "org": "TwentySevenLabs",
+        "name": "ANCP",
+        "iconBg": "#EADDFF",
+        "iconColor": "#4F378B",
+        "desc": "Agent Native Compiler Protocol: an open, spec-first protocol that gives coding agents a stable machine-readable interface for compiler diagnostics, repair plans, safe fixes, and verification loops across languages.",
+        "tags": [
+          {
+            "label": "Protocol",
+            "tone": "violet"
+          },
+          {
+            "label": "Coding agents",
+            "tone": "moss"
+          },
+          {
+            "label": "Python",
+            "tone": "sky"
+          }
+        ],
+        "links": [
+          {
+            "label": "Source",
+            "url": "https://github.com/TwentySevenLabs/ancp",
+            "style": "solid"
+          }
+        ],
+        "fa": "fas fa-code-branch"
+      },
+      {
+        "org": "Rtx09x",
+        "name": "TRIADS",
+        "iconBg": "#DDEFE1",
+        "iconColor": "#1F5E34",
+        "desc": "A parameter-efficient recursive attention architecture for materials-property prediction in small-data regimes. Code, pretrained weights, and benchmark results paired with a linked Zenodo preprint.",
+        "tags": [
+          {
+            "label": "PyTorch",
+            "tone": "violet"
+          },
+          {
+            "label": "Research software",
+            "tone": "clay"
+          },
+          {
+            "label": "Materials ML",
+            "tone": "sage"
+          }
+        ],
+        "links": [
+          {
+            "label": "Source",
+            "url": "https://github.com/Rtx09x/TRIADS",
+            "style": "solid"
+          },
+          {
+            "label": "Preprint",
+            "url": "https://doi.org/10.5281/zenodo.19200579",
+            "style": "line"
+          }
+        ],
+        "fa": "fas fa-microscope"
+      }
+    ],
+    "archive": [
+      {
+        "name": "Agentic Provider Gateway",
+        "org": "TwentySevenLabs",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0",
+        "desc": "Provider-agnostic model infrastructure: routing, adapters, capability metadata, structured outputs, normalized tool calls, streaming, usage accounting, trace storage.",
+        "tags": [
+          {
+            "label": "Python",
+            "tone": "sky"
+          },
+          {
+            "label": "LLM infra",
+            "tone": "clay"
+          }
+        ],
+        "url": "https://github.com/TwentySevenLabs/agentic-provider-gateway",
+        "fa": "fas fa-network-wired"
+      },
+      {
+        "name": "Agentic Skills",
+        "org": "Rtx09x",
+        "iconBg": "#FFF0D1",
+        "iconColor": "#8A4D00",
+        "desc": "High-agency agent skills for executable specs and end-to-end shipping — the public skill layer behind clearer planning and ship-ready workflows.",
+        "tags": [
+          {
+            "label": "Agent skills",
+            "tone": "clay"
+          },
+          {
+            "label": "Specs",
+            "tone": "violet"
+          }
+        ],
+        "url": "https://github.com/Rtx09x/agentic-skills",
+        "fa": "fas fa-toolbox"
+      },
+      {
+        "name": "Munchkin",
+        "org": "Rtx09x",
+        "iconBg": "#EADDFF",
+        "iconColor": "#4F378B",
+        "desc": "Cross-platform multi-account manager for Codex, Gemini, and Qwen CLIs with encrypted storage, fast switching, quota tracking, and load balancing.",
+        "tags": [
+          {
+            "label": "TypeScript",
+            "tone": "violet"
+          },
+          {
+            "label": "CLI",
+            "tone": "moss"
+          }
+        ],
+        "url": "https://github.com/Rtx09x/munchkin",
+        "fa": "fas fa-shuffle"
+      },
+      {
+        "name": "supergit",
+        "org": "Rtx09x",
+        "iconBg": "#DDEFE1",
+        "iconColor": "#1F5E34",
+        "desc": "Lightweight terminal Git assistant: init, commits, sync, branch switching, and undo flows with guided prompts and safer defaults.",
+        "tags": [
+          {
+            "label": "Go",
+            "tone": "sage"
+          },
+          {
+            "label": "CLI",
+            "tone": "clay"
+          }
+        ],
+        "url": "https://github.com/Rtx09x/supergit",
+        "fa": "fas fa-terminal"
+      },
+      {
+        "name": "CuriosityCache",
+        "org": "Rtx09x",
+        "iconBg": "#DDEFE1",
+        "iconColor": "#1F5E34",
+        "desc": "Public research notebook and knowledge garden: AI, compression, neuroscience, transformers, and adjacent topics feeding longer projects.",
+        "tags": [
+          {
+            "label": "Notes",
+            "tone": "sage"
+          },
+          {
+            "label": "Obsidian",
+            "tone": "sky"
+          }
+        ],
+        "url": "https://github.com/Rtx09x/CuriosityCache",
+        "fa": "fas fa-book-open"
+      },
+      {
+        "name": "Piko",
+        "org": "Rtx09x",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0",
+        "desc": "Tiny AI focus companion for Chrome. Lightweight, focused, and easy to try.",
+        "tags": [
+          {
+            "label": "Extension",
+            "tone": "sky"
+          },
+          {
+            "label": "AI",
+            "tone": "moss"
+          }
+        ],
+        "url": "https://github.com/Rtx09x/piko",
+        "fa": "fas fa-seedling"
+      },
+      {
+        "name": "Parameter Golf",
+        "org": "Rtx09x",
+        "iconBg": "#FFF0D1",
+        "iconColor": "#8A4D00",
+        "desc": "OpenAI Parameter Golf work: small LM training, compression constraints, and PR-frontier analysis under the 16MB limit.",
+        "tags": [
+          {
+            "label": "Compression",
+            "tone": "clay"
+          },
+          {
+            "label": "LLMs",
+            "tone": "violet"
+          }
+        ],
+        "url": "https://github.com/Rtx09x/parameter-golf",
+        "fa": "fas fa-golf-ball-tee"
+      },
+      {
+        "name": "Meow-Mocks",
+        "org": "Rtx09x",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0",
+        "desc": "Web-based mock test platform driven by JSON exam definitions: timed exams, review flow, results breakdowns, analysis views.",
+        "tags": [
+          {
+            "label": "Web app",
+            "tone": "sky"
+          },
+          {
+            "label": "Education",
+            "tone": "clay"
+          }
+        ],
+        "url": "https://github.com/Rtx09x/Meow-Mocks",
+        "fa": "fas fa-graduation-cap"
+      },
+      {
+        "name": "YouTube TLDR",
+        "org": "Rtx09x",
+        "iconBg": "#FFCDD2",
+        "iconColor": "#C62828",
+        "desc": "Distraction-blocking Chrome extension that redirects YouTube viewing into an AI-generated summary first.",
+        "tags": [
+          {
+            "label": "Extension",
+            "tone": "violet"
+          },
+          {
+            "label": "Productivity",
+            "tone": "clay"
+          }
+        ],
+        "url": "https://github.com/Rtx09x/YouTube-TLDR",
+        "fa": "fab fa-youtube"
+      }
+    ]
+  },
+  "labs": {
+    "tag": "Organizations",
+    "title": "Labs I operate",
+    "lede": "Separate homes for infrastructure work and scientific research, connected by the same long-term direction.",
+    "items": [
+      {
+        "name": "TwentySevenLabs",
+        "role": "Founder & operator",
+        "desc": "Independent lab for agent infrastructure, developer tools, protocols, and practical AI systems. ANCP and Agentic Provider Gateway live here.",
+        "logo": "https://avatars.githubusercontent.com/u/279220831?v=4",
+        "tags": [
+          {
+            "label": "Agent infrastructure",
+            "tone": "sky"
+          },
+          {
+            "label": "Developer tools",
+            "tone": "clay"
+          }
+        ],
+        "url": "https://github.com/TwentySevenLabs"
+      },
+      {
+        "name": "Catalyst Zero Research",
+        "role": "Founder & operator",
+        "desc": "Research umbrella for materials science, scientific ML, and AI-native research systems — the clean home for Catalyst-branded material-discovery work.",
+        "logo": "https://avatars.githubusercontent.com/u/282262503?v=4",
+        "tags": [
+          {
+            "label": "Materials science",
+            "tone": "moss"
+          },
+          {
+            "label": "Scientific ML",
+            "tone": "violet"
+          }
+        ],
+        "url": "https://github.com/Catalyst-Zero-Research"
+      }
+    ]
+  },
+  "research": {
+    "tag": "Research",
+    "title": "Research & writing",
+    "lede": "Preprints, artifacts, and research directions behind the public work.",
+    "featured": {
+      "org": "Rtx09x · Preprint · 2026",
+      "name": "TRIADS: Tiny Recursive Information-Attention with Deep Supervision",
+      "desc": "A recursive, parameter-efficient architecture for materials-property prediction in small-data settings, combining weight-tied reasoning, deep supervision, and physics-informed features.",
+      "note": "Rudra Tiwari · DOI: 10.5281/zenodo.19200579",
+      "links": [
+        {
+          "label": "View preprint",
+          "url": "https://doi.org/10.5281/zenodo.19200579",
+          "style": "solid"
+        },
+        {
+          "label": "Model artifacts",
+          "url": "https://huggingface.co/Rtx09x/TRIADS",
+          "style": "line"
+        }
+      ],
+      "fa": "fas fa-scroll",
+      "iconBg": "#6750A4",
+      "iconColor": "#ffffff"
+    },
+    "list": [
+      {
+        "year": "2026",
+        "title": "Why “Infinite” Lossless Compression Fails",
+        "sub": "Zenodo · Information theory · DOI: 10.5281/zenodo.18404002",
+        "url": "https://doi.org/10.5281/zenodo.18404002"
+      },
+      {
+        "year": "2026",
+        "title": "TRIADS: Tiny Recursive Information-Attention with Deep Supervision",
+        "sub": "Zenodo · Materials ML · DOI: 10.5281/zenodo.19200579",
+        "url": "https://doi.org/10.5281/zenodo.19200579"
+      },
+      {
+        "year": "Ongoing",
+        "title": "CuriosityCache — public research notebook",
+        "sub": "AI, compression, neuroscience, transformers",
+        "url": "https://github.com/Rtx09x/CuriosityCache"
+      }
+    ]
+  },
+  "blogs": {
+    "tag": "Notes",
+    "title": "Blogs",
+    "lede": "Informal writing — personal essays, small stories, and the parts of the work that don't belong in a paper.",
+    "profile": "https://medium.com/@Rtx09x",
+    "posts": [
+      {
+        "title": "A Small Pocket of Life",
+        "sub": "On finding words for something I had already believed for a long time.",
+        "date": "Aug 2026",
+        "url": "https://rtx09x.medium.com/a-small-pocket-of-life-f7924408817c",
+        "image": "https://cdn-images-1.medium.com/max/800/1*vL3Gvxwos8WfGlyEdoik0w.png"
+      },
+      {
+        "title": "The Pictures Make It Look Like an Event",
+        "sub": "Five people, one laptop, two venue changes, and what my first attempt at building an AI community actually felt like.",
+        "date": "Aug 2026",
+        "url": "https://rtx09x.medium.com/the-pictures-make-it-look-like-an-event-8f15a738c586",
+        "image": "https://cdn-images-1.medium.com/max/800/1*vzZvWjuSOj_Qxl7QXNpPKw.jpeg"
+      },
+      {
+        "title": "Your Perfect Prompt Is Flattening Your Mind",
+        "sub": "The most important skill in the AI era is not writing better instructions. It is learning how to make your intention survive the journey into another intelligence.",
+        "date": "Jul 2026",
+        "url": "https://rtx09x.medium.com/your-perfect-prompt-is-flattening-your-mind-7c5e0b28695e",
+        "image": "https://cdn-images-1.medium.com/max/800/1*0DRClSgiYHPgHojV1XimsQ.png"
+      },
+      {
+        "title": "The Bottle I Lost Wasn't Empty",
+        "sub": "A story about a conference, a fever, an award, and the first object I carried after I stopped feeling invisible.",
+        "date": "Jul 2026",
+        "url": "https://rtx09x.medium.com/the-bottle-i-lost-wasnt-empty-7dd17e5cea14",
+        "image": "https://cdn-images-1.medium.com/max/800/1*DuhYABon3cECQXRbyhj04g.jpeg"
+      }
+    ]
+  },
+  "updates": {
+    "tag": "Latest",
+    "title": "Updates",
+    "lede": "Recent public proof — awards, hackathons, and ships that show the work is active.",
+    "items": [
+      {
+        "date": "2026",
+        "title": "Selected for OpenAI × Outskill AI Builders Hackathon",
+        "desc": "Selected from thousands of applicants for a 7-day shipping-focused hackathon. Building Catalyst: a materials-science knowledge graph connecting crystal structures, properties, synthesis pathways, and literature.",
+        "url": "https://www.linkedin.com/posts/rtx09x_ai-materialsscience-openai-share-7464527172666363904-mtLG/",
+        "icon": "assets/icons/brands/openai.svg",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0",
+        "icon2": "assets/icons/brands/outskill-mark.png"
+      },
+      {
+        "date": "2026",
+        "title": "Learning on Graphs New Delhi 2026 Award",
+        "desc": "Award at the Learning on Graphs meetup hosted at IIT Delhi — researchers, professors, and industry leaders around AI, graph learning, and materials science. Later reposted by Mastercard.",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7443731485163008000/",
+        "icon": "assets/icons/brands/log-icon.png",
+        "iconBg": "#FFF0D1",
+        "iconColor": "#8A4D00"
+      },
+      {
+        "date": "2026",
+        "title": "Emergent × Masters' Union Hackathon",
+        "desc": "Built an AI research system for materials science that searches papers, journals, repositories, patents, datasets, and web sources to surface candidate materials.",
+        "url": "https://www.linkedin.com/posts/rtx09x_ai-materialscience-deeptech-ugcPost-7463925714376085504-WrDQ/",
+        "icon": "assets/icons/brands/emergent.png",
+        "iconBg": "#EADDFF",
+        "iconColor": "#4F378B"
+      },
+      {
+        "date": "2026",
+        "title": "Shipped ANCP",
+        "desc": "Published the Agent Native Compiler Protocol as an open spec and Python reference implementation for agent-native compiler interaction, repair plans, and verification loops.",
+        "url": "https://github.com/TwentySevenLabs/ancp",
+        "icon": "assets/icons/brands/twentysevenlabs.png",
+        "iconBg": "#DDEFE1",
+        "iconColor": "#1F5E34"
+      }
+    ]
+  },
+  "creative": {
+    "tag": "Creative + hardware",
+    "title": "Outside the terminal",
+    "lede": "Songs, videos, RC planes, and PC builds. Different materials, same habit: make the idea real enough to test.",
+    "cards": [
+      {
+        "type": "spotify",
+        "title": "If Only You Knew",
+        "sub": "Pop / Electronic · 2024",
+        "embed": "https://open.spotify.com/embed/track/23BEGzgR0ZwBrQYYtjGwRJ?utm_source=generator&theme=0"
+      },
+      {
+        "type": "video",
+        "title": "Sometimes I'm Like",
+        "sub": "Alternative / Indie · 2024 · Video work",
+        "url": "https://www.youtube.com/watch?v=MXl8CvB_rJU",
+        "thumb": "https://img.youtube.com/vi/MXl8CvB_rJU/hqdefault.jpg"
+      },
+      {
+        "type": "text",
+        "title": "RC Planes",
+        "desc": "I build and tinker with RC aircraft. Same builder loop as software: design, assemble, test, crash into reality, fix, repeat.",
+        "fa": "fas fa-plane",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0"
+      },
+      {
+        "type": "text",
+        "title": "Hardware & PC builds",
+        "desc": "Hardware, PC building, setups, and the physical side of computing. Software is better when you respect the machine it runs on.",
+        "fa": "fas fa-computer",
+        "iconBg": "#FFF0D1",
+        "iconColor": "#8A4D00"
+      }
+    ],
+    "links": [
+      {
+        "label": "Spotify Artist",
+        "url": "https://open.spotify.com/artist/2aC7n1BaEOCEgJknWRnLAj",
+        "icon": "assets/icons/color--spotify.png",
+        "style": "spotify"
+      },
+      {
+        "label": "YouTube Channel",
+        "url": "https://www.youtube.com/@rtxmusicx9",
+        "icon": "assets/icons/color--youtube-play.png",
+        "style": "youtube"
+      }
+    ]
+  },
+  "connect": {
+    "tag": "Reach out",
+    "title": "Connect",
+    "lede": "The main places to find code, research artifacts, updates, and creative work.",
+    "items": [
+      {
+        "name": "Email",
+        "handle": "contactme.rtx@gmail.com",
+        "url": "mailto:contactme.rtx@gmail.com",
+        "icon": "assets/icons/gmail-2026.svg",
+        "iconBg": "#6750A4",
+        "iconColor": "#ffffff",
+        "primary": true
+      },
+      {
+        "name": "GitHub",
+        "handle": "@Rtx09x",
+        "url": "https://github.com/Rtx09x",
+        "icon": "assets/icons/color--github.png",
+        "iconBg": "#24292e",
+        "iconColor": "#ffffff"
+      },
+      {
+        "name": "ORCID",
+        "handle": "0009-0004-8521-7627",
+        "url": "https://orcid.org/0009-0004-8521-7627",
+        "icon": "assets/icons/brands/orcid-official.svg",
+        "iconBg": "#A6CE39",
+        "iconColor": "#12320B"
+      },
+      {
+        "name": "LinkedIn",
+        "handle": "in/rtx09x",
+        "url": "https://www.linkedin.com/in/rtx09x/",
+        "icon": "assets/icons/color--linkedin.png",
+        "iconBg": "#0A66C2",
+        "iconColor": "#ffffff"
+      },
+      {
+        "name": "Hugging Face",
+        "handle": "Rtx09x",
+        "url": "https://huggingface.co/Rtx09x",
+        "icon": "assets/icons/brands/huggingface-official.svg",
+        "iconBg": "#FF9D00",
+        "iconColor": "#1F1300"
+      },
+      {
+        "name": "Kaggle",
+        "handle": "rtx09x",
+        "url": "https://www.kaggle.com/rtx09x",
+        "icon": "assets/icons/color--kaggle.png",
+        "iconBg": "#20BEFF",
+        "iconColor": "#001B2D"
+      },
+      {
+        "name": "X",
+        "handle": "@Rtx09x",
+        "url": "https://x.com/Rtx09x",
+        "iconBg": "#111111",
+        "iconColor": "#ffffff",
+        "icon": "assets/icons/color--twitterx.png"
+      },
+      {
+        "name": "Medium",
+        "handle": "@Rtx09x",
+        "url": "https://medium.com/@Rtx09x",
+        "icon": "assets/icons/color--medium-logo.png",
+        "iconBg": "#000000",
+        "iconColor": "#ffffff"
+      }
+    ]
+  },
+  "nav": [
+    {
+      "id": "home",
+      "tip": "Home",
+      "fa": "fas fa-home"
+    },
+    {
+      "id": "about",
+      "tip": "About",
+      "fa": "fas fa-user"
+    },
+    {
+      "id": "work",
+      "tip": "Work",
+      "fa": "fas fa-code"
+    },
+    {
+      "id": "labs",
+      "tip": "Labs",
+      "fa": "fas fa-flask"
+    },
+    {
+      "id": "research",
+      "tip": "Research",
+      "fa": "fas fa-book-open"
+    },
+    {
+      "id": "blogs",
+      "tip": "Blogs",
+      "fa": "fas fa-pen"
+    },
+    {
+      "id": "updates",
+      "tip": "Updates",
+      "fa": "fas fa-bolt"
+    },
+    {
+      "id": "creative",
+      "tip": "Creative",
+      "fa": "fas fa-palette"
+    },
+    {
+      "id": "connect",
+      "tip": "Connect",
+      "fa": "fas fa-paper-plane"
+    }
+  ],
+  "footer": "© 2026 Rudra Tiwari · Agent infrastructure, scientific ML, and practical tools."
+}

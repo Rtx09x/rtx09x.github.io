@@ -1,77 +1,99 @@
-/* M3 Design Tokens - LIGHT + DARK MODE */
+/* ============================================================
+   TOKENS — Original Material 3 expressive palette
+   The look/feel of the original site: lavender surfaces,
+   colorful chips, soft layered shadows, bubbly easing.
+   ============================================================ */
 
 :root {
-    /* Light Mode (Default) */
-    --md-sys-color-background: #F3EEFF;
-    --md-sys-color-on-background: #1C1B1F;
-    --md-sys-color-surface: #FFFBFE;
-    --md-sys-color-surface-variant: #E7E0EC;
-    --md-sys-color-on-surface: #1C1B1F;
-    --md-sys-color-on-surface-variant: #49454F;
-    --md-sys-color-outline: #79747E;
+    --bg: #F3EEFF;
+    --bg-raised: #FFFBFE;
+    --bg-inset: #EDE7F8;
+    --bg-sunken: #E7E0EC;
 
-    /* Primary */
-    --md-sys-color-primary: #6750A4;
-    --md-sys-color-on-primary: #FFFFFF;
-    --md-sys-color-primary-container: #EADDFF;
-    --md-sys-color-on-primary-container: #21005D;
+    --ink: #1C1B1F;
+    --ink-soft: #49454F;
+    --ink-faint: #79747E;
 
-    /* Secondary */
-    --md-sys-color-secondary-container: #E8DEF8;
-    --md-sys-color-on-secondary-container: #1D192B;
+    --line: #E7E0EC;
+    --line-strong: #CFC6DD;
 
-    /* Tertiary */
-    --md-sys-color-tertiary-container: #FFD8E4;
-    --md-sys-color-on-tertiary-container: #31111D;
+    --accent: #6750A4;
+    --accent-strong: #523F8C;
+    --accent-soft: #EADDFF;
+    --accent-ink: #4F378B;
 
-    /* Expressive */
-    --color-lime: #C6F68D;
-    --color-peach: #FFD6A5;
-    --color-pink: #FFB7CE;
-    --color-blue: #A8C7FA;
-    --color-green: #A8DAB5;
+    /* Shape — original big radii */
+    --r-xs: 10px;
+    --r-sm: 16px;
+    --r-md: 24px;
+    --r-lg: 40px;
+    --r-xl: 48px;
+    --r-full: 999px;
 
-    /* Shapes */
-    --shape-sm: 16px;
-    --shape-md: 24px;
-    --shape-lg: 40px;
-    --shape-xl: 64px;
-    --shape-full: 999px;
+    /* Tag tints — original expressive colors */
+    --tag-violet-bg: #EADDFF;
+    --tag-violet-ink: #4F378B;
+    --tag-sage-bg: #A8DAB5;
+    --tag-sage-ink: #1B4D28;
+    --tag-sky-bg: #A8C7FA;
+    --tag-sky-ink: #1A3A5C;
+    --tag-clay-bg: #FFD6A5;
+    --tag-clay-ink: #5C3D1E;
+    --tag-rose-bg: #FFB7CE;
+    --tag-rose-ink: #492532;
+    --tag-moss-bg: #C6F68D;
+    --tag-moss-ink: #2D3428;
 
-    /* Motion */
-    --ease-bubbly: cubic-bezier(0.34, 1.56, 0.64, 1);
-    --duration-short: 200ms;
-    --duration-medium: 400ms;
-    --duration-long: 600ms;
+    /* Motion — mostly calm; bounce only on buttons */
+    --ease: cubic-bezier(0.22, 0.61, 0.21, 1);
+    --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --dur-1: 200ms;
+    --dur-2: 320ms;
+    --dur-3: 520ms;
 
-    /* Shadows - Layered & Soft */
-    --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.1), 0 1px 4px -1px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 12px 24px -6px rgba(0, 0, 0, 0.15), 0 4px 8px -4px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 24px 48px -12px rgba(0, 0, 0, 0.18);
+    /* Elevation — original soft layered shadows */
+    --elev-1: 0 2px 8px -2px rgba(0, 0, 0, 0.1), 0 1px 4px -1px rgba(0, 0, 0, 0.05);
+    --elev-2: 0 12px 24px -6px rgba(0, 0, 0, 0.15), 0 4px 8px -4px rgba(0, 0, 0, 0.1);
+    --elev-3: 0 24px 48px -12px rgba(0, 0, 0, 0.18);
+
+    /* Layout */
+    --measure: 66ch;
+    --gutter: clamp(20px, 5vw, 48px);
+    --section-gap: clamp(90px, 12vh, 140px);
 }
 
-/* DARK MODE */
 [data-theme="dark"] {
-    --md-sys-color-background: #141218;
-    --md-sys-color-on-background: #E6E1E5;
-    --md-sys-color-surface: #1C1B1F;
-    --md-sys-color-surface-variant: #49454F;
-    --md-sys-color-on-surface: #E6E1E5;
-    --md-sys-color-on-surface-variant: #CAC4D0;
-    --md-sys-color-outline: #938F99;
+    --bg: #141218;
+    --bg-raised: #1C1B1F;
+    --bg-inset: #100F14;
+    --bg-sunken: #0C0B0F;
 
-    --md-sys-color-primary: #D0BCFF;
-    --md-sys-color-on-primary: #381E72;
-    --md-sys-color-primary-container: #4F378B;
-    --md-sys-color-on-primary-container: #EADDFF;
+    --ink: #E6E1E5;
+    --ink-soft: #CAC4D0;
+    --ink-faint: #938F99;
 
-    --md-sys-color-secondary-container: #4A4458;
-    --md-sys-color-on-secondary-container: #E8DEF8;
+    --line: #2B2833;
+    --line-strong: #3F3A4D;
 
-    --md-sys-color-tertiary-container: #633B48;
-    --md-sys-color-on-tertiary-container: #FFD8E4;
+    --accent: #D0BCFF;
+    --accent-strong: #E3D8FF;
+    --accent-soft: #4F378B;
+    --accent-ink: #EADDFF;
 
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --tag-violet-bg: #4F378B;
+    --tag-violet-ink: #EADDFF;
+    --tag-sage-bg: #2C4A33;
+    --tag-sage-ink: #A8DAB5;
+    --tag-sky-bg: #243B56;
+    --tag-sky-ink: #A8C7FA;
+    --tag-clay-bg: #4A3520;
+    --tag-clay-ink: #FFD6A5;
+    --tag-rose-bg: #4E2A38;
+    --tag-rose-ink: #FFB7CE;
+    --tag-moss-bg: #3A4A24;
+    --tag-moss-ink: #C6F68D;
+
+    --elev-1: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --elev-2: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --elev-3: 0 8px 32px rgba(0, 0, 0, 0.5);
 }

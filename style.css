@@ -1,6 +1,6 @@
-/* Main Stylesheet */
+/* Main stylesheet — matte editorial system */
 @import 'css/tokens.css';
 @import 'css/typography.css';
 @import 'css/layout.css';
 @import 'css/components.css';
-@import 'css/responsive.css';
+@import 'css/sections.css';
