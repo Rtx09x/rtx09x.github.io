@@ -157,7 +157,7 @@
                         <p class="body-sm">${esc(o.desc)}</p>
                         <div class="tag-row">${o.tags.map(tag).join('')}</div>
                         <div class="card-actions">
-                            <a class="btn btn-line" href="${esc(o.url)}" target="_blank" rel="noreferrer">Organization</a>
+                            <a class="btn btn-line" href="${esc(o.url)}" target="_blank" rel="noreferrer">${esc(o.actionLabel || "Organization")}</a>
                         </div>
                     </article>`).join('')}
             </div>
