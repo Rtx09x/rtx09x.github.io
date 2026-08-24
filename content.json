@@ -175,7 +175,8 @@
         "brandIcons": [
           "assets/icons/brands/zenodo-user.png",
           "assets/icons/brands/cern-white.png"
-        ]
+        ],
+        "brandFirst": true
       },
       {
         "name": "Shippy",
@@ -496,7 +497,7 @@
         ],
         "url": "https://rtx09x.medium.com/the-pictures-make-it-look-like-an-event-8f15a738c586",
         "actionLabel": "Read the story",
-        "fa": "fas fa-people-group",
+        "fa": "fas fa-users",
         "iconBg": "#DDE8FF",
         "iconColor": "#1565C0"
       },
@@ -768,7 +769,7 @@
         "icons": [
           "assets/icons/brands/iit-delhi-seal.png",
           "assets/icons/brands/yardi-school-ai.jpg",
-          "assets/icons/brands/tigergraph-user.jpg"
+          "assets/icons/brands/tigergraph-orange.png"
         ]
       },
       {

@@ -29,7 +29,14 @@
             /(?:log-icon|emergent|outskill-mark|catalyst-logo)\.(?:png|svg)$/i.test(src)
             ? ' logo-bleed' : '';
         const themed = cls.includes('logo-mark') && /log-2026-light\.png$/i.test(src) ? ' logo-log' : '';
-        return `<img class="${cls}${ink}${bleed}${themed}" src="${esc(src)}" alt="" width="48" height="48" decoding="async">`;
+        const assetClass = cls.includes('logo-mark')
+            ? (/(?:masters-union)\.(?:gif|png|webp)$/i.test(src) ? ' logo-masters-union'
+                : /outskill\.(?:png|webp|svg)$/i.test(src) ? ' logo-outskill'
+                : /cursor-logo\.(?:png|webp|svg)$/i.test(src) ? ' logo-cursor'
+                : /tigergraph-(?:user|orange)\.(?:jpg|png|webp|svg)$/i.test(src) ? ' logo-tigergraph'
+                : '')
+            : '';
+        return `<img class="${cls}${ink}${bleed}${themed}${assetClass}" src="${esc(src)}" alt="" width="48" height="48" decoding="async">`;
     };
     const tile = (it) => {
         const style = it.iconBg
