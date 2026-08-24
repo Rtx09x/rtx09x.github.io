@@ -241,7 +241,7 @@
         "org": "Rtx09x",
         "iconBg": "#FFF0D1",
         "iconColor": "#8A4D00",
-        "desc": "High-agency agent skills for executable specs and end-to-end shipping  -  the public skill layer behind clearer planning and ship-ready workflows.",
+        "desc": "High-agency agent skills for executable specs and end-to-end shipping, forming the public skill layer behind clearer planning and ship-ready workflows.",
         "tags": [
           {
             "label": "Agent skills",
@@ -448,7 +448,7 @@
   "blogs": {
     "tag": "Notes",
     "title": "Blogs",
-    "lede": "Informal writing  -  personal essays, small stories, and the parts of the work that don't belong in a paper.",
+    "lede": "Informal writing: personal essays, small stories, and the parts of the work that don't belong in a paper.",
     "profile": "https://medium.com/@Rtx09x",
     "posts": [
       {
