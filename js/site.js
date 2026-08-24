@@ -11,7 +11,7 @@
 
     let d;
     try {
-        const res = await fetch('content.json?v=20260824-portfolio', { cache: 'no-store' });
+        const res = await fetch('content.json?v=20260824-portfolio-events', { cache: 'no-store' });
         d = await res.json();
     } catch (err) {
         console.error('content.json failed to load — serve over HTTP, not file://', err);
@@ -232,7 +232,7 @@
                     <a class="card card-feature update-feature reveal" href="${esc(t.url || '#')}" ${t.url ? 'target="_blank" rel="noreferrer"' : ''}>
                         <span class="logo-row">
                             ${t.fa ? tile(t) : imgIco(t.icon, 'i8 logo-mark')}
-                            ${t.icon2 ? imgIco(t.icon2, 'i8 logo-mark') : ''}
+                            ${[t.icon2, ...(Array.isArray(t.icons) ? t.icons : [])].filter(Boolean).map((icon) => imgIco(icon, 'i8 logo-mark')).join('')}
                         </span>
                         <span class="u-date">${esc(t.date)}</span>
                         <h3 class="h3">${esc(t.title)}</h3>
