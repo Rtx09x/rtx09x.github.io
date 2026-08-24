@@ -459,3 +459,13 @@ footer .meta { color: var(--ink-faint); }
     padding: 7px !important;
     object-fit: contain;
 }
+
+/* Official Masters' Union favicon, served by mastersunion.org. */
+.logo-mark.logo-masters-union,
+[data-theme="dark"] .logo-mark.logo-masters-union {
+    background: #11181d !important;
+    border-color: transparent !important;
+    filter: none !important;
+    padding: 0 !important;
+    object-fit: cover;
+}

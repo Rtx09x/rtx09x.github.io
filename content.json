@@ -651,7 +651,7 @@
         "title": "AI Builders Mixer: Delhi Edition",
         "desc": "Won at the AI Builders Mixer at Masters' Union, with hands-on small-model training and builder sessions.",
         "url": "",
-        "icon": "assets/icons/brands/masters-union-mark.svg",
+        "icon": "assets/icons/brands/masters-union-favicon.png",
         "iconBg": "#EADDFF",
         "iconColor": "#4F378B",
         "icon2": null,
@@ -676,7 +676,7 @@
         "icon": "assets/icons/brands/emergent-user.webp",
         "iconBg": "#DDEFE1",
         "iconColor": "#1F5E34",
-        "icon2": "assets/icons/brands/masters-union-mark.svg",
+        "icon2": "assets/icons/brands/masters-union-favicon.png",
         "fa": null
       },
       {
