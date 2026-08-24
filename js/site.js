@@ -11,7 +11,7 @@
 
     let d;
     try {
-        const res = await fetch('content.json');
+        const res = await fetch('content.json?v=20260824-portfolio', { cache: 'no-store' });
         d = await res.json();
     } catch (err) {
         console.error('content.json failed to load — serve over HTTP, not file://', err);
@@ -111,7 +111,7 @@
                         <h3 class="h3">${esc(f.name)}</h3>
                         <p>${esc(f.desc)}</p>
                         <div class="tag-row">${f.tags.map(tag).join('')}</div>
-                        <div class="card-actions">${f.links.map(btn).join('')}</div>
+                        <div class="card-actions">${(f.links || (f.url ? [{ label: 'Source', url: f.url, style: 'solid' }] : [])).map(btn).join('')}</div>
                     </article>`).join('')}
             </div>
             <div class="rail-head reveal">
