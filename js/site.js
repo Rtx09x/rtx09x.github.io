@@ -220,45 +220,45 @@
 
     /* ---------- updates ---------- */
     const u = d.updates;
-    document.getElementById('updates').innerHTML = \`
+    document.getElementById('updates').innerHTML = `
         <div class="section-inner">
             <header class="section-head reveal">
-                <span class="eyebrow">\${esc(u.tag)}</span>
-                <h2 class="h2">\${esc(u.title)}</h2>
-                <p class="lede">\${esc(u.lede)}</p>
+                <span class="eyebrow">${esc(u.tag)}</span>
+                <h2 class="h2">${esc(u.title)}</h2>
+                <p class="lede">${esc(u.lede)}</p>
             </header>
             <div class="work-grid updates-featured">
-                \${(u.featured || []).map((t) => \`
-                    <a class="card card-feature update-feature reveal" href="\${esc(t.url || '#')}" \${t.url ? 'target="_blank" rel="noreferrer"' : ''}>
+                ${(u.featured || []).map((t) => `
+                    <a class="card card-feature update-feature reveal" href="${esc(t.url || '#')}" ${t.url ? 'target="_blank" rel="noreferrer"' : ''}>
                         <span class="logo-row">
-                            \${t.fa ? tile(t) : imgIco(t.icon, 'i8 logo-mark')}
-                            \${t.icon2 ? imgIco(t.icon2, 'i8 logo-mark') : ''}
+                            ${t.fa ? tile(t) : imgIco(t.icon, 'i8 logo-mark')}
+                            ${t.icon2 ? imgIco(t.icon2, 'i8 logo-mark') : ''}
                         </span>
-                        <span class="u-date">\${esc(t.date)}</span>
-                        <h3 class="h3">\${esc(t.title)}</h3>
-                        <p>\${esc(t.desc)}</p>
-                    </a>\`).join('')}
+                        <span class="u-date">${esc(t.date)}</span>
+                        <h3 class="h3">${esc(t.title)}</h3>
+                        <p>${esc(t.desc)}</p>
+                    </a>`).join('')}
             </div>
             <div class="rail-head reveal">
                 <span class="rail-title">More events</span>
                 <div class="rail-nav">
-                    <button class="rail-btn" data-rail-prev aria-label="Scroll left">\${faIco('fas fa-chevron-left')}</button>
-                    <button class="rail-btn" data-rail-next aria-label="Scroll right">\${faIco('fas fa-chevron-right')}</button>
+                    <button class="rail-btn" data-rail-prev aria-label="Scroll left">${faIco('fas fa-chevron-left')}</button>
+                    <button class="rail-btn" data-rail-next aria-label="Scroll right">${faIco('fas fa-chevron-right')}</button>
                 </div>
             </div>
             <div class="rail updates-rail">
-                \${u.items.map((t) => \`
-                    <a class="rail-item update-rail-item" href="\${esc(t.url || '#')}" \${t.url ? 'target="_blank" rel="noreferrer"' : ''}>
+                ${u.items.map((t) => `
+                    <a class="rail-item update-rail-item" href="${esc(t.url || '#')}" ${t.url ? 'target="_blank" rel="noreferrer"' : ''}>
                         <span class="logo-row">
-                            \${t.fa ? tile(t) : imgIco(t.icon, 'i8 logo-mark')}
-                            \${t.icon2 ? imgIco(t.icon2, 'i8 logo-mark') : ''}
+                            ${t.fa ? tile(t) : imgIco(t.icon, 'i8 logo-mark')}
+                            ${t.icon2 ? imgIco(t.icon2, 'i8 logo-mark') : ''}
                         </span>
-                        <span class="u-date">\${esc(t.date)}</span>
-                        <span class="name">\${esc(t.title)}</span>
-                        <span class="desc">\${esc(t.desc)}</span>
-                    </a>\`).join('')}
+                        <span class="u-date">${esc(t.date)}</span>
+                        <span class="name">${esc(t.title)}</span>
+                        <span class="desc">${esc(t.desc)}</span>
+                    </a>`).join('')}
             </div>
-        </div>\`;
+        </div>`;
 
     /* ---------- creative ---------- */
     const c = d.creative;
