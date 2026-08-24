@@ -223,6 +223,27 @@
 }
 
 /* Org logos */
+.org-logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: initial;
+    font-size: 28px;
+}
+
+.update-feature {
+    text-decoration: none;
+    color: inherit;
+}
+
+.update-feature .u-date {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
 .org-logo {
     width: 72px;
     height: 72px;
