@@ -11,7 +11,7 @@
 
     let d;
     try {
-        const res = await fetch('content.json?v=20260824-card-header-fix', { cache: 'no-store' });
+        const res = await fetch('content.json?v=20260824-logo-optical-polish', { cache: 'no-store' });
         d = await res.json();
     } catch (err) {
         console.error('content.json failed to load — serve over HTTP, not file://', err);
