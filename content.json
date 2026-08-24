@@ -497,9 +497,8 @@
         ],
         "url": "https://rtx09x.medium.com/the-pictures-make-it-look-like-an-event-8f15a738c586",
         "actionLabel": "Read the story",
-        "fa": "fas fa-users",
-        "iconBg": "#DDE8FF",
-        "iconColor": "#1565C0"
+        "logo": "assets/icons/brands/catalyst-community.svg",
+        "logoClass": "brand-community"
       },
       {
         "name": "Shippy Music",
@@ -652,7 +651,7 @@
         "title": "AI Builders Mixer: Delhi Edition",
         "desc": "Won at the AI Builders Mixer at Masters' Union, with hands-on small-model training and builder sessions.",
         "url": "",
-        "icon": "assets/icons/brands/masters-union.gif",
+        "icon": "assets/icons/brands/masters-union-mark.svg",
         "iconBg": "#EADDFF",
         "iconColor": "#4F378B",
         "icon2": null,
@@ -677,7 +676,7 @@
         "icon": "assets/icons/brands/emergent-user.webp",
         "iconBg": "#DDEFE1",
         "iconColor": "#1F5E34",
-        "icon2": "assets/icons/brands/masters-union.gif",
+        "icon2": "assets/icons/brands/masters-union-mark.svg",
         "fa": null
       },
       {

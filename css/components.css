@@ -437,3 +437,15 @@ footer .meta { color: var(--ink-faint); }
     transform: none !important;
     writing-mode: horizontal-tb;
 }
+
+/* Purpose-built organization mark; avoid Font Awesome glyph geometry. */
+.org-logo.brand-community {
+    object-fit: contain;
+    padding: 0;
+    background: #dde8ff;
+    border-color: #c8d9fa;
+}
+[data-theme="dark"] .org-logo.brand-community {
+    background: #182746;
+    border-color: #29416f;
+}
