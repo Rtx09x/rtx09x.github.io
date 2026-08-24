@@ -148,7 +148,7 @@
                 ${l.items.map((o) => `
                     <article class="card card-feature lab-card reveal">
                         <div class="lab-head">
-                            <img class="org-logo" src="${esc(o.logo)}" alt="${esc(o.name)} logo" loading="lazy">
+                            ${o.fa ? `<div class="org-logo org-logo-icon"${o.iconBg ? ` style="background:${esc(o.iconBg)};color:${esc(o.iconColor || '#4F378B')}"` : ''}>${faIco(o.fa)}</div>` : `<img class="org-logo" src="${esc(o.logo)}" alt="${esc(o.name)} logo" loading="lazy">`}
                             <div>
                                 <h3 class="h3">${esc(o.name)}</h3>
                                 <span class="meta">${esc(o.role)}</span>
@@ -227,8 +227,20 @@
                 <h2 class="h2">${esc(u.title)}</h2>
                 <p class="lede">${esc(u.lede)}</p>
             </header>
+            <div class="work-grid updates-featured">
+                ${(u.featured || []).map((t) => `
+                    <a class="card card-feature update-feature reveal" href="${esc(t.url || '#')}" ${t.url ? 'target="_blank" rel="noreferrer"' : ''}>
+                        <span class="logo-row">
+                            ${t.fa ? tile(t) : imgIco(t.icon, 'i8 logo-mark')}
+                            ${t.icon2 ? imgIco(t.icon2, 'i8 logo-mark') : ''}
+                        </span>
+                        <span class="u-date">${esc(t.date)}</span>
+                        <h3 class="h3">${esc(t.title)}</h3>
+                        <p>${esc(t.desc)}</p>
+                    </a>`).join('')}
+            </div>
             <div class="rail-head reveal">
-                <span class="rail-title">Latest</span>
+                <span class="rail-title">More events</span>
                 <div class="rail-nav">
                     <button class="rail-btn" data-rail-prev aria-label="Scroll left">${faIco('fas fa-chevron-left')}</button>
                     <button class="rail-btn" data-rail-next aria-label="Scroll right">${faIco('fas fa-chevron-right')}</button>
@@ -238,7 +250,7 @@
                 ${u.items.map((t) => `
                     <a class="rail-item update-rail-item" href="${esc(t.url || '#')}" ${t.url ? 'target="_blank" rel="noreferrer"' : ''}>
                         <span class="logo-row">
-                            ${imgIco(t.icon, 'i8 logo-mark')}
+                            ${t.fa ? tile(t) : imgIco(t.icon, 'i8 logo-mark')}
                             ${t.icon2 ? imgIco(t.icon2, 'i8 logo-mark') : ''}
                         </span>
                         <span class="u-date">${esc(t.date)}</span>

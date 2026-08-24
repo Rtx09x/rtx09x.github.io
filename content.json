@@ -172,9 +172,7 @@
           }
         ],
         "fa": "fas fa-microscope"
-      }
-    ],
-    "archive": [
+      },
       {
         "name": "Shippy",
         "org": "Shippy Music",
@@ -216,7 +214,9 @@
         ],
         "url": "https://github.com/Rtx09x/parameter-golf",
         "fa": "fas fa-golf-ball-tee"
-      },
+      }
+    ],
+    "archive": [
       {
         "name": "Agentic Provider Gateway",
         "org": "TwentySevenLabs",
@@ -353,15 +353,55 @@
     ]
   },
   "labs": {
-    "tag": "Community",
-    "title": "Catalyst AI Community",
-    "lede": "A campus community for students who want to explore AI, research, and ambitious things worth building.",
+    "tag": "Organizations",
+    "title": "Organizations",
+    "lede": "Independent homes for scientific research, agent infrastructure, community building, and public software.",
     "items": [
+      {
+        "name": "Catalyst Zero Research",
+        "role": "Founder & operator",
+        "desc": "Research umbrella for materials science, scientific ML, and AI-native research systems. It is the home for Catalyst-branded material-discovery work.",
+        "fa": "fas fa-flask",
+        "iconBg": "#EADDFF",
+        "iconColor": "#4F378B",
+        "tags": [
+          {
+            "label": "Materials science",
+            "tone": "moss"
+          },
+          {
+            "label": "Scientific ML",
+            "tone": "violet"
+          }
+        ],
+        "url": "https://github.com/Catalyst-Zero-Research",
+        "actionLabel": "Organization"
+      },
+      {
+        "name": "TwentySevenLabs",
+        "role": "Founder & operator",
+        "desc": "Independent lab for agent infrastructure, developer tools, protocols, and practical AI systems.",
+        "logo": "assets/icons/brands/twentysevenlabs.png",
+        "tags": [
+          {
+            "label": "Agent infrastructure",
+            "tone": "sky"
+          },
+          {
+            "label": "Developer tools",
+            "tone": "clay"
+          }
+        ],
+        "url": "https://github.com/TwentySevenLabs",
+        "actionLabel": "Organization"
+      },
       {
         "name": "Catalyst AI Community",
         "role": "Founder",
-        "desc": "I founded Catalyst AI Community to bring together students interested in AI, scientific research, and practical building. The aim is less passive consumption and more finding collaborators, shipping work, and taking ideas seriously enough to test them.",
-        "logo": "https://avatars.githubusercontent.com/u/282262503?v=4",
+        "desc": "A campus community for students interested in AI, scientific research, and practical building. The aim is less passive consumption and more finding collaborators and shipping work.",
+        "fa": "fas fa-people-group",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0",
         "tags": [
           {
             "label": "AI community",
@@ -380,22 +420,26 @@
         "actionLabel": "Read the story"
       },
       {
-        "name": "Catalyst Zero Research",
-        "role": "Founder & operator",
-        "desc": "Research umbrella for materials science, scientific ML, and AI-native research systems. It is the home for Catalyst-branded material-discovery work.",
-        "logo": "https://avatars.githubusercontent.com/u/282262503?v=4",
+        "name": "Shippy Music",
+        "role": "Maintainer",
+        "desc": "Open-source music software focused on a full, flexible listening experience across sources and personal libraries.",
+        "logo": "https://avatars.githubusercontent.com/u/309844582?v=4",
         "tags": [
           {
-            "label": "Materials science",
+            "label": "Android",
             "tone": "moss"
           },
           {
-            "label": "Scientific ML",
+            "label": "Kotlin",
             "tone": "violet"
+          },
+          {
+            "label": "Open source",
+            "tone": "sky"
           }
         ],
-        "url": "https://github.com/Catalyst-Zero-Research",
-        "actionLabel": "Organization"
+        "url": "https://github.com/Shippy-Music/Shippy",
+        "actionLabel": "View Shippy"
       }
     ]
   },
@@ -487,6 +531,60 @@
     "lede": "Selected work and events, ordered by relevance rather than chronology.",
     "items": [
       {
+        "date": "2026 · Finalist",
+        "title": "IBM-associated QUANT-A-THON, RIT Chennai",
+        "desc": "Finalist with Catalyst Q-Select, a hybrid quantum-classical experimental portfolio-selection workflow.",
+        "url": "https://github.com/Rtx09x/quantathon",
+        "icon": "https://www.ibm.com/adobe/dynamicmedia/deliver/dm-aid--951aee65-746e-4256-b7fa-1442b6c32531/ibm-cio-logo.jpg?preferwebp=true&quality=90",
+        "iconBg": "#DDEFE1",
+        "iconColor": "#1F5E34",
+        "icon2": "https://ik.imagekit.io/syustaging/SYU_PREPROD/LOGO_9OUUfvliq.webp?tr=w-3840"
+      },
+      {
+        "date": "2026 · 1st Place",
+        "title": "Agent{a}thon",
+        "desc": "First-place winner with Catalyst in the open-innovation track.",
+        "url": "https://github.com/Rtx09x/catalyst",
+        "icon": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/paytm.svg",
+        "iconBg": "#EADDFF",
+        "iconColor": "#4F378B",
+        "icon2": null
+      },
+      {
+        "date": "2026",
+        "title": "Developer Hackathon: Elastic & Google Cloud",
+        "desc": "Built AI agents at the ThoughtWorks developer hackathon.",
+        "url": "",
+        "icon": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/elastic.svg",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0",
+        "icon2": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googlecloud.svg"
+      },
+      {
+        "date": "2026",
+        "title": "Build With TRAE",
+        "desc": "Builder event in New Delhi focused on practical AI product work.",
+        "url": "",
+        "icon": null,
+        "iconBg": "#DDEFE1",
+        "iconColor": "#1F5E34",
+        "icon2": null,
+        "fa": "fas fa-wand-magic-sparkles"
+      },
+      {
+        "date": "2026",
+        "title": "Builders Connect: The Delhi Edition",
+        "desc": "Part of the FFDG New Delhi community builder gathering.",
+        "url": "",
+        "icon": null,
+        "iconBg": "#FFF0D1",
+        "iconColor": "#8A4D00",
+        "icon2": null,
+        "fa": "fas fa-people-group"
+      }
+    ],
+    "featured": [
+      {
         "date": "2026 · 3rd Place",
         "title": "Winner, OpenAI International Codex Hackathon",
         "desc": "Built Catalyst with Team Becodes. Catalyst has received ₹12 lakh in aggregate funding from OpenAI.",
@@ -519,54 +617,10 @@
         "title": "IIT ISM Dhanbad E-Summit",
         "desc": "Finalist across Idea2Impact, PitchFund, and VentureX with Catalyst.",
         "url": "https://github.com/Rtx09x/catalyst",
-        "icon": "assets/icons/brands/emergent.png",
+        "icon": "https://ik.imagekit.io/syustaging/SYU_PREPROD/logo_ruR49dQjz.webp?tr=w-3840",
         "iconBg": "#EADDFF",
-        "iconColor": "#4F378B"
-      },
-      {
-        "date": "2026 · Finalist",
-        "title": "IBM-associated QUANT-A-THON, RIT Chennai",
-        "desc": "Finalist with Catalyst Q-Select, a hybrid quantum-classical experimental portfolio-selection workflow.",
-        "url": "https://github.com/Rtx09x/quantathon",
-        "icon": "assets/icons/brands/openai.svg",
-        "iconBg": "#DDEFE1",
-        "iconColor": "#1F5E34"
-      },
-      {
-        "date": "2026 · 1st Place",
-        "title": "Agent{a}thon",
-        "desc": "First-place winner with Catalyst in the open-innovation track.",
-        "url": "https://github.com/Rtx09x/catalyst",
-        "icon": "assets/icons/brands/openai.svg",
-        "iconBg": "#EADDFF",
-        "iconColor": "#4F378B"
-      },
-      {
-        "date": "2026",
-        "title": "Developer Hackathon: Elastic & Google Cloud",
-        "desc": "Built AI agents at the ThoughtWorks developer hackathon.",
-        "url": "",
-        "icon": "assets/icons/brands/outskill-mark.png",
-        "iconBg": "#DDE8FF",
-        "iconColor": "#1565C0"
-      },
-      {
-        "date": "2026",
-        "title": "Build With TRAE",
-        "desc": "Builder event in New Delhi focused on practical AI product work.",
-        "url": "",
-        "icon": "assets/icons/brands/emergent.png",
-        "iconBg": "#DDEFE1",
-        "iconColor": "#1F5E34"
-      },
-      {
-        "date": "2026",
-        "title": "Builders Connect: The Delhi Edition",
-        "desc": "Part of the FFDG New Delhi community builder gathering.",
-        "url": "",
-        "icon": "assets/icons/brands/log-icon.png",
-        "iconBg": "#FFF0D1",
-        "iconColor": "#8A4D00"
+        "iconColor": "#4F378B",
+        "icon2": null
       }
     ]
   },
@@ -710,8 +764,8 @@
     },
     {
       "id": "labs",
-      "tip": "Community",
-      "fa": "fas fa-people-group"
+      "tip": "Organizations",
+      "fa": "fas fa-building"
     },
     {
       "id": "research",
