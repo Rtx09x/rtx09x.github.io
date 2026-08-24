@@ -710,8 +710,8 @@
     },
     {
       "id": "labs",
-      "tip": "Labs",
-      "fa": "fas fa-flask"
+      "tip": "Community",
+      "fa": "fas fa-people-group"
     },
     {
       "id": "research",
@@ -739,5 +739,5 @@
       "fa": "fas fa-paper-plane"
     }
   ],
-  "footer": "© 2026 Rudra Tiwari · Agent infrastructure, scientific ML, and practical tools."
+  "footer": "© 2026 Rudra Tiwari · Scientific AI, materials ML, and public software."
 }
