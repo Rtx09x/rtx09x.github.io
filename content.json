@@ -194,7 +194,14 @@
           }
         ],
         "url": "https://github.com/Shippy-Music/Shippy",
-        "fa": "fas fa-music"
+        "fa": "fas fa-music",
+        "links": [
+          {
+            "label": "Source",
+            "url": "https://github.com/Shippy-Music/Shippy",
+            "style": "solid"
+          }
+        ]
       },
       {
         "name": "Parameter Golf",
@@ -213,7 +220,14 @@
           }
         ],
         "url": "https://github.com/Rtx09x/parameter-golf",
-        "fa": "fas fa-golf-ball-tee"
+        "fa": "fas fa-golf-ball-tee",
+        "links": [
+          {
+            "label": "OpenAI PRs",
+            "url": "https://github.com/openai/parameter-golf/pull/1694",
+            "style": "solid"
+          }
+        ]
       }
     ],
     "archive": [
