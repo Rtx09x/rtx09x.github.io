@@ -171,7 +171,11 @@
             "style": "line"
           }
         ],
-        "fa": "fas fa-microscope"
+        "fa": "fas fa-microscope",
+        "brandIcons": [
+          "assets/icons/brands/zenodo.svg",
+          "assets/icons/brands/cern.svg"
+        ]
       },
       {
         "name": "Shippy",
@@ -227,10 +231,89 @@
             "url": "https://github.com/openai/parameter-golf/pull/1694",
             "style": "solid"
           }
+        ],
+        "brandIcons": [
+          "assets/icons/brands/openai-black.svg"
         ]
       }
     ],
     "archive": [
+      {
+        "name": "ALB",
+        "org": "Rtx09x",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0",
+        "desc": "Universal model gateway and provider load balancer for Codex-style agent clients.",
+        "tags": [
+          {
+            "label": "Model gateway",
+            "tone": "sky"
+          },
+          {
+            "label": "Agents",
+            "tone": "violet"
+          }
+        ],
+        "url": "https://github.com/Rtx09x/ALB",
+        "fa": "fas fa-scale-balanced"
+      },
+      {
+        "name": "NF QueryGPT",
+        "org": "Rtx09x",
+        "iconBg": "#EADDFF",
+        "iconColor": "#4F378B",
+        "desc": "Multi-agent AI database analyst built for NikahForever workflows.",
+        "tags": [
+          {
+            "label": "Multi-agent",
+            "tone": "violet"
+          },
+          {
+            "label": "Data",
+            "tone": "moss"
+          }
+        ],
+        "url": "https://github.com/Rtx09x/nf_querygpt",
+        "fa": "fas fa-database"
+      },
+      {
+        "name": "Chalta Hai",
+        "org": "Rtx09x",
+        "iconBg": "#FFF0D1",
+        "iconColor": "#8A4D00",
+        "desc": "Civic-sense game for children, built at the Elastic × Google Cloud developer hackathon.",
+        "tags": [
+          {
+            "label": "Civic tech",
+            "tone": "clay"
+          },
+          {
+            "label": "Game",
+            "tone": "sky"
+          }
+        ],
+        "url": "https://github.com/Rtx09x/Chalta-Hai",
+        "fa": "fas fa-gamepad"
+      },
+      {
+        "name": "BloodGrid",
+        "org": "Rtx09x",
+        "iconBg": "#FFCDD2",
+        "iconColor": "#C62828",
+        "desc": "Local-first regional blood-network simulation and decision-support workspace for Jharkhand.",
+        "tags": [
+          {
+            "label": "Civic systems",
+            "tone": "moss"
+          },
+          {
+            "label": "Local-first",
+            "tone": "violet"
+          }
+        ],
+        "url": "https://github.com/Rtx09x/bloodgrid",
+        "fa": "fas fa-droplet"
+      },
       {
         "name": "Agentic Provider Gateway",
         "org": "TwentySevenLabs",
@@ -387,7 +470,8 @@
         ],
         "url": "https://github.com/Catalyst-Zero-Research",
         "actionLabel": "Organization",
-        "logo": "https://github.com/Catalyst-Zero-Research.png?size=144"
+        "logo": "assets/icons/brands/catalyst-logo.svg",
+        "logoClass": "brand-catalyst"
       },
       {
         "name": "TwentySevenLabs",
@@ -411,9 +495,6 @@
         "name": "Catalyst AI Community",
         "role": "Founder & operator",
         "desc": "A campus community for students interested in AI, scientific research, and practical building. The aim is less passive consumption and more finding collaborators and shipping work.",
-        "fa": "fas fa-people-group",
-        "iconBg": "#DDE8FF",
-        "iconColor": "#1565C0",
         "tags": [
           {
             "label": "AI community",
@@ -429,7 +510,9 @@
           }
         ],
         "url": "https://rtx09x.medium.com/the-pictures-make-it-look-like-an-event-8f15a738c586",
-        "actionLabel": "Read the story"
+        "actionLabel": "Read the story",
+        "logo": "assets/icons/brands/catalyst-logo.svg",
+        "logoClass": "brand-catalyst"
       },
       {
         "name": "Shippy Music",
@@ -478,7 +561,11 @@
       ],
       "fa": "fas fa-scroll",
       "iconBg": "#6750A4",
-      "iconColor": "#ffffff"
+      "iconColor": "#ffffff",
+      "brandIcons": [
+        "assets/icons/brands/zenodo.svg",
+        "assets/icons/brands/cern.svg"
+      ]
     },
     "list": [
       {
@@ -567,59 +654,59 @@
         "title": "ElevenLabs AI Meetup",
         "desc": "Built a voice agent and won the track at the ElevenLabs meetup hosted at Microsoft India.",
         "url": "",
-        "icon": null,
+        "icon": "assets/icons/brands/elevenlabs.ico",
         "iconBg": "#DDE8FF",
         "iconColor": "#1565C0",
         "icon2": null,
-        "fa": "fas fa-microphone-lines"
+        "fa": null
       },
       {
         "date": "2026 · Winner",
         "title": "AI Builders Mixer: Delhi Edition",
         "desc": "Won at the AI Builders Mixer at Masters' Union, with hands-on small-model training and builder sessions.",
         "url": "",
-        "icon": null,
+        "icon": "assets/icons/brands/masters-union.png",
         "iconBg": "#EADDFF",
         "iconColor": "#4F378B",
         "icon2": null,
-        "fa": "fas fa-trophy"
+        "fa": null
       },
       {
         "date": "2026 · Community winner",
         "title": "Builders Connect: The Delhi Edition",
         "desc": "FlutterFlow community gathering where I won a golden enamel pin and got properly pulled into the local builder scene.",
         "url": "",
-        "icon": null,
+        "icon": "assets/icons/brands/flutterflow.png",
         "iconBg": "#FFF0D1",
         "iconColor": "#8A4D00",
         "icon2": null,
-        "fa": "fas fa-people-group"
+        "fa": null
       },
       {
         "date": "2026 · Catalyst origin",
         "title": "AI Vibe Sprint Delhi NCR: Product Folks × Emergent",
         "desc": "My second hackathon and the buildathon where Catalyst first started taking shape at Masters' Union.",
         "url": "",
-        "icon": null,
+        "icon": "assets/icons/brands/emergent.png",
         "iconBg": "#DDEFE1",
         "iconColor": "#1F5E34",
-        "icon2": null,
-        "fa": "fas fa-seedling"
+        "icon2": "assets/icons/brands/masters-union.png",
+        "fa": null
       },
       {
         "date": "2026 · Built",
         "title": "Developer Hackathon: Elastic & Google Cloud",
-        "desc": "Built a civic-sense game for children at ThoughtWorks using AI-agent ideas. No podium, still a useful build.",
+        "desc": "Built Chalta Hai, a civic-sense game for children, at the ThoughtWorks developer hackathon.",
         "url": "",
         "icon": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/elastic.svg",
         "iconBg": "#DDE8FF",
         "iconColor": "#1565C0",
-        "icon2": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googlecloud.svg"
+        "icon2": "assets/icons/brands/google-cloud.png"
       },
       {
         "date": "2026 · Built",
         "title": "Build With TRAE @ New Delhi",
-        "desc": "Built against the event tracks in a practical AI product buildathon. No win claimed, just more shipping.",
+        "desc": "Built against the event tracks in a practical AI product buildathon in New Delhi.",
         "url": "",
         "icon": null,
         "iconBg": "#DDEFE1",
@@ -632,44 +719,44 @@
         "title": "AI Research Paper Discussion, IIIT Delhi",
         "desc": "An informal research discussion on JEPA and adjacent architectures. I presented, learned, and made strong research connections.",
         "url": "",
-        "icon": null,
+        "icon": "assets/icons/brands/iit-delhi-header.svg",
         "iconBg": "#FFF0D1",
         "iconColor": "#8A4D00",
         "icon2": null,
-        "fa": "fas fa-book-open"
+        "fa": null
       },
       {
         "date": "2026 · Buildathon",
         "title": "Cursor India Roadshow: Delhi Buildathon",
         "desc": "Built at the Delhi stop of the Cursor India Roadshow, then stayed for the founder-heavy After Hours crowd.",
         "url": "",
-        "icon": null,
+        "icon": "assets/icons/brands/cursor.ico",
         "iconBg": "#EADDFF",
         "iconColor": "#4F378B",
         "icon2": null,
-        "fa": "fas fa-code"
+        "fa": null
       },
       {
         "date": "2026 · Network",
         "title": "After Hours: Activate × Cursor",
         "desc": "An after-party for the Cursor event at Fort City Brewing, with founder conversations and a distinctly less formal room.",
         "url": "",
-        "icon": null,
+        "icon": "assets/icons/brands/cursor.ico",
         "iconBg": "#DDE8FF",
         "iconColor": "#1565C0",
         "icon2": null,
-        "fa": "fas fa-champagne-glasses"
+        "fa": null
       },
       {
         "date": "2026 · Hosted",
         "title": "Catalyst 0: Research & Builders Meetup @ ANDC",
         "desc": "My first hosted event: a small research-and-builders meetup that became the real beginning of Catalyst AI Community.",
         "url": "https://rtx09x.medium.com/the-pictures-make-it-look-like-an-event-8f15a738c586",
-        "icon": null,
+        "icon": "assets/icons/brands/catalyst-logo.svg",
         "iconBg": "#EADDFF",
         "iconColor": "#4F378B",
         "icon2": null,
-        "fa": "fas fa-flask"
+        "fa": null
       }
     ],
     "featured": [
@@ -685,15 +772,16 @@
       {
         "date": "2026 · Award recipient",
         "title": "Learning on Graphs New Delhi",
-        "desc": "Award recipient at the Learning on Graphs New Delhi meetup at IIT Delhi. The MasterCard AI Garage, Yardi School of AI, and TigerGraph gathering that put the rest of this work in motion.",
+        "desc": "Award recipient at Learning on Graphs New Delhi at IIT Delhi, a Mastercard AI Garage, IIT Delhi, TigerGraph, and Yardi School of AI gathering that set the rest of this work in motion.",
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7443731485163008000/",
-        "icon": "assets/icons/brands/log-icon.png",
+        "icon": "assets/icons/brands/log-2026.png",
         "iconBg": "#FFF0D1",
         "iconColor": "#8A4D00",
-        "icon2": "https://cdn.simpleicons.org/mastercard",
+        "icon2": "assets/icons/brands/mastercard-mark.svg",
         "icons": [
-          "https://cdn.simpleicons.org/tigergraph",
-          "https://upload.wikimedia.org/wikipedia/commons/9/9d/IIT_Delhi_header.svg"
+          "assets/icons/brands/iit-delhi-header.svg",
+          "assets/icons/brands/yardi-school-ai.jpg",
+          "assets/icons/brands/tigergraph.png"
         ]
       },
       {

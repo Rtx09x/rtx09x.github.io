@@ -389,3 +389,9 @@ footer .meta { color: var(--ink-faint); }
 
     .dock-item::after { display: none; }
 }
+
+/* Brand marks: local assets, balanced in light and dark surfaces. */
+.card-logo-row { margin: 12px 0 -2px; flex-wrap: wrap; }
+.update-feature .logo-row { flex-wrap: wrap; }
+.org-logo.brand-catalyst { background: #322646; border-color: #4f3a68; object-fit: contain; padding: 15px; }
+[data-theme="dark"] .org-logo.brand-catalyst { background: #322646; border-color: #5c4677; }
