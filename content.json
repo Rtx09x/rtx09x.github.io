@@ -1,15 +1,15 @@
 {
   "profile": {
     "name": "Rudra Tiwari",
-    "role": "Building agent infrastructure & scientific ML systems",
-    "bio": "I build tools and research systems for coding agents, developers, and scientific discovery. Current work includes ANCP for agent-native compiler interaction, TRIADS for materials ML, and practical infrastructure for real developer workflows.",
+    "role": "Founder, Catalyst | Building AI systems for scientific discovery",
+    "bio": "I build Catalyst, an AI-native scientific discovery workspace for materials research, alongside original ML research and public software. Winner at the OpenAI International Codex Hackathon, I care about systems that survive beyond the demo.",
     "tags": [],
     "ctas": [
       {
-        "label": "View ANCP",
-        "url": "https://github.com/TwentySevenLabs/ancp",
+        "label": "Explore Catalyst",
+        "url": "https://github.com/Rtx09x/catalyst",
         "style": "solid",
-        "fa": "fas fa-code-branch"
+        "fa": "fas fa-flask"
       },
       {
         "label": "Read TRIADS",
@@ -48,60 +48,56 @@
     "tag": "Who I am",
     "title": "About",
     "body": [
-      "I build public systems across agent infrastructure, developer tooling, scientific machine learning, and focused product experiments. The common thread is turning messy workflows into something concrete: protocols agents can use, models researchers can test, and tools developers can actually run.",
-      "I operate this work through both my personal account and independent orgs: TwentySevenLabs for agent/dev infrastructure, Catalyst Zero Research for materials and scientific ML, and Rtx09x for experiments, apps, research notes, and fast shipping.",
-      "Away from the terminal, I am still usually building something: RC planes, PC builds, hardware setups, videos, songs, and whatever new rabbit hole is too interesting to leave alone."
+      "I build public systems for scientific discovery, practical AI, and software that has to keep working after launch day. My flagship work is Catalyst, an AI-native workspace that turns scattered scientific evidence into clearer material-discovery decisions.",
+      "Alongside product work, I research small-data materials ML through TRIADS, contribute to OpenAI Parameter Golf, and maintain open-source software such as Shippy. I like hard technical problems, but I like shipping useful things even more.",
+      "Away from the terminal, I build RC planes and PCs, make music and videos, and keep finding rabbit holes that are far too interesting to leave alone."
     ],
     "focus": [
       {
-        "k": "Agent infrastructure",
-        "v": "ANCP, provider routing, and executable agent skills."
+        "k": "Scientific AI",
+        "v": "Catalyst, evidence-driven research workflows, and materials discovery."
       },
       {
-        "k": "Scientific ML",
-        "v": "TRIADS, Matbench workflows, and materials-discovery research."
+        "k": "Materials ML",
+        "v": "TRIADS and small-data property prediction."
       },
       {
-        "k": "Side quests",
-        "v": "RC aircraft, PC hardware, video edits, music, and tiny tools."
+        "k": "Public software",
+        "v": "Shippy maintenance, Parameter Golf, and open-source building."
       }
     ],
     "signals": [
       {
-        "label": "Agent systems",
+        "label": "Scientific AI",
         "tone": "violet"
+      },
+      {
+        "label": "Materials ML",
+        "tone": "moss"
+      },
+      {
+        "label": "Open source",
+        "tone": "sky"
+      },
+      {
+        "label": "Kotlin",
+        "tone": "clay"
       },
       {
         "label": "Python",
         "tone": "sage"
       },
       {
-        "label": "TypeScript",
-        "tone": "sky"
-      },
-      {
-        "label": "Machine learning",
+        "label": "Research systems",
         "tone": "violet"
       },
       {
-        "label": "Materials science",
-        "tone": "moss"
-      },
-      {
-        "label": "Open research",
+        "label": "AI community",
         "tone": "rose"
-      },
-      {
-        "label": "Developer tools",
-        "tone": "clay"
       },
       {
         "label": "RC planes",
         "tone": "sky"
-      },
-      {
-        "label": "PC builds",
-        "tone": "clay"
       },
       {
         "label": "Music",
@@ -112,43 +108,43 @@
   "work": {
     "tag": "Selected work",
     "title": "Work",
-    "lede": "Agent infrastructure, scientific ML, and tools that are useful outside the demo.",
+    "lede": "Scientific AI, materials ML, and public software built to hold up outside the demo.",
     "featured": [
       {
-        "org": "TwentySevenLabs",
-        "name": "ANCP",
+        "org": "Catalyst",
+        "name": "Catalyst",
         "iconBg": "#EADDFF",
         "iconColor": "#4F378B",
-        "desc": "Agent Native Compiler Protocol: an open, spec-first protocol that gives coding agents a stable machine-readable interface for compiler diagnostics, repair plans, safe fixes, and verification loops across languages.",
+        "desc": "An AI-native scientific discovery workspace for materials research. Catalyst connects literature, datasets, evidence graphs, structure and property inspection, spectra, candidate comparison, project memory, and agent workflows.",
         "tags": [
           {
-            "label": "Protocol",
+            "label": "Scientific AI",
             "tone": "violet"
           },
           {
-            "label": "Coding agents",
+            "label": "Materials discovery",
             "tone": "moss"
           },
           {
-            "label": "Python",
+            "label": "Research systems",
             "tone": "sky"
           }
         ],
         "links": [
           {
             "label": "Source",
-            "url": "https://github.com/TwentySevenLabs/ancp",
+            "url": "https://github.com/Rtx09x/catalyst",
             "style": "solid"
           }
         ],
-        "fa": "fas fa-code-branch"
+        "fa": "fas fa-flask"
       },
       {
         "org": "Rtx09x",
         "name": "TRIADS",
         "iconBg": "#DDEFE1",
         "iconColor": "#1F5E34",
-        "desc": "A parameter-efficient recursive attention architecture for materials-property prediction in small-data regimes. Code, pretrained weights, and benchmark results paired with a linked Zenodo preprint.",
+        "desc": "A parameter-efficient recursive attention architecture for materials-property prediction in small-data regimes. Code, pretrained weights, and benchmark results are paired with a Zenodo preprint.",
         "tags": [
           {
             "label": "PyTorch",
@@ -180,6 +176,48 @@
     ],
     "archive": [
       {
+        "name": "Shippy",
+        "org": "Shippy Music",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0",
+        "desc": "Open-source Android music app built in Kotlin. I maintain architecture, playback and library experience, and the long-term bug-fixing work that turns a codebase into a product.",
+        "tags": [
+          {
+            "label": "Kotlin",
+            "tone": "violet"
+          },
+          {
+            "label": "Android",
+            "tone": "moss"
+          },
+          {
+            "label": "Open source",
+            "tone": "sky"
+          }
+        ],
+        "url": "https://github.com/Shippy-Music/Shippy",
+        "fa": "fas fa-music"
+      },
+      {
+        "name": "Parameter Golf",
+        "org": "Rtx09x",
+        "iconBg": "#FFF0D1",
+        "iconColor": "#8A4D00",
+        "desc": "OpenAI Parameter Golf work: small LM training, compression constraints, and PR-frontier analysis under the 16MB limit.",
+        "tags": [
+          {
+            "label": "Compression",
+            "tone": "clay"
+          },
+          {
+            "label": "LLMs",
+            "tone": "violet"
+          }
+        ],
+        "url": "https://github.com/Rtx09x/parameter-golf",
+        "fa": "fas fa-golf-ball-tee"
+      },
+      {
         "name": "Agentic Provider Gateway",
         "org": "TwentySevenLabs",
         "iconBg": "#DDE8FF",
@@ -203,7 +241,7 @@
         "org": "Rtx09x",
         "iconBg": "#FFF0D1",
         "iconColor": "#8A4D00",
-        "desc": "High-agency agent skills for executable specs and end-to-end shipping — the public skill layer behind clearer planning and ship-ready workflows.",
+        "desc": "High-agency agent skills for executable specs and end-to-end shipping  -  the public skill layer behind clearer planning and ship-ready workflows.",
         "tags": [
           {
             "label": "Agent skills",
@@ -256,25 +294,6 @@
         "fa": "fas fa-terminal"
       },
       {
-        "name": "CuriosityCache",
-        "org": "Rtx09x",
-        "iconBg": "#DDEFE1",
-        "iconColor": "#1F5E34",
-        "desc": "Public research notebook and knowledge garden: AI, compression, neuroscience, transformers, and adjacent topics feeding longer projects.",
-        "tags": [
-          {
-            "label": "Notes",
-            "tone": "sage"
-          },
-          {
-            "label": "Obsidian",
-            "tone": "sky"
-          }
-        ],
-        "url": "https://github.com/Rtx09x/CuriosityCache",
-        "fa": "fas fa-book-open"
-      },
-      {
         "name": "Piko",
         "org": "Rtx09x",
         "iconBg": "#DDE8FF",
@@ -292,25 +311,6 @@
         ],
         "url": "https://github.com/Rtx09x/piko",
         "fa": "fas fa-seedling"
-      },
-      {
-        "name": "Parameter Golf",
-        "org": "Rtx09x",
-        "iconBg": "#FFF0D1",
-        "iconColor": "#8A4D00",
-        "desc": "OpenAI Parameter Golf work: small LM training, compression constraints, and PR-frontier analysis under the 16MB limit.",
-        "tags": [
-          {
-            "label": "Compression",
-            "tone": "clay"
-          },
-          {
-            "label": "LLMs",
-            "tone": "violet"
-          }
-        ],
-        "url": "https://github.com/Rtx09x/parameter-golf",
-        "fa": "fas fa-golf-ball-tee"
       },
       {
         "name": "Meow-Mocks",
@@ -353,31 +353,36 @@
     ]
   },
   "labs": {
-    "tag": "Organizations",
-    "title": "Labs I operate",
-    "lede": "Separate homes for infrastructure work and scientific research, connected by the same long-term direction.",
+    "tag": "Community",
+    "title": "Catalyst AI Community",
+    "lede": "A campus community for students who want to explore AI, research, and ambitious things worth building.",
     "items": [
       {
-        "name": "TwentySevenLabs",
-        "role": "Founder & operator",
-        "desc": "Independent lab for agent infrastructure, developer tools, protocols, and practical AI systems. ANCP and Agentic Provider Gateway live here.",
-        "logo": "https://avatars.githubusercontent.com/u/279220831?v=4",
+        "name": "Catalyst AI Community",
+        "role": "Founder",
+        "desc": "I founded Catalyst AI Community to bring together students interested in AI, scientific research, and practical building. The aim is less passive consumption and more finding collaborators, shipping work, and taking ideas seriously enough to test them.",
+        "logo": "https://avatars.githubusercontent.com/u/282262503?v=4",
         "tags": [
           {
-            "label": "Agent infrastructure",
-            "tone": "sky"
+            "label": "AI community",
+            "tone": "violet"
           },
           {
-            "label": "Developer tools",
-            "tone": "clay"
+            "label": "Research",
+            "tone": "moss"
+          },
+          {
+            "label": "Builders",
+            "tone": "sky"
           }
         ],
-        "url": "https://github.com/TwentySevenLabs"
+        "url": "https://rtx09x.medium.com/the-pictures-make-it-look-like-an-event-8f15a738c586",
+        "actionLabel": "Read the story"
       },
       {
         "name": "Catalyst Zero Research",
         "role": "Founder & operator",
-        "desc": "Research umbrella for materials science, scientific ML, and AI-native research systems — the clean home for Catalyst-branded material-discovery work.",
+        "desc": "Research umbrella for materials science, scientific ML, and AI-native research systems. It is the home for Catalyst-branded material-discovery work.",
         "logo": "https://avatars.githubusercontent.com/u/282262503?v=4",
         "tags": [
           {
@@ -389,14 +394,15 @@
             "tone": "violet"
           }
         ],
-        "url": "https://github.com/Catalyst-Zero-Research"
+        "url": "https://github.com/Catalyst-Zero-Research",
+        "actionLabel": "Organization"
       }
     ]
   },
   "research": {
     "tag": "Research",
     "title": "Research & writing",
-    "lede": "Preprints, artifacts, and research directions behind the public work.",
+    "lede": "Preprints, artifacts, and open-source contributions behind the scientific work.",
     "featured": {
       "org": "Rtx09x · Preprint · 2026",
       "name": "TRIADS: Tiny Recursive Information-Attention with Deep Supervision",
@@ -432,17 +438,17 @@
         "url": "https://doi.org/10.5281/zenodo.19200579"
       },
       {
-        "year": "Ongoing",
-        "title": "CuriosityCache — public research notebook",
-        "sub": "AI, compression, neuroscience, transformers",
-        "url": "https://github.com/Rtx09x/CuriosityCache"
+        "year": "2026",
+        "title": "OpenAI Parameter Golf contributions",
+        "sub": "Small-model training, compression constraints, and public pull requests.",
+        "url": "https://github.com/openai/parameter-golf/pull/1694"
       }
     ]
   },
   "blogs": {
     "tag": "Notes",
     "title": "Blogs",
-    "lede": "Informal writing — personal essays, small stories, and the parts of the work that don't belong in a paper.",
+    "lede": "Informal writing  -  personal essays, small stories, and the parts of the work that don't belong in a paper.",
     "profile": "https://medium.com/@Rtx09x",
     "posts": [
       {
@@ -476,14 +482,32 @@
     ]
   },
   "updates": {
-    "tag": "Latest",
-    "title": "Updates",
-    "lede": "Recent public proof — awards, hackathons, and ships that show the work is active.",
+    "tag": "Highlights",
+    "title": "Wins, finals & builds",
+    "lede": "Selected work and events, ordered by relevance rather than chronology.",
     "items": [
       {
+        "date": "2026 · 3rd Place",
+        "title": "Winner, OpenAI International Codex Hackathon",
+        "desc": "Built Catalyst with Team Becodes. Catalyst has received ₹12 lakh in aggregate funding from OpenAI.",
+        "url": "https://github.com/Rtx09x/catalyst",
+        "icon": "assets/icons/brands/openai.svg",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0"
+      },
+      {
         "date": "2026",
-        "title": "Selected for OpenAI × Outskill AI Builders Hackathon",
-        "desc": "Selected from thousands of applicants for a 7-day shipping-focused hackathon. Building Catalyst: a materials-science knowledge graph connecting crystal structures, properties, synthesis pathways, and literature.",
+        "title": "Learning on Graphs New Delhi Award",
+        "desc": "Award recipient at the Learning on Graphs meetup hosted at IIT Delhi, around graph learning, AI, and materials science.",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7443731485163008000/",
+        "icon": "assets/icons/brands/log-icon.png",
+        "iconBg": "#FFF0D1",
+        "iconColor": "#8A4D00"
+      },
+      {
+        "date": "2026 · 88/100",
+        "title": "OpenAI × Outskill AI Builders Hackathon",
+        "desc": "Built Catalyst in a seven-day shipping-focused hackathon and earned an 88/100 evaluation.",
         "url": "https://www.linkedin.com/posts/rtx09x_ai-materialsscience-openai-share-7464527172666363904-mtLG/",
         "icon": "assets/icons/brands/openai.svg",
         "iconBg": "#DDE8FF",
@@ -491,31 +515,58 @@
         "icon2": "assets/icons/brands/outskill-mark.png"
       },
       {
-        "date": "2026",
-        "title": "Learning on Graphs New Delhi 2026 Award",
-        "desc": "Award at the Learning on Graphs meetup hosted at IIT Delhi — researchers, professors, and industry leaders around AI, graph learning, and materials science. Later reposted by Mastercard.",
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7443731485163008000/",
-        "icon": "assets/icons/brands/log-icon.png",
-        "iconBg": "#FFF0D1",
-        "iconColor": "#8A4D00"
-      },
-      {
-        "date": "2026",
-        "title": "Emergent × Masters' Union Hackathon",
-        "desc": "Built an AI research system for materials science that searches papers, journals, repositories, patents, datasets, and web sources to surface candidate materials.",
-        "url": "https://www.linkedin.com/posts/rtx09x_ai-materialscience-deeptech-ugcPost-7463925714376085504-WrDQ/",
+        "date": "2026 · Finalist",
+        "title": "IIT ISM Dhanbad E-Summit",
+        "desc": "Finalist across Idea2Impact, PitchFund, and VentureX with Catalyst.",
+        "url": "https://github.com/Rtx09x/catalyst",
         "icon": "assets/icons/brands/emergent.png",
         "iconBg": "#EADDFF",
         "iconColor": "#4F378B"
       },
       {
-        "date": "2026",
-        "title": "Shipped ANCP",
-        "desc": "Published the Agent Native Compiler Protocol as an open spec and Python reference implementation for agent-native compiler interaction, repair plans, and verification loops.",
-        "url": "https://github.com/TwentySevenLabs/ancp",
-        "icon": "assets/icons/brands/twentysevenlabs.png",
+        "date": "2026 · Finalist",
+        "title": "IBM-associated QUANT-A-THON, RIT Chennai",
+        "desc": "Finalist with Catalyst Q-Select, a hybrid quantum-classical experimental portfolio-selection workflow.",
+        "url": "https://github.com/Rtx09x/quantathon",
+        "icon": "assets/icons/brands/openai.svg",
         "iconBg": "#DDEFE1",
         "iconColor": "#1F5E34"
+      },
+      {
+        "date": "2026 · 1st Place",
+        "title": "Agent{a}thon",
+        "desc": "First-place winner with Catalyst in the open-innovation track.",
+        "url": "https://github.com/Rtx09x/catalyst",
+        "icon": "assets/icons/brands/openai.svg",
+        "iconBg": "#EADDFF",
+        "iconColor": "#4F378B"
+      },
+      {
+        "date": "2026",
+        "title": "Developer Hackathon: Elastic & Google Cloud",
+        "desc": "Built AI agents at the ThoughtWorks developer hackathon.",
+        "url": "",
+        "icon": "assets/icons/brands/outskill-mark.png",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0"
+      },
+      {
+        "date": "2026",
+        "title": "Build With TRAE",
+        "desc": "Builder event in New Delhi focused on practical AI product work.",
+        "url": "",
+        "icon": "assets/icons/brands/emergent.png",
+        "iconBg": "#DDEFE1",
+        "iconColor": "#1F5E34"
+      },
+      {
+        "date": "2026",
+        "title": "Builders Connect: The Delhi Edition",
+        "desc": "Part of the FFDG New Delhi community builder gathering.",
+        "url": "",
+        "icon": "assets/icons/brands/log-icon.png",
+        "iconBg": "#FFF0D1",
+        "iconColor": "#8A4D00"
       }
     ]
   },
@@ -659,8 +710,8 @@
     },
     {
       "id": "labs",
-      "tip": "Labs",
-      "fa": "fas fa-flask"
+      "tip": "Community",
+      "fa": "fas fa-people-group"
     },
     {
       "id": "research",
@@ -688,5 +739,5 @@
       "fa": "fas fa-paper-plane"
     }
   ],
-  "footer": "© 2026 Rudra Tiwari · Agent infrastructure, scientific ML, and practical tools."
+  "footer": "© 2026 Rudra Tiwari · Scientific AI, materials ML, and public software."
 }
