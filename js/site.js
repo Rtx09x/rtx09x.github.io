@@ -11,7 +11,7 @@
 
     let d;
     try {
-        const res = await fetch('content.json?v=20260824-portfolio-events', { cache: 'no-store' });
+        const res = await fetch('content.json?v=20260824-brand-polish', { cache: 'no-store' });
         d = await res.json();
     } catch (err) {
         console.error('content.json failed to load — serve over HTTP, not file://', err);
@@ -26,7 +26,7 @@
         if (!src) return '';
         const ink = /(?:^|\/)(x|github|medium)\.(?:svg|png)$/i.test(src) ? ' brand-ink' : '';
         const bleed = cls.includes('logo-mark') &&
-            /(?:log-icon|emergent|outskill-mark)\.(?:png|svg)$/i.test(src)
+            /(?:log-icon|log-2026|emergent|outskill-mark|catalyst-logo)\.(?:png|svg)$/i.test(src)
             ? ' logo-bleed' : '';
         return `<img class="${cls}${ink}${bleed}" src="${esc(src)}" alt="" width="48" height="48" decoding="async">`;
     };
@@ -35,6 +35,11 @@
             ? ` style="background:${esc(it.iconBg)};color:${esc(it.iconColor || '#4F378B')}"`
             : '';
         return `<div class="icon-tile"${style}>${it.fa ? faIco(it.fa) : imgIco(it.icon)}</div>`;
+    };
+
+    const brandRow = (icons = []) => {
+        const list = (Array.isArray(icons) ? icons : []).filter(Boolean);
+        return list.length ? `<span class="logo-row card-logo-row">${list.map((icon) => imgIco(icon, 'i8 logo-mark')).join('')}</span>` : '';
     };
 
     const btn = (l) =>
@@ -108,6 +113,7 @@
                     <article class="card card-feature reveal">
                         <span class="org-pill">${esc(f.org)}</span>
                         ${tile(f)}
+                        ${brandRow(f.brandIcons)}
                         <h3 class="h3">${esc(f.name)}</h3>
                         <p>${esc(f.desc)}</p>
                         <div class="tag-row">${f.tags.map(tag).join('')}</div>
@@ -148,7 +154,7 @@
                 ${l.items.map((o) => `
                     <article class="card card-feature lab-card reveal">
                         <div class="lab-head">
-                            ${o.fa ? `<div class="org-logo org-logo-icon"${o.iconBg ? ` style="background:${esc(o.iconBg)};color:${esc(o.iconColor || '#4F378B')}"` : ''}>${faIco(o.fa)}</div>` : `<img class="org-logo" src="${esc(o.logo)}" alt="${esc(o.name)} logo" loading="lazy">`}
+                            ${o.fa ? `<div class="org-logo org-logo-icon"${o.iconBg ? ` style="background:${esc(o.iconBg)};color:${esc(o.iconColor || '#4F378B')}"` : ''}>${faIco(o.fa)}</div>` : `<img class="org-logo ${esc(o.logoClass || '')}" src="${esc(o.logo)}" alt="${esc(o.name)} logo" loading="lazy">`}
                             <div>
                                 <h3 class="h3">${esc(o.name)}</h3>
                                 <span class="meta">${esc(o.role)}</span>
@@ -175,6 +181,7 @@
             <article class="card card-feature research-feature reveal">
                 <span class="org-pill">${esc(r.featured.org)}</span>
                 ${tile(r.featured)}
+                ${brandRow(r.featured.brandIcons)}
                 <h3 class="h3">${esc(r.featured.name)}</h3>
                 <p>${esc(r.featured.desc)}</p>
                 <span class="meta mono">${esc(r.featured.note)}</span>
