@@ -177,6 +177,28 @@
     margin-bottom: 4px;
 }
 
+
+/* Signals belong below the two About cards, as one wide readable strip. */
+@media (min-width: 901px) {
+    .about-grid {
+        grid-template-areas:
+            "about focus"
+            "signals signals";
+    }
+
+    .about-grid > .about-card { grid-area: about; }
+    .about-side { display: contents; }
+    .about-side > :first-child { grid-area: focus; }
+    .about-side > :last-child {
+        grid-area: signals;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+    .about-side > :last-child .h3 { flex: 0 0 140px; }
+    .about-side > :last-child .tag-row { flex: 1; }
+}
+
 /* ================= WORK ================= */
 .work-grid {
     display: grid;

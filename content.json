@@ -375,9 +375,6 @@
         "name": "Catalyst Zero Research",
         "role": "Founder & operator",
         "desc": "Research umbrella for materials science, scientific ML, and AI-native research systems. It is the home for Catalyst-branded material-discovery work.",
-        "fa": "fas fa-flask",
-        "iconBg": "#EADDFF",
-        "iconColor": "#4F378B",
         "tags": [
           {
             "label": "Materials science",
@@ -389,7 +386,8 @@
           }
         ],
         "url": "https://github.com/Catalyst-Zero-Research",
-        "actionLabel": "Organization"
+        "actionLabel": "Organization",
+        "logo": "https://github.com/Catalyst-Zero-Research.png?size=144"
       },
       {
         "name": "TwentySevenLabs",
@@ -411,7 +409,7 @@
       },
       {
         "name": "Catalyst AI Community",
-        "role": "Founder",
+        "role": "Founder & operator",
         "desc": "A campus community for students interested in AI, scientific research, and practical building. The aim is less passive consumption and more finding collaborators and shipping work.",
         "fa": "fas fa-people-group",
         "iconBg": "#DDE8FF",
@@ -435,7 +433,7 @@
       },
       {
         "name": "Shippy Music",
-        "role": "Maintainer",
+        "role": "Founder & maintainer",
         "desc": "Open-source music software focused on a full, flexible listening experience across sources and personal libraries.",
         "logo": "https://avatars.githubusercontent.com/u/309844582?v=4",
         "tags": [
@@ -542,7 +540,7 @@
   "updates": {
     "tag": "Highlights",
     "title": "Wins, finals & builds",
-    "lede": "Selected work and events, ordered by relevance rather than chronology.",
+    "lede": "Selected wins, hosted gatherings, and events, ordered by relevance rather than chronology.",
     "items": [
       {
         "date": "2026 · Finalist",
@@ -555,9 +553,9 @@
         "icon2": "https://ik.imagekit.io/syustaging/SYU_PREPROD/LOGO_9OUUfvliq.webp?tr=w-3840"
       },
       {
-        "date": "2026 · 1st Place",
-        "title": "Agent{a}thon",
-        "desc": "First-place winner with Catalyst in the open-innovation track.",
+        "date": "2026 · 1st Runner-up",
+        "title": "Agent{a}thon: NCR",
+        "desc": "First runner-up with Catalyst in the open-innovation track at Paytm.",
         "url": "https://github.com/Rtx09x/catalyst",
         "icon": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/paytm.svg",
         "iconBg": "#EADDFF",
@@ -565,9 +563,53 @@
         "icon2": null
       },
       {
-        "date": "2026",
+        "date": "2026 · Track winner",
+        "title": "ElevenLabs AI Meetup",
+        "desc": "Built a voice agent and won the track at the ElevenLabs meetup hosted at Microsoft India.",
+        "url": "",
+        "icon": null,
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0",
+        "icon2": null,
+        "fa": "fas fa-microphone-lines"
+      },
+      {
+        "date": "2026 · Winner",
+        "title": "AI Builders Mixer: Delhi Edition",
+        "desc": "Won at the AI Builders Mixer at Masters' Union, with hands-on small-model training and builder sessions.",
+        "url": "",
+        "icon": null,
+        "iconBg": "#EADDFF",
+        "iconColor": "#4F378B",
+        "icon2": null,
+        "fa": "fas fa-trophy"
+      },
+      {
+        "date": "2026 · Community winner",
+        "title": "Builders Connect: The Delhi Edition",
+        "desc": "FlutterFlow community gathering where I won a golden enamel pin and got properly pulled into the local builder scene.",
+        "url": "",
+        "icon": null,
+        "iconBg": "#FFF0D1",
+        "iconColor": "#8A4D00",
+        "icon2": null,
+        "fa": "fas fa-people-group"
+      },
+      {
+        "date": "2026 · Catalyst origin",
+        "title": "AI Vibe Sprint Delhi NCR: Product Folks × Emergent",
+        "desc": "My second hackathon and the buildathon where Catalyst first started taking shape at Masters' Union.",
+        "url": "",
+        "icon": null,
+        "iconBg": "#DDEFE1",
+        "iconColor": "#1F5E34",
+        "icon2": null,
+        "fa": "fas fa-seedling"
+      },
+      {
+        "date": "2026 · Built",
         "title": "Developer Hackathon: Elastic & Google Cloud",
-        "desc": "Built AI agents at the ThoughtWorks developer hackathon.",
+        "desc": "Built a civic-sense game for children at ThoughtWorks using AI-agent ideas. No podium, still a useful build.",
         "url": "",
         "icon": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/elastic.svg",
         "iconBg": "#DDE8FF",
@@ -575,9 +617,9 @@
         "icon2": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googlecloud.svg"
       },
       {
-        "date": "2026",
-        "title": "Build With TRAE",
-        "desc": "Builder event in New Delhi focused on practical AI product work.",
+        "date": "2026 · Built",
+        "title": "Build With TRAE @ New Delhi",
+        "desc": "Built against the event tracks in a practical AI product buildathon. No win claimed, just more shipping.",
         "url": "",
         "icon": null,
         "iconBg": "#DDEFE1",
@@ -586,15 +628,48 @@
         "fa": "fas fa-wand-magic-sparkles"
       },
       {
-        "date": "2026",
-        "title": "Builders Connect: The Delhi Edition",
-        "desc": "Part of the FFDG New Delhi community builder gathering.",
+        "date": "2026 · Discussion",
+        "title": "AI Research Paper Discussion, IIIT Delhi",
+        "desc": "An informal research discussion on JEPA and adjacent architectures. I presented, learned, and made strong research connections.",
         "url": "",
         "icon": null,
         "iconBg": "#FFF0D1",
         "iconColor": "#8A4D00",
         "icon2": null,
-        "fa": "fas fa-people-group"
+        "fa": "fas fa-book-open"
+      },
+      {
+        "date": "2026 · Buildathon",
+        "title": "Cursor India Roadshow: Delhi Buildathon",
+        "desc": "Built at the Delhi stop of the Cursor India Roadshow, then stayed for the founder-heavy After Hours crowd.",
+        "url": "",
+        "icon": null,
+        "iconBg": "#EADDFF",
+        "iconColor": "#4F378B",
+        "icon2": null,
+        "fa": "fas fa-code"
+      },
+      {
+        "date": "2026 · Network",
+        "title": "After Hours: Activate × Cursor",
+        "desc": "An after-party for the Cursor event at Fort City Brewing, with founder conversations and a distinctly less formal room.",
+        "url": "",
+        "icon": null,
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0",
+        "icon2": null,
+        "fa": "fas fa-champagne-glasses"
+      },
+      {
+        "date": "2026 · Hosted",
+        "title": "Catalyst 0: Research & Builders Meetup @ ANDC",
+        "desc": "My first hosted event: a small research-and-builders meetup that became the real beginning of Catalyst AI Community.",
+        "url": "https://rtx09x.medium.com/the-pictures-make-it-look-like-an-event-8f15a738c586",
+        "icon": null,
+        "iconBg": "#EADDFF",
+        "iconColor": "#4F378B",
+        "icon2": null,
+        "fa": "fas fa-flask"
       }
     ],
     "featured": [
@@ -603,25 +678,29 @@
         "title": "Winner, OpenAI International Codex Hackathon",
         "desc": "Built Catalyst with Team Becodes. Catalyst has received ₹12 lakh in aggregate funding from OpenAI.",
         "url": "https://github.com/Rtx09x/catalyst",
-        "icon": "assets/icons/brands/openai.svg",
+        "icon": "assets/icons/brands/openai-black.svg",
         "iconBg": "#DDE8FF",
         "iconColor": "#1565C0"
       },
       {
-        "date": "2026",
-        "title": "Learning on Graphs New Delhi Award",
-        "desc": "Award recipient at the Learning on Graphs meetup hosted at IIT Delhi, around graph learning, AI, and materials science.",
+        "date": "2026 · Award recipient",
+        "title": "Learning on Graphs New Delhi",
+        "desc": "Award recipient at the Learning on Graphs New Delhi meetup at IIT Delhi. The MasterCard AI Garage, Yardi School of AI, and TigerGraph gathering that put the rest of this work in motion.",
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7443731485163008000/",
         "icon": "assets/icons/brands/log-icon.png",
         "iconBg": "#FFF0D1",
-        "iconColor": "#8A4D00"
+        "iconColor": "#8A4D00",
+        "icon2": "https://cdn.simpleicons.org/mastercard",
+        "icons": [
+          "https://cdn.simpleicons.org/tigergraph"
+        ]
       },
       {
         "date": "2026 · 88/100",
         "title": "OpenAI × Outskill AI Builders Hackathon",
         "desc": "Built Catalyst in a seven-day shipping-focused hackathon and earned an 88/100 evaluation.",
         "url": "https://www.linkedin.com/posts/rtx09x_ai-materialsscience-openai-share-7464527172666363904-mtLG/",
-        "icon": "assets/icons/brands/openai.svg",
+        "icon": "assets/icons/brands/openai-black.svg",
         "iconBg": "#DDE8FF",
         "iconColor": "#1565C0",
         "icon2": "assets/icons/brands/outskill-mark.png"
