@@ -391,7 +391,15 @@ footer .meta { color: var(--ink-faint); }
 }
 
 /* Brand marks: local assets, balanced in light and dark surfaces. */
-.card-logo-row { margin: 12px 0 -2px; flex-wrap: wrap; }
 .update-feature .logo-row { flex-wrap: wrap; }
 .org-logo.brand-catalyst { background: #322646; border-color: #4f3a68; object-fit: contain; padding: 15px; }
 [data-theme="dark"] .org-logo.brand-catalyst { background: #322646; border-color: #5c4677; }
+
+/* Featured-card marks share one horizontal, equal-size header row. */
+.card-mark-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.card-mark-row .icon-tile,
+.card-mark-row .logo-mark { width: 56px; height: 56px; border-radius: 18px; }
+.card-mark-row .icon-tile { font-size: 24px; }
+.card-mark-row .icon-tile .i8 { width: 32px; height: 32px; }
+.logo-mark.logo-log { content: url("../assets/icons/brands/log-2026-light.png"); background: #fff; padding: 6px; object-fit: contain; }
+[data-theme="dark"] .logo-mark.logo-log { content: url("../assets/icons/brands/log-2026-dark.png"); background: #12141b; border-color: #343846; }

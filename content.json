@@ -113,8 +113,8 @@
       {
         "org": "Catalyst",
         "name": "Catalyst",
-        "iconBg": "#EADDFF",
-        "iconColor": "#4F378B",
+        "iconBg": "#322646",
+        "iconColor": "#ffffff",
         "desc": "An AI-native scientific discovery workspace for materials research. Catalyst connects literature, datasets, evidence graphs, structure and property inspection, spectra, candidate comparison, project memory, and agent workflows.",
         "tags": [
           {
@@ -137,7 +137,7 @@
             "style": "solid"
           }
         ],
-        "fa": "fas fa-flask"
+        "icon": "assets/icons/brands/catalyst-logo.svg"
       },
       {
         "org": "Rtx09x",
@@ -173,8 +173,8 @@
         ],
         "fa": "fas fa-microscope",
         "brandIcons": [
-          "assets/icons/brands/zenodo.svg",
-          "assets/icons/brands/cern.svg"
+          "assets/icons/brands/zenodo-user.png",
+          "assets/icons/brands/cern-white.png"
         ]
       },
       {
@@ -234,10 +234,34 @@
         ],
         "brandIcons": [
           "assets/icons/brands/openai-black.svg"
-        ]
+        ],
+        "brandFirst": true
       }
     ],
     "archive": [
+      {
+        "name": "ANCP",
+        "org": "TwentySevenLabs",
+        "iconBg": "#EADDFF",
+        "iconColor": "#4F378B",
+        "desc": "Agent Native Compiler Protocol: a spec-first, machine-readable interface for compiler diagnostics, repair plans, safe fixes, and verification loops across languages.",
+        "tags": [
+          {
+            "label": "Protocol",
+            "tone": "violet"
+          },
+          {
+            "label": "Coding agents",
+            "tone": "sky"
+          },
+          {
+            "label": "Python",
+            "tone": "moss"
+          }
+        ],
+        "url": "https://github.com/TwentySevenLabs/ancp",
+        "fa": "fas fa-code-branch"
+      },
       {
         "name": "ALB",
         "org": "Rtx09x",
@@ -256,44 +280,6 @@
         ],
         "url": "https://github.com/Rtx09x/ALB",
         "fa": "fas fa-scale-balanced"
-      },
-      {
-        "name": "NF QueryGPT",
-        "org": "Rtx09x",
-        "iconBg": "#EADDFF",
-        "iconColor": "#4F378B",
-        "desc": "Multi-agent AI database analyst built for NikahForever workflows.",
-        "tags": [
-          {
-            "label": "Multi-agent",
-            "tone": "violet"
-          },
-          {
-            "label": "Data",
-            "tone": "moss"
-          }
-        ],
-        "url": "https://github.com/Rtx09x/nf_querygpt",
-        "fa": "fas fa-database"
-      },
-      {
-        "name": "Chalta Hai",
-        "org": "Rtx09x",
-        "iconBg": "#FFF0D1",
-        "iconColor": "#8A4D00",
-        "desc": "Civic-sense game for children, built at the Elastic × Google Cloud developer hackathon.",
-        "tags": [
-          {
-            "label": "Civic tech",
-            "tone": "clay"
-          },
-          {
-            "label": "Game",
-            "tone": "sky"
-          }
-        ],
-        "url": "https://github.com/Rtx09x/Chalta-Hai",
-        "fa": "fas fa-gamepad"
       },
       {
         "name": "BloodGrid",
@@ -470,8 +456,7 @@
         ],
         "url": "https://github.com/Catalyst-Zero-Research",
         "actionLabel": "Organization",
-        "logo": "assets/icons/brands/catalyst-logo.svg",
-        "logoClass": "brand-catalyst"
+        "logo": "https://github.com/Catalyst-Zero-Research.png?size=144"
       },
       {
         "name": "TwentySevenLabs",
@@ -511,8 +496,9 @@
         ],
         "url": "https://rtx09x.medium.com/the-pictures-make-it-look-like-an-event-8f15a738c586",
         "actionLabel": "Read the story",
-        "logo": "assets/icons/brands/catalyst-logo.svg",
-        "logoClass": "brand-catalyst"
+        "fa": "fas fa-people-group",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0"
       },
       {
         "name": "Shippy Music",
@@ -563,8 +549,8 @@
       "iconBg": "#6750A4",
       "iconColor": "#ffffff",
       "brandIcons": [
-        "assets/icons/brands/zenodo.svg",
-        "assets/icons/brands/cern.svg"
+        "assets/icons/brands/zenodo-user.png",
+        "assets/icons/brands/cern-white.png"
       ]
     },
     "list": [
@@ -665,7 +651,7 @@
         "title": "AI Builders Mixer: Delhi Edition",
         "desc": "Won at the AI Builders Mixer at Masters' Union, with hands-on small-model training and builder sessions.",
         "url": "",
-        "icon": "assets/icons/brands/masters-union.png",
+        "icon": "assets/icons/brands/masters-union.gif",
         "iconBg": "#EADDFF",
         "iconColor": "#4F378B",
         "icon2": null,
@@ -687,10 +673,10 @@
         "title": "AI Vibe Sprint Delhi NCR: Product Folks × Emergent",
         "desc": "My second hackathon and the buildathon where Catalyst first started taking shape at Masters' Union.",
         "url": "",
-        "icon": "assets/icons/brands/emergent.png",
+        "icon": "assets/icons/brands/emergent-user.webp",
         "iconBg": "#DDEFE1",
         "iconColor": "#1F5E34",
-        "icon2": "assets/icons/brands/masters-union.png",
+        "icon2": "assets/icons/brands/masters-union.gif",
         "fa": null
       },
       {
@@ -720,7 +706,7 @@
         "title": "AI Research Paper Discussion, IIIT Delhi",
         "desc": "An informal research discussion on JEPA and adjacent architectures. I presented, learned, and made strong research connections.",
         "url": "",
-        "icon": "assets/icons/brands/iit-delhi-header.svg",
+        "icon": "assets/icons/brands/iiit-delhi.png",
         "iconBg": "#FFF0D1",
         "iconColor": "#8A4D00",
         "icon2": null,
@@ -731,7 +717,7 @@
         "title": "Cursor India Roadshow: Delhi Buildathon",
         "desc": "Built at the Delhi stop of the Cursor India Roadshow, then stayed for the founder-heavy After Hours crowd.",
         "url": "",
-        "icon": "assets/icons/brands/cursor.ico",
+        "icon": "assets/icons/brands/cursor-logo.png",
         "iconBg": "#EADDFF",
         "iconColor": "#4F378B",
         "icon2": null,
@@ -742,7 +728,7 @@
         "title": "After Hours: Activate × Cursor",
         "desc": "An after-party for the Cursor event at Fort City Brewing, with founder conversations and a distinctly less formal room.",
         "url": "",
-        "icon": "assets/icons/brands/cursor.ico",
+        "icon": "assets/icons/brands/cursor-logo.png",
         "iconBg": "#DDE8FF",
         "iconColor": "#1565C0",
         "icon2": null,
@@ -775,14 +761,14 @@
         "title": "Learning on Graphs New Delhi",
         "desc": "Award recipient at Learning on Graphs New Delhi at IIT Delhi, a Mastercard AI Garage, IIT Delhi, TigerGraph, and Yardi School of AI gathering that set the rest of this work in motion.",
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7443731485163008000/",
-        "icon": "assets/icons/brands/log-2026.png",
+        "icon": "assets/icons/brands/log-2026-light.png",
         "iconBg": "#FFF0D1",
         "iconColor": "#8A4D00",
         "icon2": "assets/icons/brands/mastercard-mark.svg",
         "icons": [
-          "assets/icons/brands/iit-delhi-header.svg",
+          "assets/icons/brands/iit-delhi-seal.png",
           "assets/icons/brands/yardi-school-ai.jpg",
-          "assets/icons/brands/tigergraph.png"
+          "assets/icons/brands/tigergraph-user.jpg"
         ]
       },
       {
@@ -793,7 +779,7 @@
         "icon": "assets/icons/brands/openai-black.svg",
         "iconBg": "#DDE8FF",
         "iconColor": "#1565C0",
-        "icon2": "assets/icons/brands/outskill-mark.png"
+        "icon2": "assets/icons/brands/outskill.png"
       },
       {
         "date": "2026 · Finalist",
