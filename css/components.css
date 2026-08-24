@@ -449,3 +449,13 @@ footer .meta { color: var(--ink-faint); }
     background: #182746;
     border-color: #29416f;
 }
+
+/* Masters' Union favicon: explicitly inverted for reliable contrast in both themes. */
+.logo-mark.logo-masters-union,
+[data-theme="dark"] .logo-mark.logo-masters-union {
+    background: #ffffff !important;
+    border-color: #d8d8dc !important;
+    filter: none !important;
+    padding: 7px !important;
+    object-fit: contain;
+}
