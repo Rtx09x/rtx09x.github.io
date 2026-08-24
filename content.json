@@ -698,21 +698,22 @@
         "title": "Developer Hackathon: Elastic & Google Cloud",
         "desc": "Built Chalta Hai, a civic-sense game for children, at the ThoughtWorks developer hackathon.",
         "url": "",
-        "icon": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/elastic.svg",
+        "icon": "assets/icons/brands/elastic.png",
         "iconBg": "#DDE8FF",
         "iconColor": "#1565C0",
-        "icon2": "assets/icons/brands/google-cloud.png"
+        "icon2": "assets/icons/brands/google-cloud.png",
+        "fa": null
       },
       {
         "date": "2026 · Built",
         "title": "Build With TRAE @ New Delhi",
         "desc": "Built against the event tracks in a practical AI product buildathon in New Delhi.",
         "url": "",
-        "icon": null,
+        "icon": "assets/icons/brands/trae.webp",
         "iconBg": "#DDEFE1",
         "iconColor": "#1F5E34",
         "icon2": null,
-        "fa": "fas fa-wand-magic-sparkles"
+        "fa": null
       },
       {
         "date": "2026 · Discussion",
