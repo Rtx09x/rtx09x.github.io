@@ -403,3 +403,37 @@ footer .meta { color: var(--ink-faint); }
 .card-mark-row .icon-tile .i8 { width: 32px; height: 32px; }
 .logo-mark.logo-log { content: url("../assets/icons/brands/log-2026-light.png"); background: #fff; padding: 6px; object-fit: contain; }
 [data-theme="dark"] .logo-mark.logo-log { content: url("../assets/icons/brands/log-2026-dark.png"); background: #12141b; border-color: #343846; }
+
+/* Per-brand optical sizing: consistent tiles without forcing every logo into a square. */
+.logo-mark {
+    padding: 5px;
+}
+.logo-mark.logo-masters-union {
+    background: #0b1728;
+    border-color: #20314a;
+    padding: 6px;
+    object-fit: contain;
+}
+.logo-mark.logo-outskill {
+    width: 78px;
+    border-radius: 14px;
+    padding: 5px 8px;
+    object-fit: contain;
+}
+.logo-mark.logo-cursor {
+    padding: 0;
+    object-fit: cover;
+    background: #fff;
+}
+.logo-mark.logo-tigergraph {
+    padding: 3px;
+    object-fit: contain;
+    background: #fff;
+}
+.card-mark-row .logo-mark.logo-outskill {
+    width: 88px;
+}
+.org-logo-icon > i {
+    transform: none !important;
+    writing-mode: horizontal-tb;
+}
