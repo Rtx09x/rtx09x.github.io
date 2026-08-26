@@ -277,15 +277,21 @@
 
     /* ---------- gallery ---------- */
     const g = d.gallery;
-    const galleryCard = (item) => `
-        <figure class="gallery-card ${esc(item.shape || 'landscape')}">
-            <div class="gallery-photo-wrap">
-                <img class="gallery-photo" src="${esc(item.src)}" alt="${esc(item.caption)}"
-                    loading="lazy" decoding="async" width="640" height="480">
-            </div>
-            <figcaption>${esc(item.caption)}</figcaption>
-        </figure>`;
-    const gallerySplit = Math.ceil(g.items.length / 2);
+    const galleryItems = [...g.items];
+    for (let i = galleryItems.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [galleryItems[i], galleryItems[j]] = [galleryItems[j], galleryItems[i]];
+    }
+    const galleryCard = (item, index) => `
+        <button class="gallery-card ${esc(item.shape || 'landscape')}" type="button"
+            data-gallery-open="${index}" aria-label="Open photo ${index + 1}: ${esc(item.caption)}">
+            <span class="gallery-photo-wrap">
+                <img class="gallery-photo" ${index < 4 ? `src="${esc(item.src)}"` : `data-src="${esc(item.src)}"`}
+                    alt="${esc(item.caption)}" loading="lazy" decoding="async" fetchpriority="low" width="960" height="720">
+                <span class="gallery-expand" aria-hidden="true">${faIco('fas fa-expand')}</span>
+            </span>
+            <span class="gallery-caption">${esc(item.caption)}</span>
+        </button>`;
     document.getElementById('gallery').innerHTML = `
         <div class="section-inner">
             <header class="section-head gallery-section-head reveal">
@@ -300,17 +306,30 @@
             </header>
             <div class="gallery-shell reveal">
                 <div class="gallery-toolbar">
-                    <span><i class="fas fa-arrows-left-right" aria-hidden="true"></i> Drag, scroll, or let it wander</span>
+                    <span><i class="fas fa-arrows-left-right" aria-hidden="true"></i> Drag, scroll, or use the arrows</span>
                     <div class="rail-nav">
                         <button class="rail-btn" data-gallery-prev aria-label="Previous photos">${faIco('fas fa-chevron-left')}</button>
                         <button class="rail-btn" data-gallery-next aria-label="Next photos">${faIco('fas fa-chevron-right')}</button>
                     </div>
                 </div>
                 <div class="gallery-viewport" tabindex="0" role="region" aria-label="Photo gallery">
-                    <div class="gallery-canvas">
-                        <div class="gallery-row">${g.items.slice(0, gallerySplit).map(galleryCard).join('')}</div>
-                        <div class="gallery-row">${g.items.slice(gallerySplit).map(galleryCard).join('')}</div>
+                    <div class="gallery-row">${galleryItems.map(galleryCard).join('')}</div>
+                </div>
+            </div>
+            <div class="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+                <button class="lightbox-backdrop" type="button" data-lightbox-close tabindex="-1" aria-label="Close photo viewer"></button>
+                <div class="lightbox-panel">
+                    <div class="lightbox-topbar">
+                        <span class="lightbox-count" aria-live="polite"></span>
+                        <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close photo viewer">${faIco('fas fa-xmark')}</button>
                     </div>
+                    <div class="lightbox-stage">
+                        <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev aria-label="Previous photo">${faIco('fas fa-chevron-left')}</button>
+                        <img class="lightbox-image" src="" alt="">
+                        <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next aria-label="Next photo">${faIco('fas fa-chevron-right')}</button>
+                    </div>
+                    <p class="lightbox-caption"></p>
+                    <p class="lightbox-hint">← → keys, mouse wheel, or swipe</p>
                 </div>
             </div>
         </div>`;
@@ -487,7 +506,7 @@
         });
     }
 
-    /* Gallery navigation, desktop drag, and gentle auto-drift. */
+    /* Gallery navigation, drag-to-scroll, and full-screen viewer. */
     const gallery = document.querySelector('.gallery-viewport');
     if (gallery) {
         const shell = gallery.closest('.gallery-shell');
@@ -497,19 +516,58 @@
         shell.querySelector('[data-gallery-next]')?.addEventListener('click', () =>
             gallery.scrollBy({ left: step(), behavior: reduced ? 'auto' : 'smooth' }));
 
-        let dragging = false, startX = 0, startScroll = 0;
+        const deferredImages = [...gallery.querySelectorAll('img[data-src]')];
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    const image = entry.target;
+                    image.src = image.dataset.src;
+                    image.removeAttribute('data-src');
+                    observer.unobserve(image);
+                });
+            }, { root: gallery, rootMargin: '0px 900px', threshold: 0.01 });
+            deferredImages.forEach((image) => imageObserver.observe(image));
+        } else {
+            deferredImages.forEach((image) => {
+                image.src = image.dataset.src;
+                image.removeAttribute('data-src');
+            });
+        }
+
+        let dragging = false, startX = 0, startScroll = 0, moved = 0, dragFrame = 0, pendingScroll = 0;
         gallery.addEventListener('pointerdown', (event) => {
             if (event.pointerType !== 'mouse') return;
             dragging = true;
+            moved = 0;
             startX = event.clientX;
             startScroll = gallery.scrollLeft;
             gallery.classList.add('is-dragging');
         });
         gallery.addEventListener('pointermove', (event) => {
             if (!dragging) return;
-            gallery.scrollLeft = startScroll - (event.clientX - startX);
+            const delta = event.clientX - startX;
+            moved = Math.max(moved, Math.abs(delta));
+            pendingScroll = startScroll - delta;
+            if (!dragFrame) {
+                dragFrame = requestAnimationFrame(() => {
+                    gallery.scrollLeft = pendingScroll;
+                    dragFrame = 0;
+                });
+            }
         });
         const stopGalleryDrag = () => {
+            if (dragFrame) {
+                cancelAnimationFrame(dragFrame);
+                gallery.scrollLeft = pendingScroll;
+                dragFrame = 0;
+            }
+            if (dragging && moved > 6) {
+                gallery.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }, { capture: true, once: true });
+            }
             dragging = false;
             gallery.classList.remove('is-dragging');
         };
@@ -517,27 +575,68 @@
         gallery.addEventListener('pointercancel', stopGalleryDrag);
         gallery.addEventListener('pointerleave', stopGalleryDrag);
 
-        if (!reduced) {
-            let paused = false, direction = 1, lastFrame = performance.now();
-            const setPaused = (value) => { paused = value; };
-            shell.addEventListener('mouseenter', () => setPaused(true));
-            shell.addEventListener('mouseleave', () => setPaused(false));
-            shell.addEventListener('focusin', () => setPaused(true));
-            shell.addEventListener('focusout', () => setPaused(false));
-            shell.addEventListener('pointerdown', () => setPaused(true));
-            shell.addEventListener('pointerup', () => setPaused(false));
-            const drift = (now) => {
-                const delta = Math.min(40, now - lastFrame);
-                lastFrame = now;
-                if (!paused && !dragging && gallery.scrollWidth > gallery.clientWidth) {
-                    gallery.scrollLeft += direction * delta * 0.018;
-                    const end = gallery.scrollWidth - gallery.clientWidth;
-                    if (gallery.scrollLeft >= end - 2) direction = -1;
-                    if (gallery.scrollLeft <= 2) direction = 1;
-                }
-                requestAnimationFrame(drift);
-            };
-            requestAnimationFrame(drift);
-        }
+        const lightbox = document.querySelector('.gallery-lightbox');
+        const lightboxImage = lightbox.querySelector('.lightbox-image');
+        const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+        const lightboxCount = lightbox.querySelector('.lightbox-count');
+        let activeIndex = 0;
+        let lastTrigger = null;
+        let wheelLocked = false;
+        let swipeStartX = null;
+
+        const renderLightbox = () => {
+            const item = galleryItems[activeIndex];
+            lightboxImage.src = item.src;
+            lightboxImage.alt = item.caption;
+            lightboxCaption.textContent = item.caption;
+            lightboxCount.textContent = `${activeIndex + 1} / ${galleryItems.length}`;
+        };
+        const moveLightbox = (direction) => {
+            activeIndex = (activeIndex + direction + galleryItems.length) % galleryItems.length;
+            renderLightbox();
+        };
+        const openLightbox = (index, trigger) => {
+            activeIndex = index;
+            lastTrigger = trigger;
+            renderLightbox();
+            lightbox.classList.add('is-open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('lightbox-open');
+            lightbox.querySelector('.lightbox-close').focus();
+        };
+        const closeLightbox = () => {
+            lightbox.classList.remove('is-open');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('lightbox-open');
+            lightboxImage.src = '';
+            lastTrigger?.focus();
+        };
+
+        gallery.querySelectorAll('[data-gallery-open]').forEach((card) => {
+            card.addEventListener('click', () => openLightbox(Number(card.dataset.galleryOpen), card));
+        });
+        lightbox.querySelectorAll('[data-lightbox-close]').forEach((button) => button.addEventListener('click', closeLightbox));
+        lightbox.querySelector('[data-lightbox-prev]').addEventListener('click', () => moveLightbox(-1));
+        lightbox.querySelector('[data-lightbox-next]').addEventListener('click', () => moveLightbox(1));
+        lightbox.addEventListener('wheel', (event) => {
+            event.preventDefault();
+            if (wheelLocked || Math.max(Math.abs(event.deltaX), Math.abs(event.deltaY)) < 12) return;
+            wheelLocked = true;
+            moveLightbox((event.deltaX || event.deltaY) > 0 ? 1 : -1);
+            window.setTimeout(() => { wheelLocked = false; }, 320);
+        }, { passive: false });
+        lightbox.addEventListener('pointerdown', (event) => { swipeStartX = event.clientX; });
+        lightbox.addEventListener('pointerup', (event) => {
+            if (swipeStartX === null) return;
+            const delta = event.clientX - swipeStartX;
+            swipeStartX = null;
+            if (Math.abs(delta) > 60) moveLightbox(delta > 0 ? -1 : 1);
+        });
+        document.addEventListener('keydown', (event) => {
+            if (!lightbox.classList.contains('is-open')) return;
+            if (event.key === 'Escape') closeLightbox();
+            if (event.key === 'ArrowLeft') { event.preventDefault(); moveLightbox(-1); }
+            if (event.key === 'ArrowRight') { event.preventDefault(); moveLightbox(1); }
+        });
     }
 })();
