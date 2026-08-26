@@ -11,7 +11,7 @@
 
     let d;
     try {
-        const res = await fetch('content.json?v=20260824-logo-optical-polish', { cache: 'no-store' });
+        const res = await fetch('content.json?v=20260826-gallery', { cache: 'no-store' });
         d = await res.json();
     } catch (err) {
         console.error('content.json failed to load — serve over HTTP, not file://', err);
@@ -275,6 +275,46 @@
             </div>
         </div>`;
 
+    /* ---------- gallery ---------- */
+    const g = d.gallery;
+    const galleryCard = (item) => `
+        <figure class="gallery-card ${esc(item.shape || 'landscape')}">
+            <div class="gallery-photo-wrap">
+                <img class="gallery-photo" src="${esc(item.src)}" alt="${esc(item.caption)}"
+                    loading="lazy" decoding="async" width="640" height="480">
+            </div>
+            <figcaption>${esc(item.caption)}</figcaption>
+        </figure>`;
+    const gallerySplit = Math.ceil(g.items.length / 2);
+    document.getElementById('gallery').innerHTML = `
+        <div class="section-inner">
+            <header class="section-head gallery-section-head reveal">
+                <div>
+                    <span class="eyebrow">${esc(g.tag)}</span>
+                    <h2 class="h2">${esc(g.title)}</h2>
+                    <p class="lede">${esc(g.lede)}</p>
+                </div>
+                <a class="btn btn-line" href="${esc(g.albumUrl)}" target="_blank" rel="noreferrer">
+                    ${faIco('fas fa-images')} ${esc(g.albumLabel)}
+                </a>
+            </header>
+            <div class="gallery-shell reveal">
+                <div class="gallery-toolbar">
+                    <span><i class="fas fa-arrows-left-right" aria-hidden="true"></i> Drag, scroll, or let it wander</span>
+                    <div class="rail-nav">
+                        <button class="rail-btn" data-gallery-prev aria-label="Previous photos">${faIco('fas fa-chevron-left')}</button>
+                        <button class="rail-btn" data-gallery-next aria-label="Next photos">${faIco('fas fa-chevron-right')}</button>
+                    </div>
+                </div>
+                <div class="gallery-viewport" tabindex="0" role="region" aria-label="Photo gallery">
+                    <div class="gallery-canvas">
+                        <div class="gallery-row">${g.items.slice(0, gallerySplit).map(galleryCard).join('')}</div>
+                        <div class="gallery-row">${g.items.slice(gallerySplit).map(galleryCard).join('')}</div>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+
     /* ---------- creative ---------- */
     const c = d.creative;
     const creativeCard = (card) => {
@@ -445,5 +485,59 @@
             rail.addEventListener('pointercancel', end);
             rail.addEventListener('pointerleave', end);
         });
+    }
+
+    /* Gallery navigation, desktop drag, and gentle auto-drift. */
+    const gallery = document.querySelector('.gallery-viewport');
+    if (gallery) {
+        const shell = gallery.closest('.gallery-shell');
+        const step = () => Math.max(320, gallery.clientWidth * 0.78);
+        shell.querySelector('[data-gallery-prev]')?.addEventListener('click', () =>
+            gallery.scrollBy({ left: -step(), behavior: reduced ? 'auto' : 'smooth' }));
+        shell.querySelector('[data-gallery-next]')?.addEventListener('click', () =>
+            gallery.scrollBy({ left: step(), behavior: reduced ? 'auto' : 'smooth' }));
+
+        let dragging = false, startX = 0, startScroll = 0;
+        gallery.addEventListener('pointerdown', (event) => {
+            if (event.pointerType !== 'mouse') return;
+            dragging = true;
+            startX = event.clientX;
+            startScroll = gallery.scrollLeft;
+            gallery.classList.add('is-dragging');
+        });
+        gallery.addEventListener('pointermove', (event) => {
+            if (!dragging) return;
+            gallery.scrollLeft = startScroll - (event.clientX - startX);
+        });
+        const stopGalleryDrag = () => {
+            dragging = false;
+            gallery.classList.remove('is-dragging');
+        };
+        gallery.addEventListener('pointerup', stopGalleryDrag);
+        gallery.addEventListener('pointercancel', stopGalleryDrag);
+        gallery.addEventListener('pointerleave', stopGalleryDrag);
+
+        if (!reduced) {
+            let paused = false, direction = 1, lastFrame = performance.now();
+            const setPaused = (value) => { paused = value; };
+            shell.addEventListener('mouseenter', () => setPaused(true));
+            shell.addEventListener('mouseleave', () => setPaused(false));
+            shell.addEventListener('focusin', () => setPaused(true));
+            shell.addEventListener('focusout', () => setPaused(false));
+            shell.addEventListener('pointerdown', () => setPaused(true));
+            shell.addEventListener('pointerup', () => setPaused(false));
+            const drift = (now) => {
+                const delta = Math.min(40, now - lastFrame);
+                lastFrame = now;
+                if (!paused && !dragging && gallery.scrollWidth > gallery.clientWidth) {
+                    gallery.scrollLeft += direction * delta * 0.018;
+                    const end = gallery.scrollWidth - gallery.clientWidth;
+                    if (gallery.scrollLeft >= end - 2) direction = -1;
+                    if (gallery.scrollLeft <= 2) direction = 1;
+                }
+                requestAnimationFrame(drift);
+            };
+            requestAnimationFrame(drift);
+        }
     }
 })();
