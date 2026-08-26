@@ -516,6 +516,24 @@
         shell.querySelector('[data-gallery-next]')?.addEventListener('click', () =>
             gallery.scrollBy({ left: step(), behavior: reduced ? 'auto' : 'smooth' }));
 
+        gallery.addEventListener('wheel', (event) => {
+            const rawDelta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
+            if (!rawDelta) return;
+
+            const scale = event.deltaMode === WheelEvent.DOM_DELTA_LINE
+                ? 16
+                : event.deltaMode === WheelEvent.DOM_DELTA_PAGE
+                    ? gallery.clientWidth
+                    : 1;
+            const delta = rawDelta * scale;
+            const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+            const canMove = delta < 0 ? gallery.scrollLeft > 0 : gallery.scrollLeft < maxScroll - 1;
+            if (!canMove) return;
+
+            event.preventDefault();
+            gallery.scrollLeft += delta;
+        }, { passive: false });
+
         const deferredImages = [...gallery.querySelectorAll('img[data-src]')];
         if ('IntersectionObserver' in window) {
             const imageObserver = new IntersectionObserver((entries, observer) => {
