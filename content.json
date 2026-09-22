@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Rudra Tiwari",
-    "role": "Founder, Catalyst | Building AI systems for scientific discovery",
+    "role": "Founder, Catalyst | Scientific AI, research systems & public software",
     "bio": "I build Catalyst, an AI-native scientific discovery workspace for materials research, alongside original ML research and public software. Winner at the OpenAI International Codex Hackathon, I care about systems that survive beyond the demo.",
     "tags": [],
     "ctas": [
@@ -630,9 +630,52 @@
     "lede": "Selected wins, hosted gatherings, and events, ordered by relevance rather than chronology.",
     "items": [
       {
-        "date": "2026 · Finalist",
+        "date": "2026 · Physical AI",
+        "title": "VYOMA Innovation Challenge Finale",
+        "desc": "Attended the IIIT-Delhi finale showcasing multilingual, offline AI hardware built on Suno Sutra for public-interest use cases.",
+        "url": "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2310855&lang=1&reg=3",
+        "icon": "https://bhashini.gov.in/favicon.ico",
+        "iconBg": "#FFF0D1",
+        "iconColor": "#8A4D00",
+        "icon2": "https://www.google.com/s2/favicons?domain=currentai.org&sz=128",
+        "fa": null
+      },
+      {
+        "date": "2026 · Physical AI",
+        "title": "AI Hardware Circle — Delhi Edition",
+        "desc": "Small-format Masters' Union meetup on robotics, drones and physical AI, with Cyberwave's sim-to-real stack at the center of the discussion.",
+        "url": "https://luma.com/pnddf1uv",
+        "icon": "https://github.com/cyberwave-os.png?size=144",
+        "iconBg": "#EADDFF",
+        "iconColor": "#4F378B",
+        "icon2": "assets/icons/brands/masters-union-favicon.png",
+        "fa": null
+      },
+      {
+        "date": "2026 · Best Performer",
+        "title": "Build with AI — GDG Cloud Noida @ IPEC",
+        "desc": "Spoke on the future of AI and agentic systems, then received the Best Performer Award at IPEC.",
+        "url": "https://gdg.community.dev/events/details/google-gdg-cloud-noida-presents-build-with-ai/",
+        "icon": "https://www.google.com/s2/favicons?domain=gdg.community.dev&sz=128",
+        "iconBg": "#DDEFE1",
+        "iconColor": "#1F5E34",
+        "icon2": "https://www.google.com/s2/favicons?domain=ipec.org.in&sz=128",
+        "fa": null
+      },
+      {
+        "date": "2026 · 88/100",
+        "title": "OpenAI × Outskill AI Builders Hackathon",
+        "desc": "Built Catalyst in a seven-day shipping-focused hackathon and earned an 88/100 evaluation.",
+        "url": "https://www.linkedin.com/posts/rtx09x_ai-materialsscience-openai-share-7464527172666363904-mtLG/",
+        "icon": "assets/icons/brands/openai-black.svg",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0",
+        "icon2": "assets/icons/brands/outskill.png"
+      },
+      {
+        "date": "2026 · Finalist · Project Lead",
         "title": "IBM QUANT-A-THON, RIT Chennai",
-        "desc": "Finalist with Catalyst Q-Select, a hybrid quantum-classical experimental portfolio-selection workflow.",
+        "desc": "Led Catalyst Q-Select remotely to the finals at the 36-hour international quantum hackathon.",
         "url": "https://github.com/Rtx09x/quantathon",
         "icon": "https://www.ibm.com/adobe/dynamicmedia/deliver/dm-aid--951aee65-746e-4256-b7fa-1442b6c32531/ibm-cio-logo.jpg?preferwebp=true&quality=90",
         "iconBg": "#DDEFE1",
@@ -640,9 +683,9 @@
         "icon2": "https://ik.imagekit.io/syustaging/SYU_PREPROD/LOGO_9OUUfvliq.webp?tr=w-3840"
       },
       {
-        "date": "2026 · 1st Runner-up",
+        "date": "2026 · 1st Prize",
         "title": "Agent{a}thon: NCR",
-        "desc": "First runner-up with Catalyst in the open-innovation track at Paytm.",
+        "desc": "Won 1st Prize solo with Catalyst in the open-innovation track at Paytm.",
         "url": "https://github.com/Rtx09x/catalyst",
         "icon": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/paytm.svg",
         "iconBg": "#EADDFF",
@@ -652,18 +695,18 @@
       {
         "date": "2026 · Track winner",
         "title": "ElevenLabs AI Meetup",
-        "desc": "Built a voice agent and won the track at the ElevenLabs meetup hosted at Microsoft India.",
-        "url": "",
+        "desc": "Track winner at the ElevenLabs AI Meetup hosted at Microsoft India, building with voice agents and real-time conversational AI.",
+        "url": "https://luma.com/e5kadpay",
         "icon": "assets/icons/brands/elevenlabs.ico",
         "iconBg": "#DDE8FF",
         "iconColor": "#1565C0",
-        "icon2": null,
+        "icon2": "https://cdn.simpleicons.org/microsoft",
         "fa": null
       },
       {
-        "date": "2026 · Winner",
+        "date": "2026 · Award recipient",
         "title": "AI Builders Mixer: Delhi Edition",
-        "desc": "Won at the AI Builders Mixer at Masters' Union, with hands-on small-model training and builder sessions.",
+        "desc": "Extended a two-model self-play exercise into six models competing against one another and earned event recognition at Masters' Union.",
         "url": "",
         "icon": "assets/icons/brands/masters-union-favicon.png",
         "iconBg": "#EADDFF",
@@ -696,7 +739,7 @@
       {
         "date": "2026 · Built",
         "title": "Developer Hackathon: Elastic & Google Cloud",
-        "desc": "Built Chalta Hai, a civic-sense game for children, at the ThoughtWorks developer hackathon.",
+        "desc": "Built Chalta Hai, a civic-sense game for children, while experimenting with Elastic, Google Cloud and agentic workflows at ThoughtWorks.",
         "url": "",
         "icon": "assets/icons/brands/elastic.png",
         "iconBg": "#DDE8FF",
@@ -718,7 +761,7 @@
       {
         "date": "2026 · Discussion",
         "title": "AI Research Paper Discussion, IIIT Delhi",
-        "desc": "An informal research discussion on JEPA and adjacent architectures. I presented, learned, and made strong research connections.",
+        "desc": "Presented and joined a research discussion on JEPA, LLM routing and VLMs at IIIT Delhi, making strong research connections along the way.",
         "url": "",
         "icon": "assets/icons/brands/iiit-delhi.png",
         "iconBg": "#FFF0D1",
@@ -729,7 +772,7 @@
       {
         "date": "2026 · Buildathon",
         "title": "Cursor India Roadshow: Delhi Buildathon",
-        "desc": "Built at the Delhi stop of the Cursor India Roadshow, then stayed for the founder-heavy After Hours crowd.",
+        "desc": "Built on Catalyst at the Delhi Roadshow while exploring agent workflows, MCP and software-factory ideas in a room full of builders.",
         "url": "",
         "icon": "assets/icons/brands/cursor-logo.png",
         "iconBg": "#EADDFF",
@@ -740,7 +783,7 @@
       {
         "date": "2026 · Network",
         "title": "After Hours: Activate × Cursor",
-        "desc": "An after-party for the Cursor event at Fort City Brewing, with founder conversations and a distinctly less formal room.",
+        "desc": "Closed the Cursor buildathon day with founders and engineers talking agents, developer tools and AI products at Fort City Brewing.",
         "url": "",
         "icon": "assets/icons/brands/cursor-logo.png",
         "iconBg": "#DDE8FF",
@@ -786,24 +829,24 @@
         ]
       },
       {
-        "date": "2026 · 88/100",
-        "title": "OpenAI × Outskill AI Builders Hackathon",
-        "desc": "Built Catalyst in a seven-day shipping-focused hackathon and earned an 88/100 evaluation.",
-        "url": "https://www.linkedin.com/posts/rtx09x_ai-materialsscience-openai-share-7464527172666363904-mtLG/",
-        "icon": "assets/icons/brands/openai-black.svg",
-        "iconBg": "#DDE8FF",
-        "iconColor": "#1565C0",
-        "icon2": "assets/icons/brands/outskill.png"
-      },
-      {
-        "date": "2026 · Finalist",
+        "date": "2026 · 2× Finalist",
         "title": "IIT ISM Dhanbad E-Summit",
-        "desc": "Finalist across Idea2Impact, PitchFund, and VentureX with Catalyst.",
+        "desc": "Solo PitchFund finalist with Catalyst; also reached the VentureX final with BloodGrid during the five-day E-Summit.",
         "url": "https://github.com/Rtx09x/catalyst",
         "icon": "https://ik.imagekit.io/syustaging/SYU_PREPROD/logo_ruR49dQjz.webp?tr=w-3840",
         "iconBg": "#EADDFF",
         "iconColor": "#4F378B",
         "icon2": null
+      },
+      {
+        "date": "2026 · Academia invite",
+        "title": "SEMICON India 2026",
+        "desc": "Invited with Academia access to the conference and exhibition at Yashobhoomi, spanning semiconductor manufacturing, RISC-V, advanced compute and quantum hardware.",
+        "url": "https://www.semiconindia.org/",
+        "icon": "https://www.semiconindia.org/sites/semiconindia.org/files/styles/555x370/public/2024-03/logo%20with%20border_0.jpg.webp?h=9b267253&itok=u4lAKEsp",
+        "iconBg": "#DDE8FF",
+        "iconColor": "#1565C0",
+        "icon2": "https://cdn.simpleicons.org/amd"
       }
     ]
   },
@@ -814,58 +857,266 @@
     "albumUrl": "https://photos.app.goo.gl/Hacgpopo7gPGrCSx7",
     "albumLabel": "Open the full album",
     "items": [
-      { "src": "assets/gallery/01.webp", "shape": "portrait", "caption": "The camera roll occasionally remembers that flowers exist." },
-      { "src": "assets/gallery/02.webp", "shape": "portrait", "caption": "One tiny branch doing an unreasonable amount of aesthetic labour." },
-      { "src": "assets/gallery/03.webp", "shape": "portrait", "caption": "High-stakes negotiations with the smallest stakeholder in the room." },
-      { "src": "assets/gallery/04.webp", "shape": "portrait", "caption": "Peace treaty signed. The delegate declined further comment." },
-      { "src": "assets/gallery/05.webp", "shape": "portrait", "caption": "The laptop stopped being a laptop and acquired server responsibilities." },
-      { "src": "assets/gallery/06.webp", "shape": "wide", "caption": "The bottle I lost was not empty. It was carrying lore." },
-      { "src": "assets/gallery/07.webp", "shape": "portrait", "caption": "The new aeroplane, currently in its trust-the-process phase." },
-      { "src": "assets/gallery/08.webp", "shape": "landscape", "caption": "Builders, laptops, and the dangerous belief that this might work." },
-      { "src": "assets/gallery/09.webp", "shape": "landscape", "caption": "Builders Connect, before the networking became LinkedIn archaeology." },
-      { "src": "assets/gallery/10.webp", "shape": "landscape", "caption": "The FlutterFlow uniform: black tee, event badge, unreasonable optimism." },
-      { "src": "assets/gallery/11.webp", "shape": "landscape", "caption": "A group selfie is just distributed proof of attendance." },
-      { "src": "assets/gallery/12.webp", "shape": "portrait", "caption": "Paytm visitor 532. Open-innovation menace number one." },
-      { "src": "assets/gallery/13.webp", "shape": "landscape", "caption": "Microsoft India, photographed before I went inside to cause software." },
-      { "src": "assets/gallery/14.webp", "shape": "portrait", "caption": "Four wristbands, one shared delusion that sleep was optional." },
-      { "src": "assets/gallery/15.webp", "shape": "landscape", "caption": "Pizza, laptops, and the ancient ritual of pretending this is dinner." },
-      { "src": "assets/gallery/16.webp", "shape": "landscape", "caption": "Masters' Union: where every wall quietly asks what you are building." },
-      { "src": "assets/gallery/17.webp", "shape": "landscape", "caption": "IIIT Delhi. Excellent research, aggressively consonant-heavy name." },
-      { "src": "assets/gallery/18.webp", "shape": "landscape", "caption": "IBM in the background, curiosity doing the actual heavy lifting." },
-      { "src": "assets/gallery/19.webp", "shape": "landscape", "caption": "Built a civic-sense game. Naturally, chaos required two screens." },
-      { "src": "assets/gallery/20.webp", "shape": "landscape", "caption": "The traditional post-build portrait: tired, pleased, still debugging." },
-      { "src": "assets/gallery/21.webp", "shape": "landscape", "caption": "Cursor roadshow. The cursor moved; several sleep schedules did not." },
-      { "src": "assets/gallery/22.webp", "shape": "portrait", "caption": "A balanced founder diet: one surviving slice and suspiciously red liquid." },
-      { "src": "assets/gallery/23.webp", "shape": "landscape", "caption": "The meeting had laptops. The table had seen things." },
-      { "src": "assets/gallery/24.webp", "shape": "landscape", "caption": "Founder conversations, now available in low-light group-selfie format." },
-      { "src": "assets/gallery/25.webp", "shape": "portrait", "caption": "Lab benches: where clean diagrams go to encounter physical reality." },
-      { "src": "assets/gallery/26.webp", "shape": "landscape", "caption": "Another room, another laptop, another completely reasonable ambition." },
-      { "src": "assets/gallery/27.webp", "shape": "portrait", "caption": "IIT ISM E-Summit badge: wearable evidence that Dhanbad happened." },
-      { "src": "assets/gallery/28.webp", "shape": "landscape", "caption": "Spider-Man on screen, scheduling logistics defeated off screen." },
-      { "src": "assets/gallery/29.webp", "shape": "wide", "caption": "A room full of builders and approximately twelve remaining CPU cores." },
-      { "src": "assets/gallery/30.webp", "shape": "portrait", "caption": "The stage: humanity's preferred device for making standing feel official." },
-      { "src": "assets/gallery/31.webp", "shape": "wide", "caption": "Masters' Union, captured mid-ceremony and pre-snack migration." },
-      { "src": "assets/gallery/32.webp", "shape": "wide", "caption": "Explaining the graph like it had personally offended me." },
-      { "src": "assets/gallery/33.webp", "shape": "wide", "caption": "Scientific AI, now with a giant colourful molecule for dramatic effect." },
-      { "src": "assets/gallery/34.webp", "shape": "wide", "caption": "The exact face of someone about to add one more feature." },
-      { "src": "assets/gallery/35.webp", "shape": "wide", "caption": "We built the thing. Someone found a certificate. Civilization continued." },
-      { "src": "assets/gallery/36.webp", "shape": "wide", "caption": "The whole room, briefly persuaded to face the same camera." },
-      { "src": "assets/gallery/37.webp", "shape": "landscape", "caption": "CREATE. Subtle wall. No pressure whatsoever." },
-      { "src": "assets/gallery/38.webp", "shape": "portrait", "caption": "Audience mode: listening carefully while the next idea boots up." },
-      { "src": "assets/gallery/39.webp", "shape": "portrait", "caption": "Question asked. Microphone acquired. Social anxiety politely overruled." },
-      { "src": "assets/gallery/40.webp", "shape": "landscape", "caption": "An award at the FlutterFlow event." },
-      { "src": "assets/gallery/41.webp", "shape": "wide", "caption": "Holding hands for an activity. That was the entire plot." },
-      { "src": "assets/gallery/42.webp", "shape": "wide", "caption": "Apparently the hand gestures are part of the architecture diagram." },
-      { "src": "assets/gallery/43.webp", "shape": "wide", "caption": "Still explaining. The slide never stood a chance." },
-      { "src": "assets/gallery/44.webp", "shape": "wide", "caption": "Collecting a prize at the GDG event at IPEC University." },
-      { "src": "assets/gallery/45.webp", "shape": "screen contain", "caption": "Grass touched. Evidence secured. Achievement unlocked." },
-      { "src": "assets/gallery/46.webp", "shape": "screen contain", "caption": "The recursive social-media event: posting about the post about the event." },
-      { "src": "assets/gallery/47.webp", "shape": "wide contain", "caption": "The group photo before everyone dissolved back into Discord servers." },
-      { "src": "assets/gallery/48.webp", "shape": "screen contain", "caption": "Linus Torvalds telling AI haters to fork off. Naturally, Android made it a notification." },
-      { "src": "assets/gallery/49.webp", "shape": "screen contain", "caption": "Catalyst planning for the RIT hackathon." },
-      { "src": "assets/gallery/50.webp", "shape": "square contain", "caption": "Mandatory cat intermission. Peer review was overwhelmingly positive." },
-      { "src": "assets/gallery/51.webp", "shape": "portrait contain", "caption": "Innovation has peaked. The cat now has a bed with architectural detailing." },
-      { "src": "assets/gallery/52.webp", "shape": "square contain", "caption": "The tension was not taken. The tension simply arrived." }
+      {
+        "src": "assets/gallery/01.webp",
+        "shape": "portrait",
+        "caption": "The camera roll occasionally remembers that flowers exist."
+      },
+      {
+        "src": "assets/gallery/02.webp",
+        "shape": "portrait",
+        "caption": "One tiny branch doing an unreasonable amount of aesthetic labour."
+      },
+      {
+        "src": "assets/gallery/03.webp",
+        "shape": "portrait",
+        "caption": "High-stakes negotiations with the smallest stakeholder in the room."
+      },
+      {
+        "src": "assets/gallery/04.webp",
+        "shape": "portrait",
+        "caption": "Peace treaty signed. The delegate declined further comment."
+      },
+      {
+        "src": "assets/gallery/05.webp",
+        "shape": "portrait",
+        "caption": "The laptop stopped being a laptop and acquired server responsibilities."
+      },
+      {
+        "src": "assets/gallery/06.webp",
+        "shape": "wide",
+        "caption": "The bottle I lost was not empty. It was carrying lore."
+      },
+      {
+        "src": "assets/gallery/07.webp",
+        "shape": "portrait",
+        "caption": "The new aeroplane, currently in its trust-the-process phase."
+      },
+      {
+        "src": "assets/gallery/08.webp",
+        "shape": "landscape",
+        "caption": "Builders, laptops, and the dangerous belief that this might work."
+      },
+      {
+        "src": "assets/gallery/09.webp",
+        "shape": "landscape",
+        "caption": "Builders Connect, before the networking became LinkedIn archaeology."
+      },
+      {
+        "src": "assets/gallery/10.webp",
+        "shape": "landscape",
+        "caption": "The FlutterFlow uniform: black tee, event badge, unreasonable optimism."
+      },
+      {
+        "src": "assets/gallery/11.webp",
+        "shape": "landscape",
+        "caption": "A group selfie is just distributed proof of attendance."
+      },
+      {
+        "src": "assets/gallery/12.webp",
+        "shape": "portrait",
+        "caption": "Paytm visitor 532. Open-innovation menace number one."
+      },
+      {
+        "src": "assets/gallery/13.webp",
+        "shape": "landscape",
+        "caption": "Microsoft India, photographed before I went inside to cause software."
+      },
+      {
+        "src": "assets/gallery/14.webp",
+        "shape": "portrait",
+        "caption": "Four wristbands, one shared delusion that sleep was optional."
+      },
+      {
+        "src": "assets/gallery/15.webp",
+        "shape": "landscape",
+        "caption": "Pizza, laptops, and the ancient ritual of pretending this is dinner."
+      },
+      {
+        "src": "assets/gallery/16.webp",
+        "shape": "landscape",
+        "caption": "Masters' Union: where every wall quietly asks what you are building."
+      },
+      {
+        "src": "assets/gallery/17.webp",
+        "shape": "landscape",
+        "caption": "IIIT Delhi. Excellent research, aggressively consonant-heavy name."
+      },
+      {
+        "src": "assets/gallery/18.webp",
+        "shape": "landscape",
+        "caption": "IBM in the background, curiosity doing the actual heavy lifting."
+      },
+      {
+        "src": "assets/gallery/19.webp",
+        "shape": "landscape",
+        "caption": "Built a civic-sense game. Naturally, chaos required two screens."
+      },
+      {
+        "src": "assets/gallery/20.webp",
+        "shape": "landscape",
+        "caption": "The traditional post-build portrait: tired, pleased, still debugging."
+      },
+      {
+        "src": "assets/gallery/21.webp",
+        "shape": "landscape",
+        "caption": "Cursor roadshow. The cursor moved; several sleep schedules did not."
+      },
+      {
+        "src": "assets/gallery/22.webp",
+        "shape": "portrait",
+        "caption": "A balanced founder diet: one surviving slice and suspiciously red liquid."
+      },
+      {
+        "src": "assets/gallery/23.webp",
+        "shape": "landscape",
+        "caption": "The meeting had laptops. The table had seen things."
+      },
+      {
+        "src": "assets/gallery/24.webp",
+        "shape": "landscape",
+        "caption": "Founder conversations, now available in low-light group-selfie format."
+      },
+      {
+        "src": "assets/gallery/25.webp",
+        "shape": "portrait",
+        "caption": "Lab benches: where clean diagrams go to encounter physical reality."
+      },
+      {
+        "src": "assets/gallery/26.webp",
+        "shape": "landscape",
+        "caption": "Another room, another laptop, another completely reasonable ambition."
+      },
+      {
+        "src": "assets/gallery/27.webp",
+        "shape": "portrait",
+        "caption": "IIT ISM E-Summit badge: wearable evidence that Dhanbad happened."
+      },
+      {
+        "src": "assets/gallery/28.webp",
+        "shape": "landscape",
+        "caption": "Spider-Man on screen, scheduling logistics defeated off screen."
+      },
+      {
+        "src": "assets/gallery/29.webp",
+        "shape": "wide",
+        "caption": "A room full of builders and approximately twelve remaining CPU cores."
+      },
+      {
+        "src": "assets/gallery/30.webp",
+        "shape": "portrait",
+        "caption": "The stage: humanity's preferred device for making standing feel official."
+      },
+      {
+        "src": "assets/gallery/31.webp",
+        "shape": "wide",
+        "caption": "Masters' Union, captured mid-ceremony and pre-snack migration."
+      },
+      {
+        "src": "assets/gallery/32.webp",
+        "shape": "wide",
+        "caption": "Explaining the graph like it had personally offended me."
+      },
+      {
+        "src": "assets/gallery/33.webp",
+        "shape": "wide",
+        "caption": "Scientific AI, now with a giant colourful molecule for dramatic effect."
+      },
+      {
+        "src": "assets/gallery/34.webp",
+        "shape": "wide",
+        "caption": "The exact face of someone about to add one more feature."
+      },
+      {
+        "src": "assets/gallery/35.webp",
+        "shape": "wide",
+        "caption": "We built the thing. Someone found a certificate. Civilization continued."
+      },
+      {
+        "src": "assets/gallery/36.webp",
+        "shape": "wide",
+        "caption": "The whole room, briefly persuaded to face the same camera."
+      },
+      {
+        "src": "assets/gallery/37.webp",
+        "shape": "landscape",
+        "caption": "CREATE. Subtle wall. No pressure whatsoever."
+      },
+      {
+        "src": "assets/gallery/38.webp",
+        "shape": "portrait",
+        "caption": "Audience mode: listening carefully while the next idea boots up."
+      },
+      {
+        "src": "assets/gallery/39.webp",
+        "shape": "portrait",
+        "caption": "Question asked. Microphone acquired. Social anxiety politely overruled."
+      },
+      {
+        "src": "assets/gallery/40.webp",
+        "shape": "landscape",
+        "caption": "An award at the FlutterFlow event."
+      },
+      {
+        "src": "assets/gallery/41.webp",
+        "shape": "wide",
+        "caption": "Holding hands for an activity. That was the entire plot."
+      },
+      {
+        "src": "assets/gallery/42.webp",
+        "shape": "wide",
+        "caption": "Apparently the hand gestures are part of the architecture diagram."
+      },
+      {
+        "src": "assets/gallery/43.webp",
+        "shape": "wide",
+        "caption": "Still explaining. The slide never stood a chance."
+      },
+      {
+        "src": "assets/gallery/44.webp",
+        "shape": "wide",
+        "caption": "Collecting a prize at the GDG event at IPEC University."
+      },
+      {
+        "src": "assets/gallery/45.webp",
+        "shape": "screen contain",
+        "caption": "Grass touched. Evidence secured. Achievement unlocked."
+      },
+      {
+        "src": "assets/gallery/46.webp",
+        "shape": "screen contain",
+        "caption": "The recursive social-media event: posting about the post about the event."
+      },
+      {
+        "src": "assets/gallery/47.webp",
+        "shape": "wide contain",
+        "caption": "The group photo before everyone dissolved back into Discord servers."
+      },
+      {
+        "src": "assets/gallery/48.webp",
+        "shape": "screen contain",
+        "caption": "Linus Torvalds telling AI haters to fork off. Naturally, Android made it a notification."
+      },
+      {
+        "src": "assets/gallery/49.webp",
+        "shape": "screen contain",
+        "caption": "Catalyst planning for the RIT hackathon."
+      },
+      {
+        "src": "assets/gallery/50.webp",
+        "shape": "square contain",
+        "caption": "Mandatory cat intermission. Peer review was overwhelmingly positive."
+      },
+      {
+        "src": "assets/gallery/51.webp",
+        "shape": "portrait contain",
+        "caption": "Innovation has peaked. The cat now has a bed with architectural detailing."
+      },
+      {
+        "src": "assets/gallery/52.webp",
+        "shape": "square contain",
+        "caption": "The tension was not taken. The tension simply arrived."
+      }
     ]
   },
   "creative": {
